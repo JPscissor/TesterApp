@@ -124,7 +124,7 @@ fun TestItem(title: String, quesNumber: Int) {
                 )
 
                 Text(
-                    text = stringResource(R.string.questions) + ": " + quesNumber.toString(),
+                    text = stringResource(R.string.questions) + ": $quesNumber",
                     color = MaterialTheme.colorScheme.tertiary,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.SemiBold
