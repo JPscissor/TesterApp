@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JpTester</string>
+    <string name="start">пройти</string>
+    <string name="questions">вопросов</string>
+</resources>
