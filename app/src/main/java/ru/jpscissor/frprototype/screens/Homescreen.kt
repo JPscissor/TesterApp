@@ -1,7 +1,9 @@
 package ru.jpscissor.frprototype.screens
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -26,6 +28,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -37,7 +40,7 @@ import ru.jpscissor.frprototype.R
 import ru.jpscissor.frprototype.ui.theme.FRprototypeTheme
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen( onNavigateToTest: () -> Unit ) {
 
     Column(
         modifier = Modifier
@@ -56,7 +59,7 @@ fun HomeScreen() {
 
             Spacer(Modifier.height(64.dp))
 
-            TestsList()
+            TestsList(onNavigateToTest)
 
             Spacer(Modifier.weight(1f))
 
@@ -87,20 +90,20 @@ fun ApperPanel() {
 
 
 @Composable
-fun TestsList() {
+fun TestsList( navigate: () -> Unit ) {
     LazyColumn(
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(34.dp)
     ) {
         items(4) { index ->
-            TestItem("Психология", 100)
+            TestItem("Психология", 100, navigate)
         }
     }
 }
 
 
 @Composable
-fun TestItem(title: String, quesNumber: Int) {
+fun TestItem(title: String, quesNumber: Int, navigate: () -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth().height(87.dp),
         colors = CardDefaults.cardColors(
@@ -132,9 +135,7 @@ fun TestItem(title: String, quesNumber: Int) {
             }
 
             Button(
-                onClick = {
-
-                },
+                onClick = { navigate },
                 colors = ButtonDefaults.buttonColors(
                     contentColor = Color.White,
                     containerColor = MaterialTheme.colorScheme.onSurface,
@@ -178,13 +179,17 @@ fun BottomPanel() {
                 contentDescription = ""
             )
             Spacer(Modifier.weight(1f))
+
+            val context = LocalContext.current
             Image(
                 painter = painterResource(R.drawable.folder_icon),
+                modifier = Modifier.clickable{ Toast.makeText(context, "скоро", Toast.LENGTH_SHORT).show() },
                 contentDescription = ""
             )
             Spacer(Modifier.weight(1f))
             Image(
                 painter = painterResource(R.drawable.cog_icon),
+                modifier = Modifier.clickable{ Toast.makeText(context, "скоро", Toast.LENGTH_SHORT).show() },
                 contentDescription = ""
             )
         }
@@ -196,6 +201,6 @@ fun BottomPanel() {
 @Preview
 fun HomePreview() {
     FRprototypeTheme {
-        HomeScreen()
+        HomeScreen( {} )
     }
 }

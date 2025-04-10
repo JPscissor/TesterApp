@@ -7,9 +7,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import ru.jpscissor.frprototype.screens.HomeScreen
+import ru.jpscissor.frprototype.screens.TestScreen
 
 sealed class NavRoute (val route: String) {
-    object Home: NavRoute("onboard_screen")
+    object Home: NavRoute("home_screen")
+    object Test: NavRoute("test_screen")
 
 }
 
@@ -28,7 +30,11 @@ fun AppNavHost() {
 fun NavGraphBuilder.mainGraph(navController: NavController) {
 
     composable(NavRoute.Home.route) {
-        HomeScreen()
+        HomeScreen( onNavigateToTest = { navController.navigate(NavRoute.Test.route) } )
+    }
+
+    composable(NavRoute.Test.route) {
+        TestScreen( onBack = {} )
     }
 
 }
