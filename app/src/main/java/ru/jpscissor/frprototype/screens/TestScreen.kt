@@ -36,7 +36,7 @@ import ru.jpscissor.frprototype.ui.theme.FRprototypeTheme
 fun TestScreen() {
 
     var number by remember { mutableIntStateOf(value = 1) }
-    var questionText by remember { mutableStateOf("Вопрос") }
+    var questionText by remember { mutableStateOf("text is missing") }
 
     Column(
         modifier = Modifier
@@ -51,49 +51,58 @@ fun TestScreen() {
                 .padding(top = 16.dp, bottom = 32.dp, start = 16.dp, end = 16.dp)
         ) {
 
-            Row(
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Card(
-                    modifier = Modifier.size(38.dp),
-                    colors = CardDefaults.cardColors(
-                        containerColor = MaterialTheme.colorScheme.surface,
-                        contentColor = MaterialTheme.colorScheme.onSurface
-                    ),
-                    shape = RoundedCornerShape(5.dp)
-                ) {
-                    Column(
-                        modifier = Modifier.fillMaxSize(),
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
-                        Text(
-                            text = "$number",
-                            color = MaterialTheme.colorScheme.background,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 20.sp,
-                            textAlign = TextAlign.Center,
-                        )
-                    }
+            Question(number, questionText)
 
-                }
-
-                Spacer(Modifier.width(8.dp))
-
-                Text(
-                    text = questionText,
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.Medium,
-                    color = MaterialTheme.colorScheme.tertiary
-                )
-
-            }
+            Spacer(Modifier.weight(1f))
 
         }
 
     }
 
 }
+
+
+@Composable
+fun Question(qn: Int, qt: String) {
+    Row(
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Card(
+            modifier = Modifier.size(38.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface
+            ),
+            shape = RoundedCornerShape(5.dp)
+        ) {
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "$qn",
+                    color = MaterialTheme.colorScheme.background,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 20.sp,
+                    textAlign = TextAlign.Center,
+                )
+            }
+
+        }
+
+        Spacer(Modifier.width(8.dp))
+
+        Text(
+            text = qt,
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Medium,
+            color = MaterialTheme.colorScheme.tertiary
+        )
+
+    }
+}
+
 
 @Composable
 @Preview
