@@ -1,11 +1,13 @@
 package ru.jpscissor.frprototype.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import ru.jpscissor.frprototype.data.getQuestions
 import ru.jpscissor.frprototype.screens.HomeScreen
 import ru.jpscissor.frprototype.screens.TestScreen
 
@@ -34,7 +36,7 @@ fun NavGraphBuilder.mainGraph(navController: NavController) {
     }
 
     composable(NavRoute.Test.route) {
-        TestScreen( onBack = {} )
+        TestScreen( onBack = {}, getQuestions())
     }
 
 }

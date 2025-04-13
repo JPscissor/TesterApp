@@ -135,7 +135,7 @@ fun TestItem(title: String, quesNumber: Int, navigate: () -> Unit) {
             }
 
             Button(
-                onClick = { navigate },
+                onClick = { navigate() },
                 colors = ButtonDefaults.buttonColors(
                     contentColor = Color.White,
                     containerColor = MaterialTheme.colorScheme.onSurface,
