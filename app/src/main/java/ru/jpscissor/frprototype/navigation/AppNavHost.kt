@@ -11,7 +11,6 @@ import androidx.navigation.compose.rememberNavController
 import ru.jpscissor.frprototype.R
 import ru.jpscissor.frprototype.data.parseTestFromJson
 import ru.jpscissor.frprototype.screens.HomeScreen
-import ru.jpscissor.frprototype.screens.SampleScreen
 import ru.jpscissor.frprototype.screens.TestScreen
 
 sealed class NavRoute (val route: String) {
