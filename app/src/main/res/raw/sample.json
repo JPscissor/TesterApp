@@ -1,0 +1,21 @@
+{
+  "title": "Психология общения",
+  "questions": [
+    {
+      "question": "Вы можете прочитать этот вопрос?",
+      "answers": [
+        { "text": "да", "isCorrect": true },
+        { "text": "нет", "isCorrect": false },
+        { "text": "не знаю", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Чей тест кабинет вам нравится больше?",
+      "answers": [
+        { "text": "Андрея", "isCorrect": true },
+        { "text": "Богдана", "isCorrect": false },
+        { "text": "мне не нравится тест кибент (в принципе)", "isCorrect": false }
+      ]
+    }
+  ]
+}

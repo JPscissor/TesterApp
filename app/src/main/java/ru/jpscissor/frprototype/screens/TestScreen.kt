@@ -46,14 +46,12 @@ object Globals {
 }
 
 
-
 @Composable
 fun TestScreen(onBack: () -> Unit, questions: List<Question>) {
 
     val currentQuestion = questions[Globals.currentQuestionIndex]
     val questionsNumber by remember { mutableIntStateOf(100) }
     val answers = currentQuestion.answers.map { it.text }
-
 
     Column(
         modifier = Modifier
