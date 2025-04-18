@@ -1,5 +1,6 @@
 {
-  "title": "Психология общения",
+  "id": 1488,
+  "title": "Проверка",
   "questions": [
     {
       "question": "Вы можете прочитать этот вопрос?",
@@ -15,6 +16,14 @@
         { "text": "Андрея", "isCorrect": true },
         { "text": "Богдана", "isCorrect": false },
         { "text": "мне не нравится тест кибент (в принципе)", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Ждете обнову?",
+      "answers": [
+        { "text": "да", "isCorrect": true },
+        { "text": "нет", "isCorrect": false },
+        { "text": "Возможно", "isCorrect": false }
       ]
     }
   ]

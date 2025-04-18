@@ -2,4 +2,6 @@
     <string name="app_name">JpTester</string>
     <string name="start">пройти</string>
     <string name="questions">вопросов</string>
+    <string name="next">Далее</string>
+    <string name="complete">Звершить</string>
 </resources>

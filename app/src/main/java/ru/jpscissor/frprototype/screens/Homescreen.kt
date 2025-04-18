@@ -1,5 +1,6 @@
 package ru.jpscissor.frprototype.screens
 
+import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -17,6 +18,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -25,6 +27,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -37,16 +40,29 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ru.jpscissor.frprototype.R
+import ru.jpscissor.frprototype.data.Test
+import ru.jpscissor.frprototype.data.loadTestFromJson
 import ru.jpscissor.frprototype.ui.theme.FRprototypeTheme
 
 @Composable
-fun HomeScreen( onNavigateToTest: () -> Unit ) {
-
+fun HomeScreen(context: Context, onNavigateToTest: (Int) -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
     ) {
+        val testResources = listOf(R.raw.psyhology, R.raw.sample)
+
+        val tests = remember {
+            testResources.mapNotNull { resourceId ->
+                try {
+                    loadTestFromJson(context, resourceId)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    null
+                }
+            }
+        }
 
         Column(
             modifier = Modifier
@@ -54,21 +70,17 @@ fun HomeScreen( onNavigateToTest: () -> Unit ) {
                 .systemBarsPadding()
                 .padding(top = 8.dp, bottom = 32.dp, start = 16.dp, end = 16.dp)
         ) {
-
             ApperPanel()
 
             Spacer(Modifier.height(64.dp))
 
-            TestsList(onNavigateToTest)
+            TestsList(tests, onNavigateToTest)
 
             Spacer(Modifier.weight(1f))
 
             BottomPanel()
-
         }
-
     }
-
 }
 
 
@@ -90,13 +102,17 @@ fun ApperPanel() {
 
 
 @Composable
-fun TestsList( navigate: () -> Unit ) {
+fun TestsList(tests: List<Test>, navigate: (Int) -> Unit) {
     LazyColumn(
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(34.dp)
     ) {
-        items(4) { index ->
-            TestItem("Психология", 100, navigate)
+        items(tests) { test ->
+            TestItem(
+                title = test.title,
+                quesNumber = test.questions.size,
+                navigate = { navigate(test.id) }
+            )
         }
     }
 }
@@ -201,6 +217,6 @@ fun BottomPanel() {
 @Preview
 fun HomePreview() {
     FRprototypeTheme {
-        HomeScreen( {} )
+        HomeScreen( LocalContext.current, {})
     }
 }
