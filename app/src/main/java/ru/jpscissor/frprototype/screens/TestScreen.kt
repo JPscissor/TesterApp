@@ -93,7 +93,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                 modifier = Modifier
                     .fillMaxSize()
                     .systemBarsPadding()
-                    .padding(top = 16.dp, bottom = 32.dp, start = 16.dp, end = 16.dp)
+                    .padding(top = 16.dp, bottom = 16.dp, start = 16.dp, end = 16.dp)
             ) {
 
                 Question(
@@ -109,7 +109,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                     Card(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(64.dp)
+                            .height(84.dp)
                             .padding(vertical = 4.dp)
                             .clickable {
                                 modifiedTest = modifiedTest.copy(
@@ -205,7 +205,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                     }
                 }
 
-                Spacer(Modifier.height(128.dp))
+                Spacer(Modifier.height(84.dp))
 
                 //--------------------------------
 
@@ -478,30 +478,6 @@ fun Question(qn: Int, qt: String) {
     Row(
         modifier = Modifier.fillMaxWidth()
     ) {
-        Card(
-            modifier = Modifier.size(38.dp),
-            colors = CardDefaults.cardColors(
-                containerColor = MaterialTheme.colorScheme.surface,
-                contentColor = MaterialTheme.colorScheme.onSurface
-            ),
-            shape = RoundedCornerShape(5.dp)
-        ) {
-            Column(
-                modifier = Modifier.fillMaxSize(),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text(
-                    text = "$qn",
-                    color = MaterialTheme.colorScheme.background,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp,
-                    textAlign = TextAlign.Center,
-                )
-            }
-
-        }
-
         Spacer(Modifier.width(12.dp))
 
         Text(
