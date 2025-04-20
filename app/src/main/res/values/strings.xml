@@ -4,4 +4,10 @@
     <string name="questions">questions</string>
     <string name="next">Next</string>
     <string name="complete">Complete</string>
+    <string name="points">Points:</string>
+    <string name="complete_question">Complete test?</string>
+    <string name="click_on_me">Click on me to exit</string>
+    <string name="well_done">Well done!</string>
+    <string name="nice_try">Nice try</string>
+    <string name="dont_giveup">Don\'t give up!</string>
 </resources>

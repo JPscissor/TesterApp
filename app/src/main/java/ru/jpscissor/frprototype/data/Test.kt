@@ -53,3 +53,20 @@ fun loadTestFromJson(context: Context, resourceId: Int): Test {
         parseTestFromJson(context, resourceId)
     }
 }
+
+fun calculateCorrectAnswers(test: Test): Int {
+    return test.questions.count { question ->
+        val correctAnswerIndex = question.answers.indexOfFirst { it.isCorrect }
+        val selectedAnswerIndex = question.selectedAnswerIndex
+
+        selectedAnswerIndex == correctAnswerIndex
+    }
+}
+
+fun clearSelectedAnswers(test: Test): Test {
+    return test.copy(
+        questions = test.questions.map { question ->
+            question.copy(selectedAnswerIndex = null)
+        }
+    )
+}
