@@ -68,7 +68,7 @@ fun HomeScreen(context: Context, onNavigateToTest: (Int) -> Unit) {
             modifier = Modifier
                 .fillMaxSize()
                 .systemBarsPadding()
-                .padding(top = 8.dp, bottom = 32.dp, start = 16.dp, end = 16.dp)
+                .padding(top = 10.dp, bottom = 16.dp, start = 16.dp, end = 16.dp)
         ) {
             ApperPanel()
 
@@ -139,7 +139,7 @@ fun TestItem(title: String, quesNumber: Int, navigate: () -> Unit) {
                 Text(
                     text = title,
                     color = MaterialTheme.colorScheme.tertiary,
-                    fontSize = 24.sp
+                    fontSize = 18.sp
                 )
 
                 Text(

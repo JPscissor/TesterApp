@@ -6,8 +6,10 @@
     <string name="complete">Звершить</string>
     <string name="points">Баллы:</string>
     <string name="complete_question">Завершить тест?</string>
-    <string name="click_on_me">Нажми на меня, чтобы выйти</string>
+    <string name="click_on_me">Нажми на меня,\nчтобы выйти</string>
     <string name="well_done">Так держать!</string>
     <string name="nice_try">Хорошая попытка</string>
     <string name="dont_giveup">Не здавайся!</string>
+    <string name="yes">да</string>
+    <string name="no">нет</string>
 </resources>

@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -64,14 +63,30 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
     val currentQuestion = modifiedTest.questions[currentQuestionIndex]
 
     var isChecked by remember { mutableStateOf(false) }
-
     var showDialog by remember { mutableStateOf(false) }
+    var isFirstUnansweredFound by remember { mutableStateOf(false) }
+
+    val questionsNumber = modifiedTest.questions.size
+
+    val firstUnansweredIndex = if (!isFirstUnansweredFound) {
+        modifiedTest.questions.indexOfFirst { question ->
+            question.selectedAnswerIndex == null
+        }
+    } else {
+        -1
+    }
+
+    if (firstUnansweredIndex != -1 && !isFirstUnansweredFound) {
+        currentQuestionIndex = firstUnansweredIndex
+        isFirstUnansweredFound = true
+    }
 
     if (!isTestComplete) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(MaterialTheme.colorScheme.background)
+                .background(MaterialTheme.colorScheme.background),
+            verticalArrangement = Arrangement.Bottom
         ) {
 
             Column(
@@ -109,16 +124,16 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                             containerColor = if (currentQuestion.selectedAnswerIndex == index) {
                                 if (isChecked) {
                                     if (answer.isCorrect) {
-                                        Color.Green
+                                        Color(0xff8EFF92)
                                     } else {
-                                        Color.Red
+                                        Color(0xffFF7373)
                                     }
                                 } else MaterialTheme.colorScheme.tertiary
                             } else if (isChecked) {
                                 if (answer.isCorrect) {
-                                    Color.Green
+                                    Color(0xff8EFF92)
                                 } else {
-                                    Color.Red
+                                    Color(0xffFF7373)
                                 }
                             } else {
                                 MaterialTheme.colorScheme.onBackground
@@ -190,7 +205,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                     }
                 }
 
-                Spacer(Modifier.weight(1f))
+                Spacer(Modifier.height(128.dp))
 
                 //--------------------------------
 
@@ -324,7 +339,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                         ),
                         shape = RoundedCornerShape(8.dp)
                     ) {
-                        Text("Да")
+                        Text(stringResource(R.string.yes))
                     }
                 },
                 dismissButton = {
@@ -338,7 +353,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                         ),
                         shape = RoundedCornerShape(8.dp)
                     ) {
-                        Text("Нет")
+                        Text(stringResource(R.string.no))
                     }
                 },
                 modifier = Modifier.width(IntrinsicSize.Max)
@@ -348,12 +363,11 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
     } //IF closed
     else {
 
-        var progress by remember { mutableStateOf(0.8f) }
+        var progress by remember { mutableStateOf(0.0f) }
 
-        val correctAnswers: Int = calculateCorrectAnswers(test)
+        val correctAnswers: Int = calculateCorrectAnswers(modifiedTest)
 
-        modifiedTest = clearSelectedAnswers(modifiedTest)
-        saveTestToJson(context, test.id, modifiedTest)
+        progress = ((100 / questionsNumber.toFloat()) * (correctAnswers)) * 0.01f
 
         Column(
             modifier = Modifier
@@ -380,7 +394,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                     Spacer(Modifier.height(36.dp))
 
                     Text(
-                        text = stringResource(R.string.points) + " " + (progress * 100),
+                        text = stringResource(R.string.points) + " " + (progress * 100).toInt(),
                         fontSize = 24.sp,
                         fontWeight = FontWeight.Medium,
                         color = MaterialTheme.colorScheme.tertiary
@@ -414,7 +428,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                     ) {
 
                         Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
+                            horizontalAlignment = Alignment.Start,
                             verticalArrangement = Arrangement.Top
                         ) {
                             Text(
@@ -439,7 +453,11 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                         Image(
                             painter = painterResource(R.drawable.snorlax),
                             contentDescription = "",
-                            modifier = Modifier.size(215.dp)
+                            modifier = Modifier.size(215.dp).clickable {
+                                onBack()
+                                modifiedTest = clearSelectedAnswers(modifiedTest)
+                                saveTestToJson(context, test.id, modifiedTest)
+                            }
                         )
                     }
                 }
@@ -447,9 +465,12 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
             }
         }
 
+
+
     } // ELSE closed
 
 }
+
 
 
 @Composable

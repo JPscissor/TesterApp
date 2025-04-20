@@ -25,6 +25,14 @@
         { "text": "нет", "isCorrect": false },
         { "text": "Возможно", "isCorrect": false }
       ]
+    },
+    {
+      "question": "Последний вопрос, хз?",
+      "answers": [
+        { "text": "да", "isCorrect": true },
+        { "text": "нет", "isCorrect": false },
+        { "text": "Возможно", "isCorrect": false }
+      ]
     }
   ]
 }
