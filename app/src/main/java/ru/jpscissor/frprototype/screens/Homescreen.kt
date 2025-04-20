@@ -51,7 +51,7 @@ fun HomeScreen(context: Context, onNavigateToTest: (Int) -> Unit) {
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
     ) {
-        val testResources = listOf(R.raw.psyhology, R.raw.sample)
+        val testResources = listOf(R.raw.psyhology, R.raw.sample, R.raw.history, R.raw.economy)
 
         val tests = remember {
             testResources.mapNotNull { resourceId ->
