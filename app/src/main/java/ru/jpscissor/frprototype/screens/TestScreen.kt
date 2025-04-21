@@ -1,10 +1,14 @@
 package ru.jpscissor.frprototype.screens
 
 import android.content.Context
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
@@ -37,6 +41,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -52,6 +57,7 @@ import ru.jpscissor.frprototype.data.clearSelectedAnswers
 import ru.jpscissor.frprototype.data.saveTestToJson
 
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
 
@@ -86,7 +92,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
             modifier = Modifier
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.background),
-            verticalArrangement = Arrangement.Bottom
+            verticalArrangement = Arrangement.Center
         ) {
 
             Column(
@@ -101,7 +107,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                     qt = currentQuestion.question
                 )
 
-                Spacer(Modifier.weight(0.5f))
+                Spacer(Modifier.weight(1f)) // 1 spacer
 
                 //--------------------------------
 
@@ -205,24 +211,30 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                     }
                 }
 
-                Spacer(Modifier.height(84.dp))
+                Spacer(Modifier.weight(1f)) // 2 spacer
 
                 //--------------------------------
+
 
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(52.dp)
-                        .clickable {
-                            if (currentQuestionIndex < modifiedTest.questions.size - 1) {
-                                saveTestToJson(context, test.id, modifiedTest)
-                                isChecked = false
-                                currentQuestionIndex++
-                            }
-                            else {
+                        .combinedClickable (
+                            onClick = {
+                                if (currentQuestionIndex < modifiedTest.questions.size - 1) {
+                                    saveTestToJson(context, test.id, modifiedTest)
+                                    isChecked = false
+                                    currentQuestionIndex++
+                                }
+                                else {
+                                    showDialog = true
+                                }
+                            },
+                            onLongClick = {
                                 showDialog = true
                             }
-                        },
+                        ),
                     colors = CardDefaults.cardColors(
                         containerColor = MaterialTheme.colorScheme.surface,
                         contentColor = MaterialTheme.colorScheme.onSurface
@@ -314,50 +326,55 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
         //dialog
 
         if (showDialog) {
-            AlertDialog(
-                onDismissRequest = { showDialog = false },
-                title = null,
-                text = {
-                    Text(
-                        text = stringResource(R.string.complete_question),
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Medium,
-                        color = MaterialTheme.colorScheme.tertiary,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(bottom = 16.dp).fillMaxWidth()
-                    )
-                },
-                confirmButton = {
-                    Button(
-                        onClick = {
-                            showDialog = false
-                            isTestComplete = true
-                        },
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = MaterialTheme.colorScheme.surface,
-                            contentColor = MaterialTheme.colorScheme.onBackground
-                        ),
-                        shape = RoundedCornerShape(8.dp)
-                    ) {
-                        Text(stringResource(R.string.yes))
-                    }
-                },
-                dismissButton = {
-                    Button(
-                        onClick = {
-                            showDialog = false
-                        },
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = MaterialTheme.colorScheme.surface,
-                            contentColor = MaterialTheme.colorScheme.onBackground
-                        ),
-                        shape = RoundedCornerShape(8.dp)
-                    ) {
-                        Text(stringResource(R.string.no))
-                    }
-                },
-                modifier = Modifier.width(IntrinsicSize.Max)
-            )
+            Row(
+                horizontalArrangement = Arrangement.Center
+            ) {
+                AlertDialog(
+                    onDismissRequest = { showDialog = false },
+                    title = null,
+                    text = {
+                        Text(
+                            text = stringResource(R.string.complete_question),
+                            fontSize = 18.sp,
+                            fontWeight = FontWeight.Medium,
+                            color = MaterialTheme.colorScheme.tertiary,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.padding(bottom = 16.dp).fillMaxWidth()
+                        )
+                    },
+                    confirmButton = {
+                        Button(
+                            onClick = {
+                                showDialog = false
+                                isTestComplete = true
+                            },
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = MaterialTheme.colorScheme.surface,
+                                contentColor = MaterialTheme.colorScheme.onBackground
+                            ),
+                            shape = RoundedCornerShape(8.dp)
+                        ) {
+                            Text(stringResource(R.string.yes))
+                        }
+                    },
+                    dismissButton = {
+                        Button(
+                            onClick = {
+                                showDialog = false
+                            },
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = MaterialTheme.colorScheme.surface,
+                                contentColor = MaterialTheme.colorScheme.onBackground
+                            ),
+                            shape = RoundedCornerShape(8.dp)
+                        ) {
+                            Text(stringResource(R.string.no))
+                        }
+                    },
+                    modifier = Modifier.width(IntrinsicSize.Max)
+                )
+            }
+
         }
 
     } //IF closed
@@ -476,7 +493,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
 @Composable
 fun Question(qn: Int, qt: String) {
     Row(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth().height(120.dp)
     ) {
         Spacer(Modifier.width(12.dp))
 
