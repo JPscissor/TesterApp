@@ -399,7 +399,6 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                     )
                 },
                 text = {
-                    var inputText by remember { mutableStateOf("") }
 
                     TextField(
                         value = inputText,
@@ -432,7 +431,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                 },
                 dismissButton = {
                     Button(
-                        onClick = { showDialog = false },
+                        onClick = { shownInputDialog = false },
                         colors = ButtonDefaults.buttonColors(
                             containerColor = MaterialTheme.colorScheme.secondary,
                             contentColor = MaterialTheme.colorScheme.onSecondary
