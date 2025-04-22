@@ -22,14 +22,17 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -45,6 +48,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -70,7 +74,10 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
 
     var isChecked by remember { mutableStateOf(false) }
     var showDialog by remember { mutableStateOf(false) }
+    var shownInputDialog by remember { mutableStateOf(false) }
     var isFirstUnansweredFound by remember { mutableStateOf(false) }
+
+
 
     val questionsNumber = modifiedTest.questions.size
 
@@ -294,7 +301,8 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                             "${currentQuestionIndex + 1} / ${modifiedTest.questions.size}",
                             fontSize = 20.sp,
                             fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.background
+                            color = MaterialTheme.colorScheme.background,
+                            modifier = Modifier.clickable { shownInputDialog = true }
                         )
 
                         Spacer(Modifier.weight(1f))
@@ -339,7 +347,6 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                             fontWeight = FontWeight.Medium,
                             color = MaterialTheme.colorScheme.tertiary,
                             textAlign = TextAlign.Center,
-                            modifier = Modifier.padding(bottom = 16.dp).fillMaxWidth()
                         )
                     },
                     confirmButton = {
@@ -375,6 +382,68 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                 )
             }
 
+        }
+
+        if (shownInputDialog) {
+            var inputText by remember { mutableStateOf("") }
+
+            AlertDialog(
+                onDismissRequest = { showDialog = false },
+                title = {
+                    Text(
+                        text = "Введите номер вопроса",
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.Bold,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                },
+                text = {
+                    var inputText by remember { mutableStateOf("") }
+
+                    TextField(
+                        value = inputText,
+                        onValueChange = { newValue ->
+                            inputText = newValue.filter { it.isDigit() }
+                        },
+                        label = { Text("Номер вопроса") },
+                        singleLine = true,
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                },
+                confirmButton = {
+                    Button(
+                        onClick = {
+                            val questionNumber = inputText.toIntOrNull()
+                            if (questionNumber != null && questionNumber in 1..modifiedTest.questions.size) {
+                                currentQuestionIndex = questionNumber - 1
+                            }
+                            shownInputDialog = false
+                        },
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.primary,
+                            contentColor = MaterialTheme.colorScheme.onPrimary
+                        ),
+                        shape = RoundedCornerShape(8.dp)
+                    ) {
+                        Text("Подтвердить")
+                    }
+                },
+                dismissButton = {
+                    Button(
+                        onClick = { showDialog = false },
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.secondary,
+                            contentColor = MaterialTheme.colorScheme.onSecondary
+                        ),
+                        shape = RoundedCornerShape(8.dp)
+                    ) {
+                        Text("Отмена")
+                    }
+                },
+                modifier = Modifier.width(IntrinsicSize.Max)
+            )
         }
 
     } //IF closed
@@ -535,6 +604,8 @@ fun CustomLinearProgress(
         )
     }
 }
+
+
 
 
 
