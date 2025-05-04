@@ -10,9 +10,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import ru.jpscissor.frprototype.R
 import ru.jpscissor.frprototype.data.loadTestFromJson
-import ru.jpscissor.frprototype.data.parseTestFromJson
 import ru.jpscissor.frprototype.screens.HomeScreen
 import ru.jpscissor.frprototype.screens.TestScreen
 

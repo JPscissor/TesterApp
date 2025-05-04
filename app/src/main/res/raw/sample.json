@@ -23,7 +23,7 @@
       "answers": [
         { "text": "да", "isCorrect": true },
         { "text": "нет", "isCorrect": false },
-        { "text": "Возможно", "isCorrect": false }
+        { "text": "Возможно", "isCorrect": true }
       ]
     },
     {

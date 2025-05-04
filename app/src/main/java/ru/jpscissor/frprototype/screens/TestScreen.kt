@@ -1,8 +1,6 @@
 package ru.jpscissor.frprototype.screens
 
 import android.content.Context
-import androidx.compose.animation.animateColorAsState
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
@@ -28,7 +26,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -44,7 +41,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -83,7 +79,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
 
     val firstUnansweredIndex = if (!isFirstUnansweredFound) {
         modifiedTest.questions.indexOfFirst { question ->
-            question.selectedAnswerIndex == null
+            question.selectedAnswerIndex.isEmpty()
         }
     } else {
         -1
@@ -125,28 +121,37 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                             .height(84.dp)
                             .padding(vertical = 4.dp)
                             .clickable {
+                                // Обновляем список выбранных индексов
                                 modifiedTest = modifiedTest.copy(
                                     questions = modifiedTest.questions.toMutableList().apply {
+                                        val updatedSelectedIndices = currentQuestion.selectedAnswerIndex.toMutableList()
+                                        if (updatedSelectedIndices.contains(index)) {
+                                            updatedSelectedIndices.remove(index) // Удаляем индекс, если он уже выбран
+                                        } else {
+                                            updatedSelectedIndices.add(index) // Добавляем индекс, если он еще не выбран
+                                        }
                                         this[currentQuestionIndex] = currentQuestion.copy(
-                                            selectedAnswerIndex = index
+                                            selectedAnswerIndex = updatedSelectedIndices
                                         )
                                     }
                                 )
                             },
                         colors = CardDefaults.cardColors(
-                            containerColor = if (currentQuestion.selectedAnswerIndex == index) {
+                            containerColor = if (currentQuestion.selectedAnswerIndex.contains(index)) {
                                 if (isChecked) {
                                     if (answer.isCorrect) {
                                         Color(0xff8EFF92)
                                     } else {
                                         Color(0xffFF7373)
                                     }
-                                } else MaterialTheme.colorScheme.tertiary
+                                } else {
+                                    MaterialTheme.colorScheme.tertiary
+                                }
                             } else if (isChecked) {
                                 if (answer.isCorrect) {
                                     Color(0xff8EFF92)
                                 } else {
-                                    Color(0xffFF7373)
+                                    Color.Transparent
                                 }
                             } else {
                                 MaterialTheme.colorScheme.onBackground
@@ -165,10 +170,11 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 modifier = Modifier.padding(start = 8.dp),
-                                color = if (currentQuestion.selectedAnswerIndex == index) {
+                                color = if (currentQuestion.selectedAnswerIndex.contains(index)) {
                                     MaterialTheme.colorScheme.onBackground
-                                } else if (isChecked) MaterialTheme.colorScheme.background
-                                else {
+                                } else if (isChecked) {
+                                    MaterialTheme.colorScheme.background
+                                } else {
                                     MaterialTheme.colorScheme.tertiary
                                 }
                             )

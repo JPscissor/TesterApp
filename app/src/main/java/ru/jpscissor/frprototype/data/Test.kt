@@ -16,7 +16,7 @@ data class Answer(
 data class Question(
     val question: String,
     val answers: List<Answer>,
-    var selectedAnswerIndex: Int? = null
+    var selectedAnswerIndex: MutableList<Int> = mutableListOf()
 )
 
 @Serializable
@@ -56,17 +56,19 @@ fun loadTestFromJson(context: Context, resourceId: Int): Test {
 
 fun calculateCorrectAnswers(test: Test): Int {
     return test.questions.count { question ->
-        val correctAnswerIndex = question.answers.indexOfFirst { it.isCorrect }
-        val selectedAnswerIndex = question.selectedAnswerIndex
-
-        selectedAnswerIndex == correctAnswerIndex
+        val correctIndices = question.answers
+            .mapIndexed { index, answer -> if (answer.isCorrect) index else null }
+            .filterNotNull()
+            .toSet()
+        val selectedIndices = question.selectedAnswerIndex.toSet()
+        correctIndices == selectedIndices
     }
 }
 
 fun clearSelectedAnswers(test: Test): Test {
     return test.copy(
         questions = test.questions.map { question ->
-            question.copy(selectedAnswerIndex = null)
+            question.copy(selectedAnswerIndex = mutableListOf())
         }
     )
 }
