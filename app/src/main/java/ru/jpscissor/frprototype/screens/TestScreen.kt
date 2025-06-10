@@ -167,7 +167,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                         ) {
                             Text(
                                 text = answer.text,
-                                fontSize = 14.sp,
+                                fontSize = if (answer.text.length >= 30) 10.sp else 14.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 modifier = Modifier.padding(start = 8.dp),
                                 color = if (currentQuestion.selectedAnswerIndex.contains(index)) {
@@ -573,7 +573,7 @@ fun Question(qn: Int, qt: String) {
 
         Text(
             text = qt,
-            fontSize = 22.sp,
+            fontSize = if (qt.length >= 30) 14.sp else 22.sp,
             fontWeight = FontWeight.Medium,
             color = MaterialTheme.colorScheme.tertiary
         )
