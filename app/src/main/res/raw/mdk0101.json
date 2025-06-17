@@ -1,0 +1,3447 @@
+{
+  "id": 3261,
+  "title": "01.01 X",
+  "questions": [
+    {
+      "question": "Что такое ООП?",
+      "answers": [
+        {"text": "Объектно-ориентированное программирование — методология программирования, основанная на представлении программы в виде совокупности объектов, каждый из которых является экземпляром определенного класса, а классы образуют иерархию наследования.", "isCorrect": true},
+        {"text": "Объектно-ориентированное программирование — так называют любой тип программирования, в котором используются понятия высокого уровня и, в отличие от Assembler, в котором не работают напрямую с ячейками памяти ПК.", "isCorrect": false},
+        {"text": "Объектно-ориентированное программирование — просто красивое понятие. Если вдуматься, оно не несет дополнительной смысловой нагрузки, просто программисты любят аббревиатуры, так области их знаний выглядят сложнее.", "isCorrect": false},
+        {"text": "Очень одинокий программист.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что такое класс в Java?",
+      "answers": [
+        {"text": "Уровень сложности программы. Все операторы делятся на классы в зависимости от сложности их использования.", "isCorrect": false},
+        {"text": "Базовый элемент объектно-ориентированного программирования в языке Java.", "isCorrect": true},
+        {"text": "Просто одно из возможных названий переменной.", "isCorrect": false},
+        {"text": "Такое понятие есть только в C++, в Java такого понятия нет.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Как объявить класс в коде?",
+      "answers": [
+        {"text": "class MyClass {}", "isCorrect": true},
+        {"text": "new class MyClass {}", "isCorrect": false},
+        {"text": "select * from class MyClass {}", "isCorrect": false},
+        {"text": "MyClass extends class {}", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что означает ключевое слово extends?",
+      "answers": [
+        {"text": "Что данный класс наследуется от другого.", "isCorrect": true},
+        {"text": "Что это дополнительный модуль класса, который расширяет его свойства.", "isCorrect": false},
+        {"text": "Что два класса делают одно и то же.", "isCorrect": false},
+        {"text": "Что это самый большой класс в программе.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что означает перегрузка метода в Java (overload)?",
+      "answers": [
+        {"text": "Изменение поведения метода класса относительно родительского.", "isCorrect": false},
+        {"text": "Изменение поведения метода класса относительно дочернего.", "isCorrect": false},
+        {"text": "Несколько методов с одинаковым названием, но разным набором параметров.", "isCorrect": true},
+        {"text": "Несколько разных классов с одинаковым методом.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что означает переопределение метода в Java (override)?",
+      "answers": [
+        {"text": "Изменение поведения метода класса относительно родительского.", "isCorrect": true},
+        {"text": "Изменение поведения метода класса относительно дочернего.", "isCorrect": false},
+        {"text": "Несколько методов с одинаковым названием, но разным набором параметров.", "isCorrect": false},
+        {"text": "Несколько разных классов с одинаковым методом.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Чем отличаются static-метод класса от обычного метода класса?",
+      "answers": [
+        {"text": "Поведение обычного метода класса можно изменить в классе-наследнике, а поведение static-метода нельзя.", "isCorrect": false},
+        {"text": "Обычный метод класса можно переопределить, а static-метод нельзя.", "isCorrect": false},
+        {"text": "Обычный метод класса работает от объекта класса, а static-метод от всего класса.", "isCorrect": true},
+        {"text": "Static-метод класса можно вызывать только внутри класса, а обычный - в любой части кода.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Как вызвать static-метод внутри обычного?",
+      "answers": [
+        {"text": "Никак, static-метод можно вызвать только от объекта класса.", "isCorrect": false},
+        {"text": "Можно, надо перед этим перегрузить обычный метод класса.", "isCorrect": false},
+        {"text": "Можно, надо перед этим переопределить обычный метод класса.", "isCorrect": false},
+        {"text": "Можно, ничего дополнительно делать не надо.", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Как вызвать обычный метод класса внутри static-метода?",
+      "answers": [
+        {"text": "Никак, static-метод не работает с объектом класса.", "isCorrect": true},
+        {"text": "Можно, надо перед этим перегрузить обычный метод класса.", "isCorrect": false},
+        {"text": "Можно, надо перед этим переопределить обычный метод класса.", "isCorrect": false},
+        {"text": "Можно, ничего дополнительно делать не надо.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Для чего необходимо ключевое слово this?",
+      "answers": [
+        {"text": "Это указатель на переопределенный метод класса. Его нельзя опускать при вызове, иначе переопределение не сработает.", "isCorrect": false},
+        {"text": "Это указатель на текущий объект класса внутри самого класса. Его можно опускать при вызове метода класса, но лучше этого не делать.", "isCorrect": true},
+        {"text": "Это не ключевое слово.", "isCorrect": false},
+        {"text": "Это ключевое слово для вызова обычного метода внутри static-метода. Его нельзя опускать, иначе вызов не сработает и будет ошибка.", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что вернет метод, объявленный следующим образом:\npublic static int getAmount()",
+      "answers": [
+        {"text": "Не ясно, надо смотреть код метода.", "isCorrect": false},
+        {"text": "Вернет static-поле класса.", "isCorrect": false},
+        {"text": "Вернет ссылку на объект класса this.", "isCorrect": false},
+        {"text": "Вернет целочисленное значение.", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какой метод позволяет запустить программу на Java?",
+      "answers": [
+        {"text": "Любой, его можно задавать в настройках проекта.", "isCorrect": false},
+        {"text": "Запуск программы происходит через компиляцию проекта, основного метода нет.", "isCorrect": false},
+        {"text": "С класса, что был написан первым и с методов что есть внутри него.", "isCorrect": false},
+        {"text": "С метода main в любом из классов.", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Где правильно присвоено новое значение к многомерному массиву?",
+      "answers": [
+        {"text": "a{0}{0} = 1;", "isCorrect": false},
+        {"text": "a[0, 0] = 1;", "isCorrect": false},
+        {"text": "a[0 0] = 1;", "isCorrect": false},
+        {"text": "a(0)(0) = 1;", "isCorrect": false},
+        {"text": "a[0][0] = 1;", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие числа будут выведены?\n\nfor (int i = 10; i < 20; i += 2) {\n    if (i > 15)\n        break;\n    if (i % 4 == 0)\n        continue;\n    System.out.println(i);\n}",
+      "answers": [
+        {"text": "11, 13, 15", "isCorrect": false},
+        {"text": "14", "isCorrect": false},
+        {"text": "10, 12, 14", "isCorrect": false},
+        {"text": "12, 14", "isCorrect": false},
+        {"text": "10, 14", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Сколько параметров может принимать функция?",
+      "answers": [
+        {"text": "Не более 3", "isCorrect": false},
+        {"text": "Не более 10", "isCorrect": false},
+        {"text": "Не более 5", "isCorrect": false},
+        {"text": "Не более 20", "isCorrect": false},
+        {"text": "Неограниченное количество", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Что выведет этот код?\nint a = 9;\nswitch (a) {\n    case 0: System.out.print(\"0\");\n    case 5: System.out.print(\"5\"); break;\n    case 9: System.out.print(\"9\");\n    case 10: System.out.print(\"10\"); break;\n    default: System.out.print(\"!\");\n}",
+      "answers": [
+        {"text": "Ошибка в коде", "isCorrect": false},
+        {"text": "9", "isCorrect": false},
+        {"text": "10", "isCorrect": false},
+        {"text": "910!", "isCorrect": false},
+        {"text": "910", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какой класс отвечает за получение информации от пользователя?",
+      "answers": [
+        {"text": "System", "isCorrect": false},
+        {"text": "Get", "isCorrect": false},
+        {"text": "Scaner", "isCorrect": false},
+        {"text": "Out", "isCorrect": false},
+        {"text": "Scanner", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "В чем здесь ошибка?\n\nint a, b;\nSystem.out.print(\"Введите первое число: \");\nScanner num = new Scanner(System.in);\na = num.nextFloat();",
+      "answers": [
+        {"text": "Ошибок нет", "isCorrect": false},
+        {"text": "Вместо System.in надо использовать System.out", "isCorrect": false},
+        {"text": "int a, b - необходимо записывать по отдельности", "isCorrect": false},
+        {"text": "Вместо nextFloat надо использовать nextInt", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Где правильно создана простая переменная?",
+      "answers": [
+        {"text": "byte x = 100000;", "isCorrect": false},
+        {"text": "int[] a;", "isCorrect": false},
+        {"text": "char str = 'ab';", "isCorrect": false},
+        {"text": "bool isDone = true;", "isCorrect": false},
+        {"text": "float x = 23.3f;", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Каждый файл должен называться...",
+      "answers": [
+        {"text": "как вам захочется", "isCorrect": false},
+        {"text": "по имени основного метода в нем", "isCorrect": false},
+        {"text": "по имени названия пакета", "isCorrect": false},
+        {"text": "по имени первой библиотеки в нём", "isCorrect": false},
+        {"text": "по имени класса в нём", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Где правильно осуществлен вывод?",
+      "answers": [
+        {"text": "System.print(''Hello World!'');", "isCorrect": false},
+        {"text": "System.out(''Hello World!'');", "isCorrect": false},
+        {"text": "print(''Hello World!'');", "isCorrect": false},
+        {"text": "System.out.print = ''Hello World!'';", "isCorrect": false},
+        {"text": "System.out.print(''Hello World!'');", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие математические операции есть в Java?",
+      "answers": [
+        {"text": "+, -, *, /", "isCorrect": false},
+        {"text": "+, -, *, /, %", "isCorrect": false},
+        {"text": "+, -, *, /, --, ++", "isCorrect": false},
+        {"text": "Все перечисленные", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Где правильно создан массив?",
+      "answers": [
+        {"text": "int a = new int[] {1, 2, 3, 4, 5};", "isCorrect": false},
+        {"text": "int[] a = new int {1, 2, 3, 4, 5};", "isCorrect": false},
+        {"text": "int a[] = 1, 2, 3, 4, 5;", "isCorrect": false},
+        {"text": "int[] a = int[] {1, 2, 3, 4, 5};", "isCorrect": false},
+        {"text": "int[] a = new int[] {1, 2, 3, 4, 5};", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Что выведет этот код?\nint a = 9;\nboolean isDone = false;\nif (a % 3 != 0 || !isDone)\n    System.out.print(\"Готово\");",
+      "answers": [
+        {"text": "Ошибка в коде", "isCorrect": false},
+        {"text": "Ничего не будет выведено в консоль", "isCorrect": false},
+        {"text": "Выведет текст: ''Готово''", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Что общего у всех элементов массива?",
+      "answers": [
+        {"text": "Их названия", "isCorrect": false},
+        {"text": "Их размер", "isCorrect": false},
+        {"text": "Их адрес в памяти", "isCorrect": false},
+        {"text": "Их тип данных", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Для чего можно использовать Java?",
+      "answers": [
+        {"text": "Для создания сайтов", "isCorrect": false},
+        {"text": "Для создания программ под ПК", "isCorrect": false},
+        {"text": "Для создания игр", "isCorrect": false},
+        {"text": "Только для создания игр и программ", "isCorrect": false},
+        {"text": "Для всего перечисленного", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Что такое Java?",
+      "answers": [
+        {"text": "Мотоцикл", "isCorrect": false},
+        {"text": "Остров", "isCorrect": false},
+        {"text": "Сигареты", "isCorrect": false},
+        {"text": "Язык программирования", "isCorrect": true},
+        {"text": "Чай", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что будет в результате выполнения операции 2 + 2 == 5 && 12 / 4 == 3 || 2 == 5 % 3?",
+      "answers": [
+        {"text": "true", "isCorrect": true},
+        {"text": "false", "isCorrect": false},
+        {"text": "null", "isCorrect": false},
+        {"text": "0", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Отметьте верное утверждение относительно языков Java и JavaScript:",
+      "answers": [
+        {"text": "оба языка кроссплатформенны", "isCorrect": true},
+        {"text": "их спецификации являются закрытыми", "isCorrect": false},
+        {"text": "JavaScript является синонимом Java", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что будет выведено на экран в результате выполнения следующего кода:\npublic class SomeClass {\n    static int x = 5;\n    public static void main(String[] args) {\n        int x;\n        int y = 5;\n        if (y > 3) x = 1;\n        System.out.println(x);\n    }\n}",
+      "answers": [
+        {"text": "1", "isCorrect": false},
+        {"text": "3", "isCorrect": false},
+        {"text": "5", "isCorrect": false},
+        {"text": "предупреждение о потенциальной ошибке", "isCorrect": false},
+        {"text": "сообщение об ошибке компиляции", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Как получить объект класса Color из AWT, описывающий чистый синий цвет?",
+      "answers": [
+        {"text": "new Color(''blue'')", "isCorrect": false},
+        {"text": "new Color(0, 0, 255)", "isCorrect": true},
+        {"text": "Color.getBlue()", "isCorrect": false},
+        {"text": "Color.blue", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Каким образом на однопроцессорной машине исполняются многопоточные приложения?",
+      "answers": [
+        {"text": "на однопроцессорном компьютере многопоточные приложения не исполняются", "isCorrect": false},
+        {"text": "количество процессоров для многопоточной архитектуры не имеет значения", "isCorrect": false},
+        {"text": "рабочее время процессора разбивается на небольшие интервалы, в течение которых выполняется одна задача, после чего происходит переключение на следующую задачу", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие классы из пакета java.util предназначены для работы с датами?",
+      "answers": [
+        {"text": "java.util.Date", "isCorrect": true},
+        {"text": "java.util.Time", "isCorrect": false},
+        {"text": "java.util.Calendar", "isCorrect": true},
+        {"text": "java.util.DateTime", "isCorrect": false},
+        {"text": "java.util.GregorianCalendar", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие источники могут использоваться классами стандартных входных потоков java в качестве источника данных?",
+      "answers": [
+        {"text": "файл – представляется объектом класса File", "isCorrect": true},
+        {"text": "массив – представляется массивом byte[] или char[]", "isCorrect": true},
+        {"text": "строка – представляется объектом byte[]", "isCorrect": false},
+        {"text": "строка – представляется объектом String", "isCorrect": true},
+        {"text": "таблица базы данных - представляется массивом Object[]", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Назови сете-зависимые уровни модели OSI",
+      "answers": [
+        {"text": "уровень приложений", "isCorrect": false},
+        {"text": "представительский уровень", "isCorrect": false},
+        {"text": "сессионный уровень", "isCorrect": false},
+        {"text": "физический уровень", "isCorrect": true},
+        {"text": "сетевой уровень", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Почему объектно-ориентированное программирование пришло на смену процедурному программированию?",
+      "answers": [
+        {"text": "программы, написанные с использованием ООП, выполняются на компьютере быстрее", "isCorrect": false},
+        {"text": "использование ООП позволяет создавать не зависящие от платформы программы", "isCorrect": false},
+        {"text": "ООП позволяет уменьшить сложность создания ПО", "isCorrect": true},
+        {"text": "ООП позволяет увеличить надежность создаваемого ПО", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Как записать в Java-программе символ с кодом 546 (код символа десятичный)?",
+      "answers": [
+        {"text": "'546'", "isCorrect": false},
+        {"text": "\\u0546", "isCorrect": false},
+        {"text": "\\u0222", "isCorrect": true},
+        {"text": "\\0222", "isCorrect": false},
+        {"text": "'222'", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие варианты объявления целочисленной переменной верны (никакие переменные предварительно не объявлены)?",
+      "answers": [
+        {"text": "int a = b;", "isCorrect": false},
+        {"text": "int a;", "isCorrect": true},
+        {"text": "int a = 5;", "isCorrect": true},
+        {"text": "int a = b = 5;", "isCorrect": false},
+        {"text": "int a = 5, b = a;", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какое из перечисленных ниже имен является простым?\nMyClass\nMyClass.name\nMyClass.name.toString()\nMyClass.name.toString().hashCode()",
+      "answers": [
+        {"text": "MyClass", "isCorrect": true},
+        {"text": "MyClass.name", "isCorrect": false},
+        {"text": "MyClass.name.toString()", "isCorrect": false},
+        {"text": "MyClass.name.toString().hashCode()", "isCorrect": false},
+        {"text": "ни один из перечисленных", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие модификаторы позволяют обращаться к элементу класса из классов-наследников того же пакета?",
+      "answers": [
+        {"text": "public", "isCorrect": true},
+        {"text": "protected", "isCorrect": true},
+        {"text": "по умолчанию", "isCorrect": true},
+        {"text": "private", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Укажите количество преобразований, которые будут сделаны в следующем коде:\nlong a = 3;\na = 5 + 'A' + a;",
+      "answers": [
+        {"text": "0", "isCorrect": false},
+        {"text": "1", "isCorrect": false},
+        {"text": "2", "isCorrect": false},
+        {"text": "3", "isCorrect": true},
+        {"text": "4", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Предположим, вы моделируете автомобиль, описывая его свойства в формате Java-класса. Какие из следующих полей нужно объявить динамическими?",
+      "answers": [
+        {"text": "идентификационный номер (VIN)", "isCorrect": true},
+        {"text": "максимально допустимая масса для этого класса автомобилей", "isCorrect": false},
+        {"text": "дата начала выпуска автомобилей", "isCorrect": false},
+        {"text": "дата выпуска автомобиля", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какое утверждение относительно языка Java верно?",
+      "answers": [
+        {"text": "он является только компилируемым", "isCorrect": false},
+        {"text": "он является только интерпретируемым", "isCorrect": false},
+        {"text": "он является и компилируемым, и интерпретируемым", "isCorrect": true},
+        {"text": "ни одно из перечисленных", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно класса java.awt.Container верны?",
+      "answers": [
+        {"text": "является наследником java.awt.Component", "isCorrect": true},
+        {"text": "добавляемые компоненты хранятся в упорядоченном списке", "isCorrect": true},
+        {"text": "для удаления всех компонентов из контейнера служит метод clearAll()", "isCorrect": false},
+        {"text": "контейнеры могут быть вложены друг в друга", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Для чего служит в Java класс Thread?",
+      "answers": [
+        {"text": "для запуска потоков", "isCorrect": true},
+        {"text": "для синхронизации потоков", "isCorrect": true},
+        {"text": "для изменения свойств (например, приоритета) потоков", "isCorrect": true},
+        {"text": "для прерывания потоков", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно метода equals верны?",
+      "answers": [
+        {"text": "для любой объектной ссылки x, отличной от null, вызов x.equals(x) возвращает false", "isCorrect": false},
+        {"text": "реализация этого метода в классе Object вернет true только в случае равенства по ссылке", "isCorrect": true},
+        {"text": "метод equals может быть переопределен любым способом", "isCorrect": true},
+        {"text": "для любых объектных ссылок x и y многократные последовательные вызовы x.equals(y) возвращают одно и то же значение", "isCorrect": true},
+        {"text": "для любой не равной null объектной ссылки x вызов x.equals(null) должен вернуть значение true", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно класса TimeZone верны?",
+      "answers": [
+        {"text": "можно создавать экземпляры этого класса", "isCorrect": false},
+        {"text": "чтобы получить настройки текущей временной зоны надо использовать метод getDefault()", "isCorrect": true},
+        {"text": "чтобы получить настройки текущей временной зоны надо использовать метод getTimezone()", "isCorrect": false},
+        {"text": "позволяет получить список всех доступных временных зон", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Что произойдет при попытке к одному объекту PipedWriter несколько раз присоединять объекты PipedReader?",
+      "answers": [
+        {"text": "при попытке присоединить более одного PipedReader будет брошено исключение IOException, но только в том случае, если предпринята попытка присоединить PipedReader, отличный от уже подключенного", "isCorrect": false},
+        {"text": "при попытке присоединить более одного PipedReader будет брошено исключение IOException, даже в том случае, если производится попытка несколько раз присоединить один и тот же объект PipedReader", "isCorrect": true},
+        {"text": "ничего не произойдет, так как это допустимая ситуация", "isCorrect": false},
+        {"text": "ничего из перечисленного", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какой из вариантов является строчным комментарием?",
+      "answers": [
+        {"text": "// комментарий", "isCorrect": true},
+        {"text": "/* комментарий", "isCorrect": false},
+        {"text": "/* комментарий */", "isCorrect": false},
+        {"text": "/** комментарий */", "isCorrect": false},
+        {"text": "ни один из перечисленных", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Укажите результат выполнения следующего фрагмента кода:\nint a = 5, b = 6;\na = b++;\nSystem.out.println(a);",
+      "answers": [
+        {"text": "5", "isCorrect": false},
+        {"text": "6", "isCorrect": true},
+        {"text": "7", "isCorrect": false},
+        {"text": "будет выдано сообщение об ошибке", "isCorrect": false},
+        {"text": "ничего из перечисленного", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно пакетов в Java верны?",
+      "answers": [
+        {"text": "каждый пакет может включать вложенные пакеты", "isCorrect": true},
+        {"text": "пакет, содержащий вложенный пакет, не может содержать классы", "isCorrect": false},
+        {"text": "пакеты могут содержать классы и интерфейсы", "isCorrect": true},
+        {"text": "каждый пакет имеет свое пространство имен", "isCorrect": true},
+        {"text": "разные пакеты могут разделять одно пространство имен", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Для каких элементов в Java можно указать модификатор доступа?",
+      "answers": [
+        {"text": "для конструкторов класса", "isCorrect": true},
+        {"text": "для элементов ссылочных типов", "isCorrect": true},
+        {"text": "для пакетов", "isCorrect": false},
+        {"text": "для типов (классов и интерфейсов) объявления верхнего уровня", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно преобразования примитивных типов верны?",
+      "answers": [
+        {"text": "расширение - это переход от менее емкого типа к более емкому", "isCorrect": true},
+        {"text": "расширение является небезопасным преобразованием", "isCorrect": false},
+        {"text": "тип boolean можно привести к типу byte", "isCorrect": false},
+        {"text": "тип byte можно привести к типу int без потери данных", "isCorrect": true},
+        {"text": "тип byte можно привести к типу char без потери данных", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие из следующих утверждений верны?",
+      "answers": [
+        {"text": "в Java существует всего 8 типов данных, которые не являются объектами", "isCorrect": true},
+        {"text": "в Java все типы данных являются объектами", "isCorrect": false},
+        {"text": "простые типы могут быть объектами", "isCorrect": false},
+        {"text": "ссылочные типы могут быть объектами", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Есть следующий код:\npublic class SomeClass {\n    public static void main(String[] args) {\n        SomeClass t = new SomeClass();\n        ____\n    }\n    private int check(String x, int n) {\n        if (n == 0) return n;\n        else if (n == 1) {\n            if (x != null) return 5;\n        }\n        else if (n == 2 && x != null) {\n            if (x.equals(\"YES\")) return 3;\n            else if (x.equals(\"NO\")) return 4;\n        }\n        return -1;\n    }\n}\nЕсли вместо знаков подчеркивания поместить код вызова метода check, то какое из предложений будет верным?",
+      "answers": [
+        {"text": "t.check(''ANY'',1), в этом случае функция вернет значение 14", "isCorrect": false},
+        {"text": "t.check(''NO'',2), в этом случае функция вернет значение 4", "isCorrect": true},
+        {"text": "t.check(''YES'',1), в этом случае функция вернет значение 3", "isCorrect": false},
+        {"text": "t.check(''YES'',2), в этом случае функция вернет значение 4", "isCorrect": false},
+        {"text": "t.check(''ANY'',6), в этом случае функция вернет значение -1", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какой метод нужно вызвать, чтобы инициировать перерисовку компонента?",
+      "answers": [
+        {"text": "paint", "isCorrect": false},
+        {"text": "update", "isCorrect": false},
+        {"text": "repaint", "isCorrect": true},
+        {"text": "show", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Поскольку интерфейс Runnable представляет собой альтернативный способ программирования потоков исполнения, можно ли в такой программе обойтись без класса Thread?",
+      "answers": [
+        {"text": "да", "isCorrect": false},
+        {"text": "да, если не модифицировать свойства потока (приоритет и т.п.)", "isCorrect": false},
+        {"text": "да, если не прерывать поток", "isCorrect": false},
+        {"text": "да, если не требуется взаимодействие с другими потоками", "isCorrect": false},
+        {"text": "нет", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "В чем особенность класса-обертки для void?",
+      "answers": [
+        {"text": "никаких отличительных особенностей нет", "isCorrect": false},
+        {"text": "этот класс, в отличие от остальных классов-оберток, не реализует интерфейс java.io.Serializable", "isCorrect": true},
+        {"text": "он не имеет открытого конструктора. Более того, экземпляр этого класса вообще не может быть получен", "isCorrect": true},
+        {"text": "пакете java.lang отсутствует класс java.lang.Void", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "В JDK 1.2 введены новые классы и интерфейсы, которые позволяют работать с наборами объектов. Отметьте те из них, которые являются интерфейсами.",
+      "answers": [
+        {"text": "java.util.List", "isCorrect": true},
+        {"text": "java.util.TreeMap", "isCorrect": false},
+        {"text": "java.util.AbstractList", "isCorrect": false},
+        {"text": "java.util.SortedMap", "isCorrect": true},
+        {"text": "java.util.Iterator", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Если вызвать write(0x01234567) у экземпляра OutputStream, то в каком порядке и какие байты будут записаны в выходной поток?",
+      "answers": [
+        {"text": "0x01,0x23,0x45,0x67", "isCorrect": false},
+        {"text": "0x67,0x45,0x23,0x01", "isCorrect": false},
+        {"text": "только 0x01", "isCorrect": false},
+        {"text": "только 0x67", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Что такое класс?",
+      "answers": [
+        {"text": "семантическая и синтаксическая конструкция в коде программы, используемая для специфицирования услуг, предоставляемых объектом", "isCorrect": false},
+        {"text": "конструкция , позволяющая содержать в себе набор переменных различных типов", "isCorrect": false},
+        {"text": "некоторая сущность в виртуальном пространстве, обладающая определённым состоянием и поведением", "isCorrect": false},
+        {"text": "шаблон поведения объектов определенного типа с заданными параметрами, определяющими состояние", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Дан следующий класс:\nclass abcPoint {\n    abcPoint(int a, int b) { x = a; y = b; }\n    int x, y;\n    ...\n}\nУкажите результат выполнения следующего фрагмента кода:\nabcPoint p = new abcPoint(5,3), p1 = p;\np.x = 4;\nSystem.out.println(p1.x);",
+      "answers": [
+        {"text": "3", "isCorrect": false},
+        {"text": "4", "isCorrect": true},
+        {"text": "5", "isCorrect": false},
+        {"text": "будет выдано сообщение об ошибке", "isCorrect": false},
+        {"text": "ничего из перечисленного", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Вы создали класс Animal в пакете ru.animal. Где будет хранится исходный код класса в файловой системе?",
+      "answers": [
+        {"text": "ru\\animal\\Animal.java", "isCorrect": true},
+        {"text": "ru\\Animal.java", "isCorrect": false},
+        {"text": "ru\\animal\\Animal.class", "isCorrect": false},
+        {"text": "ru\\Animal.class", "isCorrect": false},
+        {"text": "ru\\animal\\Animal", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно заголовка класса верны?",
+      "answers": [
+        {"text": "допустимые модификаторы доступа для класса - public или default", "isCorrect": true},
+        {"text": "класс может быть объявлен как final", "isCorrect": true},
+        {"text": "допустимо наследовать final-класс", "isCorrect": false},
+        {"text": "допустима следующая цепочка наследования: A наследует классу B, B наследует классу C, C наследует классу A", "isCorrect": false},
+        {"text": "если не указан класс-предок класса, то это означает, что класс наследует от java.lang.Object", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Будет ли скомпилирован следующий пример:\nbyte b = 100 - 100;\nb = 100 + 200;\nb = 100 * 100;",
+      "answers": [
+        {"text": "пример не будет скомпилирован, будет выдано сообщение об ошибках в 1-й и 2-й строках", "isCorrect": false},
+        {"text": "пример не будет скомпилирован, будет выдано сообщение об ошибках во 2-й и 3-й строках", "isCorrect": true},
+        {"text": "пример не будет скомпилирован, будет выдано сообщение об ошибках в 1-й и 3-й строках", "isCorrect": false},
+        {"text": "пример не будет скомпилирован, будет выдано сообщение об ошибках в 1-й, 2-й и 3-й строках", "isCorrect": false},
+        {"text": "пример будет скомпилирован", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Сколько объектов порождается при инициализации массива new int[3][4]?",
+      "answers": [
+        {"text": "1", "isCorrect": false},
+        {"text": "2", "isCorrect": false},
+        {"text": "3", "isCorrect": false},
+        {"text": "4", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно виртуальной машины Java (Java Virtual Machine) верны?",
+      "answers": [
+        {"text": "позволяет отсекать опасный код на каждом этапе работы", "isCorrect": true},
+        {"text": "периодически запускает сборщик мусора", "isCorrect": true},
+        {"text": "для запуска приложения на языке Java на какой-либо операционной системе, для нее должна быть создана виртуальная машина", "isCorrect": true},
+        {"text": "поддерживает запуск приложений из файлов с расширением .java", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что будет выведено на экран в результате выполнения следующего кода:\npublic class SomeClass {\n    public static void main(String[] args) {\n        SomeClass t = new SomeClass();\n        t.say(1);\n    }\n    private void say(int digit) {\n        switch (digit) {\n            case 1: System.out.print(\"1\"); break;\n            case 2: System.out.print(\"2\");\n            case 3: System.out.print(\"3\");\n            default: System.out.print(\"Unknown\");\n        }\n    }\n}",
+      "answers": [
+        {"text": "1", "isCorrect": true},
+        {"text": "2", "isCorrect": false},
+        {"text": "3", "isCorrect": false},
+        {"text": "Unknown", "isCorrect": false},
+        {"text": "ошибка времени выполнения", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Сколько вложенных компонентов может быть у контейнера ScrollPane?",
+      "answers": [
+        {"text": "0", "isCorrect": false},
+        {"text": "1 любую компоненту", "isCorrect": true},
+        {"text": "1 любую компоненту и 1 контейнер ScrollPane", "isCorrect": false},
+        {"text": "произвольное количество", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Для чего нужна синхронизация?",
+      "answers": [
+        {"text": "для одновременного запуска нескольких потоков", "isCorrect": false},
+        {"text": "для того, чтобы потоки могли работать с общими данными предсказуемым образом", "isCorrect": true},
+        {"text": "для того, чтобы потоки могли приостанавливать друг друга", "isCorrect": false},
+        {"text": "для того, чтобы потоки могли запускать друг друга", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно класса Math верны?",
+      "answers": [
+        {"text": "от этого класса нельзя унаследоваться", "isCorrect": true},
+        {"text": "является абстрактным", "isCorrect": false},
+        {"text": "нельзя создать экземпляр этого класса", "isCorrect": true},
+        {"text": "содержит только статические методы", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какой из перечисленных ниже классов имеет наибольшее сходство с классом Vector?",
+      "answers": [
+        {"text": "AbstractCollection", "isCorrect": false},
+        {"text": "ArrayList", "isCorrect": true},
+        {"text": "Hashtable", "isCorrect": false},
+        {"text": "TreeSet", "isCorrect": false},
+        {"text": "LinkedList", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно класса BufferedOutputStream верны?",
+      "answers": [
+        {"text": "предоставляет возможность производить многократную запись небольших блоков данных без обращения к устройству вывода", "isCorrect": true},
+        {"text": "запись с использованием буфера значительно быстрее, чем без него", "isCorrect": true},
+        {"text": "инициирование передачи содержимого буфера на устройство вывода осуществляется самим классом BufferedOutputStream", "isCorrect": false},
+        {"text": "инициирование передачи содержимого буфера на устройство вывода можно осуществить явным образом", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что используется для описания поведения объекта?",
+      "answers": [
+        {"text": "поля", "isCorrect": false},
+        {"text": "методы", "isCorrect": true},
+        {"text": "наследование", "isCorrect": false},
+        {"text": "инкапсуляция", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Отметьте ключевые слова языка Java:",
+      "answers": [
+        {"text": "yes", "isCorrect": false},
+        {"text": "nil", "isCorrect": false},
+        {"text": "goto", "isCorrect": true},
+        {"text": "const", "isCorrect": true},
+        {"text": "var", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие существуют примитивные целочисленные типы?",
+      "answers": [
+        {"text": "byte", "isCorrect": true},
+        {"text": "float", "isCorrect": false},
+        {"text": "short", "isCorrect": true},
+        {"text": "boolean", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно модуля компиляции верны?",
+      "answers": [
+        {"text": "хранится в текстовом .java-файле", "isCorrect": true},
+        {"text": "отсутствие объявления пакета в модуле компиляции вызовет ошибку компиляции", "isCorrect": false},
+        {"text": "объявления верхнего уровня содержат объявление только одного типа", "isCorrect": false},
+        {"text": "если в модуле компиляции есть объявление пакета - оно будет первым выражением", "isCorrect": true},
+        {"text": "import-выражения позволяют импортировать типы в модуль компиляции и далее обращаться к ним по простым именам", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно полей класса верны?",
+      "answers": [
+        {"text": "допускаются поля с одинаковыми именами, но с разными типами", "isCorrect": false},
+        {"text": "объявление полей начинается с перечисления модификаторов", "isCorrect": true},
+        {"text": "поле может быть проинициализировано только в конструкторе", "isCorrect": false},
+        {"text": "допускается инициализация final полей в конструкторе класса", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно преобразования ссылочных типов верны?",
+      "answers": [
+        {"text": "преобразование от null-типа к любому объектному типу является расширяющим", "isCorrect": true},
+        {"text": "преобразование от класса A к классу B, если A наследуется от B является сужающим", "isCorrect": false},
+        {"text": "можно преобразовать ссылку одного типа к ссылке другого типа даже если они не являются родителем и наследником", "isCorrect": false},
+        {"text": "всегда можно обращаться к объекту, порожденному от наследника, по типу его родителя", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Что будет выведено на экран в результате выполнения следующего кода:\npublic class SomeClass {\n    int b = this.a;\n    int a = 5;\n    { System.out.print(a); System.out.print(b); }\n    public static void main(String[] args) {\n        new SomeClass();\n    }\n}",
+      "answers": [
+        {"text": "00", "isCorrect": false},
+        {"text": "05", "isCorrect": false},
+        {"text": "50", "isCorrect": true},
+        {"text": "55", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое утверждение относительно приведения массивов верно?",
+      "answers": [
+        {"text": "любые массивы приводимы, поскольку являются объектами", "isCorrect": false},
+        {"text": "A[] можно привести к B[], если A приводится к B, и A, B – ссылочные типы", "isCorrect": true},
+        {"text": "массивы не преобразовываются", "isCorrect": false},
+        {"text": "A[] можно привести к B[], если A приводится к B", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно Java Development Kit (JDK) и Java Runtime Environment (JRE) верны?",
+      "answers": [
+        {"text": "JRE включает в себя средства разработки", "isCorrect": false},
+        {"text": "JDK включает в себя компилятор", "isCorrect": true},
+        {"text": "JDK не позволяет запускать программы", "isCorrect": false},
+        {"text": "JRE является минимальной реализацией виртуальной машины", "isCorrect": true},
+        {"text": "JRE включает в себя JDK", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что будет выведено на экран в результате выполнения следующего кода:\npublic class SomeClass {\n    public static void main(String[] args) {\n        int i = 0;\n        while (i < 6) {\n            if (i > 5) i--;\n            if (i < 4) i++;\n            if (i == 5) i++;\n            i++;\n            System.out.print(i);\n        }\n    }\n}",
+      "answers": [
+        {"text": "1234", "isCorrect": false},
+        {"text": "245", "isCorrect": false},
+        {"text": "2457", "isCorrect": true},
+        {"text": "3457", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Укажите результат выполнения следующего кода:\npublic abstract class SomeClass implements Runnable {\n    public final static Object one = new Object(), two = new Object();\n    public static void main(String s[]) {\n        Thread t1 = new Thread() {\n            public void run() {\n                synchronized (one) {\n                    try { Thread.sleep(1000); } catch (InterruptedException e) { e.printStackTrace(); }\n                    synchronized (two) { System.out.print(\"1\"); }\n                }\n            }\n        };\n        Thread t2 = new Thread() {\n            public void run() {\n                synchronized (two) {\n                    synchronized (one) { System.out.print(\"2\"); }\n                }\n            }\n        };\n        t1.start();\n        t2.start();\n    }\n}",
+      "answers": [
+        {"text": "программа не завершит работу, на консоли появится 1", "isCorrect": false},
+        {"text": "программа не завершит работу, на консоли появится 2", "isCorrect": false},
+        {"text": "программа не завершит работу", "isCorrect": true},
+        {"text": "программа не завершит работу, на консоли появится 12", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно класса ClassLoader верны?",
+      "answers": [
+        {"text": "от этого класса нельзя наследовать", "isCorrect": false},
+        {"text": "является неабстрактным", "isCorrect": false},
+        {"text": "каждый объект Class содержит ссылку на объект ClassLoader, с помощью которого он был загружен", "isCorrect": true},
+        {"text": "можно реализовать свой загрузчик, унаследовав его от ClassLoader", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно java.util.Observer и java.util.Observable корректны?",
+      "answers": [
+        {"text": "Observer является классом, реализующим интерфейс Observable", "isCorrect": false},
+        {"text": "интерфейс Observer определяет всего один метод, update (Observable o, Object arg), который вызывается, когда обозреваемый объект изменяется", "isCorrect": true},
+        {"text": "обозреватели должны реализовать интерфейс Observable", "isCorrect": false},
+        {"text": "порядок, в котором вызываются методы update обозревателей, заранее не определен", "isCorrect": true},
+        {"text": "из-за отсутствия множественного наследования использовать Observer неудобно", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что произойдет, если, используя ByteArrayOutputStream, записать в файл значения типов long, int, byte именно в таком порядке, а считать в обратном, используя DataInputStream?",
+      "answers": [
+        {"text": "ошибка на этапе компиляции, так как нельзя настраивать DataInputStream на данные, записанные с помощью ByteArrayOutputStream", "isCorrect": false},
+        {"text": "несоответствие форматов ByteArrayOutputStream и DataInputStream проявится только во время выполнения, что приведет к возникновению исключения IOException", "isCorrect": false},
+        {"text": "все пройдет успешно, но полученные значения byte, int и long могут отличаться от тех, которые были записаны", "isCorrect": true},
+        {"text": "все пройдет успешно, полученные значения byte, int и long не будут отличаться от тех, которые были записаны", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие возможны отношения между классами?",
+      "answers": [
+        {"text": "агрегация", "isCorrect": true},
+        {"text": "полиморфизм", "isCorrect": false},
+        {"text": "ассоциация", "isCorrect": true},
+        {"text": "инкапсуляция", "isCorrect": false},
+        {"text": "наследование", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Отметьте целочисленные литералы языка Java:",
+      "answers": [
+        {"text": "15L", "isCorrect": true},
+        {"text": "15D", "isCorrect": false},
+        {"text": "0xdec", "isCorrect": true},
+        {"text": "3.14", "isCorrect": false},
+        {"text": "0x0", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какой тип должна иметь переменная d в следующем фрагменте:\nint a = 1;\nshort b = 1;\nlong c = 1;\n? d = a + b + c;",
+      "answers": [
+        {"text": "byte", "isCorrect": false},
+        {"text": "short", "isCorrect": false},
+        {"text": "int", "isCorrect": false},
+        {"text": "long", "isCorrect": true},
+        {"text": "char", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно импорт-выражений верны?",
+      "answers": [
+        {"text": "позволяют импортировать типы в модуль компиляции", "isCorrect": true},
+        {"text": "можно импортировать один тип", "isCorrect": true},
+        {"text": "нельзя импортировать пакет целиком", "isCorrect": false},
+        {"text": "выражение, импортирующее один тип, записывается с помощью ключевого слова import и полного имени типа", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Можно ли при наследовании не реализовывать абстрактный метод родительского класса?",
+      "answers": [
+        {"text": "можно в любом случае", "isCorrect": false},
+        {"text": "можно, если наследник имеет модификатор abstract", "isCorrect": true},
+        {"text": "можно, если родитель имеет модификатор final", "isCorrect": false},
+        {"text": "нельзя", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какой метод сгенерирует ошибку ArrayStoreException при передаче в него массива v?\npublic class Vehicle {\n    public static void main(String[] args) {\n        Vehicle[] v = new Car[5];\n        ...\n    }\n    public void setVehicles(Vehicle c[]) {\n        c[0] = new Vehicle();\n    }\n    public void setVehicles2(Vehicle c[]) {\n        if (c[0] instanceof Vehicle) { c[0] = new Vehicle(); }\n    }\n    public void setVehicles3(Car c[]) {\n        if (c[0] instanceof Car) { c[0] = new Car(); }\n    }\n}\nclass Car extends Vehicle {}",
+      "answers": [
+        {"text": "setVehicles", "isCorrect": true},
+        {"text": "setVehicles2", "isCorrect": true},
+        {"text": "setVehicles3", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие меры позволяют Java обеспечивать безопасность?",
+      "answers": [
+        {"text": "правила работы с памятью", "isCorrect": true},
+        {"text": "наличие виртуальной машины-интерпретатора", "isCorrect": true},
+        {"text": "наличие JIT-компилятора", "isCorrect": false},
+        {"text": "сертификаты для приложений, загружаемых по сети", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Есть следующая иерархия наследования:\nВ методе testSomеValue могут быть возбуждены исключения StringIndexOutOfBoundsException и ArrayIndexOutOfBoundsException, при этом они не обрабатываются в блоке try – catch. Какое из перечисленных ниже утверждений будет верным?",
+      "answers": [
+        {"text": "определение метода testSomеValue должно включать throws StringIndexOutOfBoundsException, ArrayIndexOutOfBoundsException", "isCorrect": false},
+        {"text": "если метод, вызывающий testSomeValue, перехватывает IndexOutOfBoundsException, то исключения StringIndexOutOfBoundsException, ArrayIndexOutOfBoundsException тоже будут перехватываться", "isCorrect": true},
+        {"text": "так как в определении метода указано throws StringIndexOutOfBoundsException, ArrayIndexOutOfBoundsException, любой вызывающий его метод должен перехватывать эти типы исключений, вне зависимости от того, возбуждается во время работы исключение или нет", "isCorrect": false},
+        {"text": "при объявлении метода testSomeValue необходимо указывать возбуждаемые исключения", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Каким будет результат работы следующего кода?\npublic abstract class SomeClass implements Runnable {\n    private Object lock = new Object();\n    public void lock() {\n        synchronized (lock) {\n            try { lock.wait(); System.out.print(\"1\"); } catch (InterruptedException e) {}\n        }\n    }\n    public void notifyThread() {\n        synchronized (lock) { lock.notify(); }\n    }\n    public void unlock() {\n        synchronized (lock) { lock.notify(); System.out.print(\"2\"); }\n    }\n    public static void main(String s[]) {\n        SomeClass c = new SomeClass() { public void run() { lock(); } };\n        SomeClass c1 = new SomeClass() { public void run() { unlock(); } };\n        new Thread(c).start();\n        new Thread(c1).start();\n        c.notifyThread();\n    }\n}",
+      "answers": [
+        {"text": "программа не завершит работу, на консоли ничего не появится", "isCorrect": false},
+        {"text": "программа завершит работу, на консоли появится 12", "isCorrect": false},
+        {"text": "программа завершит работу, на консоли появится 21", "isCorrect": false},
+        {"text": "программа не завершит работу, на консоли появится 1", "isCorrect": false},
+        {"text": "результат трудно предугадать", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Выберите технологии программирования:",
+      "answers": [
+        {"text": "структурное программирование", "isCorrect": true},
+        {"text": "интеграционное моделирование", "isCorrect": false},
+        {"text": "информационное моделирование", "isCorrect": false},
+        {"text": "объектно-ориентированное программирование", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Структурное программирование основано на …",
+      "answers": [
+        {"text": "системном проектировании функций обработки данных и детальном конструировании процедур обработки данных", "isCorrect": false},
+        {"text": "модульной структуре программного продукта и типовых управляющих структурах (линейной, разветвляющейся, циклической)", "isCorrect": true},
+        {"text": "алгоритмов обработки данных различных модулей", "isCorrect": false},
+        {"text": "системном проектировании функций обработки данных и детальном конструировании процедур обработки данных", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Выберите основные управляющие структуры структурного программирования:",
+      "answers": [
+        {"text": "процедура", "isCorrect": false},
+        {"text": "линия", "isCorrect": true},
+        {"text": "ветвление", "isCorrect": false},
+        {"text": "перекресток", "isCorrect": false},
+        {"text": "цикл", "isCorrect": true},
+        {"text": "безусловный переход", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Структурный подход к программированию – это:",
+      "answers": [
+        {"text": "Совокупность рекомендуемых технологических приемов, охватывающих выполнение всех этапов разработки программного обеспечения", "isCorrect": true},
+        {"text": "Создание программного обеспечения на основе структурной схемы решаемой задачи", "isCorrect": false},
+        {"text": "Подход, требующий разработки структурной схемы алгоритма и программы решения задачи", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что такое структурное программирование?",
+      "answers": [
+        {"text": "Технология разработки программного обеспечения, основой которой служит представление программы в виде математических формул и символов естественного языка", "isCorrect": false},
+        {"text": "Технология разработки программного обеспечения, основой которой служит представление программы в виде иерархической конструкции логических целостных фрагментов", "isCorrect": true},
+        {"text": "Технология разработки программного обеспечения, основой которой служит представление программы в виде логарифмических уравнений", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Как называется алгоритм, который целиком используется в составе другого алгоритма?",
+      "answers": [
+        {"text": "циклический", "isCorrect": false},
+        {"text": "служебный", "isCorrect": false},
+        {"text": "вспомогательный", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Что называется функцией?",
+      "answers": [
+        {"text": "Подпрограмма, которая имеет произвольное количество входных и выходных данных", "isCorrect": false},
+        {"text": "Подпрограмма, которая имеет единственный результат, записываемый в ячейку памяти, имя которой совпадает с именем подпрограммы", "isCorrect": false},
+        {"text": "Подпрограмма, которая небольшое количество входных и выходных данных, записываемое в ячейку памяти, имя которой не совпадает с именем подпрограммы", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какое утверждение относительно класса java.lang.Object верно:",
+      "answers": [
+        {"text": "у этого класса нет полей", "isCorrect": true},
+        {"text": "нельзя явно переопределять методы этого класса", "isCorrect": false},
+        {"text": "нельзя явно наследовать этот класс", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое утверждение относительно класса java.lang.Object верно:",
+      "answers": [
+        {"text": "нельзя явно переопределять методы этого класса", "isCorrect": false},
+        {"text": "у этого класса нет суперкласса", "isCorrect": true},
+        {"text": "нельзя явно наследовать этот класс", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое утверждение относительно модуля компиляции верно:",
+      "answers": [
+        {"text": "в модуле компиляции может быть больше одного объявления пакета", "isCorrect": false},
+        {"text": "объявления верхнего уровня позволяют обращаться к типам из других пакетов по их простым именам", "isCorrect": false},
+        {"text": "если объявление пакета отсутствует, то модуль компиляции будет принадлежать безымянному пакету", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какое утверждение относительно модуля компиляции верно:",
+      "answers": [
+        {"text": "import-выражения необязательны", "isCorrect": true},
+        {"text": "в модуле компиляции может быть больше одного объявления пакета", "isCorrect": false},
+        {"text": "хранится в текстовом .class-файле", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое утверждение относительно java.util.Random корректно:",
+      "answers": [
+        {"text": "void nextBytes(byte[] arr) — заполняет массив arr нулями", "isCorrect": false},
+        {"text": "последовательный запуск приложения, генерирующего последовательность псевдослучайных чисел, никогда не вернет одинаковых последовательностей", "isCorrect": false},
+        {"text": "используется для получения последовательности псевдослучайных чисел", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какое утверждение относительно java.util.Random корректно:",
+      "answers": [
+        {"text": "double nextGaussian()— возвращает случайное число в диапазоне от 0.0 до 1.0 распределенное по нормальному закону", "isCorrect": true},
+        {"text": "void nextBytes(byte[] arr) — заполняет массив arr нулями", "isCorrect": false},
+        {"text": "последовательный запуск приложения, генерирующего последовательность псевдослучайных чисел, никогда не вернет одинаковых последовательностей", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Одно из ключевых слов языка Java:",
+      "answers": [
+        {"text": "false", "isCorrect": false},
+        {"text": "null", "isCorrect": false},
+        {"text": "default", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Одно из ключевых слов языка Java:",
+      "answers": [
+        {"text": "null", "isCorrect": false},
+        {"text": "protected", "isCorrect": true},
+        {"text": "false", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Сколько объектов порождается при инициализации массива new int[3][]:",
+      "answers": [
+        {"text": "1", "isCorrect": true},
+        {"text": "3", "isCorrect": false},
+        {"text": "2", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое утверждение относительно класса String верно:",
+      "answers": [
+        {"text": "является абстрактным", "isCorrect": false},
+        {"text": "содержит только статические методы", "isCorrect": false},
+        {"text": "обладает свойством неизменяемости", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какое значение может принимать переменная булева типа:",
+      "answers": [
+        {"text": "true", "isCorrect": true},
+        {"text": "0", "isCorrect": false},
+        {"text": "1", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое значение может принимать переменная булева типа:",
+      "answers": [
+        {"text": "null", "isCorrect": false},
+        {"text": "false", "isCorrect": true},
+        {"text": "1", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Отметьте верное утверждение относительно языков Java и JavaScript:",
+      "answers": [
+        {"text": "JavaScript является синонимом Java", "isCorrect": false},
+        {"text": "их спецификации являются закрытыми", "isCorrect": false},
+        {"text": "оба языка кроссплатформенны", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Вы создали класс Animal в пакете ru.animal. Где будет хранится исходный код класса в файловой системе?",
+      "answers": [
+        {"text": "ru\\animal\\Animal.class", "isCorrect": false},
+        {"text": "ru\\Animal.java", "isCorrect": false},
+        {"text": "ru\\animal\\Animal.java", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Может ли массив основываться на абстрактных классах? Интерфейсах:",
+      "answers": [
+        {"text": "да, нет", "isCorrect": false},
+        {"text": "да, да", "isCorrect": true},
+        {"text": "нет, да", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что такое приоритет потока:",
+      "answers": [
+        {"text": "качественная характеристика, обеспечивающая распределение процессорного времени между потоками: чем выше приоритет, тем в среднем чаще будет выделяться процессорное время для такого потока", "isCorrect": true},
+        {"text": "процессор сначала выполняет все задачи с более высоким приоритетом, затем – с менее высоким", "isCorrect": false},
+        {"text": "порядковый номер потока в очереди на исполнение", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое преимущество предоставляет интерфейс Runnable по сравнению с классом Thread:",
+      "answers": [
+        {"text": "позволяет более гибко работать с приоритетами потоков", "isCorrect": false},
+        {"text": "позволяет классу, содержащему логику работы, наследоваться от других классов", "isCorrect": true},
+        {"text": "позволяет обойтись без класса Thread", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какая кодировка используется классом OutputStreamWriter по умолчанию:",
+      "answers": [
+        {"text": "UTF-8 независимо от системы, где запущена Java-машина", "isCorrect": false},
+        {"text": "UTF-16 независимо от системы, где запущена Java-машина", "isCorrect": false},
+        {"text": "используемая кодировка зависит от системы, где запущена Java-машина", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какое утверждение относительно методов класса верно:",
+      "answers": [
+        {"text": "к методу, объявленному с модификаторами public final, нельзя обратиться из класса-наследника", "isCorrect": false},
+        {"text": "метод, объявленный с модификатором native, должен быть написан на другом языке программирования", "isCorrect": true},
+        {"text": "методы не могут иметь модификатор доступа default", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое утверждение относительно методов класса верно:",
+      "answers": [
+        {"text": "идентификатор метода при объявлении становится составным именем метода", "isCorrect": false},
+        {"text": "к методу, объявленному с модификаторами public final, нельзя обратиться из класса-наследника", "isCorrect": false},
+        {"text": "метод, объявленный с модификатором final, не может быть переопределен в классе-наследнике", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Каким образом на однопроцессорной машине исполняются многопоточные приложения?",
+      "answers": [
+        {"text": "количество процессоров для многопоточной архитектуры не имеет значения", "isCorrect": false},
+        {"text": "рабочее время процессора разбивается на небольшие интервалы, в течение которых выполняется одна задача, после чего происходит переключение на следующую задачу", "isCorrect": true},
+        {"text": "на однопроцессорном компьютере многопоточные приложения не исполняются", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какой из перечисленных ниже классов имеет наибольшее сходство с классом Vector:",
+      "answers": [
+        {"text": "ArrayList", "isCorrect": true},
+        {"text": "LinkedList", "isCorrect": false},
+        {"text": "AbstractCollection", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какой класс соответствует классу CharArrayReader, но работает только с байтовыми данными:",
+      "answers": [
+        {"text": "FilterInputStream", "isCorrect": false},
+        {"text": "BufferedInputStream", "isCorrect": false},
+        {"text": "ByteArrayInputStream", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какой метод нужно переопределить, чтобы реализовать отрисовку внешнего вида компонента:",
+      "answers": [
+        {"text": "paint", "isCorrect": true},
+        {"text": "repaint", "isCorrect": false},
+        {"text": "show", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "От какого класса наследуются InputStream и OutputStream:",
+      "answers": [
+        {"text": "AbstractStream", "isCorrect": false},
+        {"text": "Object", "isCorrect": true},
+        {"text": "IOWriter", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Укажите допустимый синтаксис комментария:",
+      "answers": [
+        {"text": "/* Комментарий */", "isCorrect": true},
+        {"text": "# Комментарий", "isCorrect": false},
+        {"text": "/* Комментарий", "isCorrect": false},
+        {"text": "// Комментарий", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие типы данных не существуют в Java?",
+      "answers": [
+        {"text": "int", "isCorrect": false},
+        {"text": "float", "isCorrect": false},
+        {"text": "string", "isCorrect": true},
+        {"text": "unknown", "isCorrect": true},
+        {"text": "Double", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Можно ли создать программу (приложение) на Java, не используя среду разработки (IDE)?",
+      "answers": [
+        {"text": "Да", "isCorrect": true},
+        {"text": "Нет, так как необходимо скомпилировать исходный код в байт-код", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое расширение имеют файлы с исходным кодом Java?",
+      "answers": [
+        {"text": "javac", "isCorrect": false},
+        {"text": "java", "isCorrect": true},
+        {"text": "class", "isCorrect": false},
+        {"text": "classpath", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Может ли файл содержать более одного класса Java?",
+      "answers": [
+        {"text": "Да, но только если один внешний класс имеет модификатор доступа public", "isCorrect": true},
+        {"text": "Да, если все внешние классы будут иметь модификатор доступа private", "isCorrect": false},
+        {"text": "Нет", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое имя переменной является синтаксически недопустимым?",
+      "answers": [
+        {"text": "53someVariable", "isCorrect": true},
+        {"text": "_someVariable", "isCorrect": false},
+        {"text": "some-variable", "isCorrect": true},
+        {"text": "somevariable", "isCorrect": false},
+        {"text": "someVariable", "isCorrect": false},
+        {"text": "Somevariable53", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "От какого класса наследуются все создаваемые классы в Java?",
+      "answers": [
+        {"text": "Классы наследуется от типа указанного после ключевого слова extends, если тип не указан, значит класс не является наследником", "isCorrect": false},
+        {"text": "Object", "isCorrect": true},
+        {"text": "Class", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Импорт какого пакета в Java происходит автоматически?",
+      "answers": [
+        {"text": "Все пакеты нужно явно указывать", "isCorrect": false},
+        {"text": "java.util", "isCorrect": false},
+        {"text": "java.lang", "isCorrect": true},
+        {"text": "java.text", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Укажите какой тип данных, из представленных, занимает наибольшее место в памяти.",
+      "answers": [
+        {"text": "int", "isCorrect": false},
+        {"text": "byte", "isCorrect": false},
+        {"text": "double", "isCorrect": true},
+        {"text": "float", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какой арифметический оператор в Java не существует?",
+      "answers": [
+        {"text": "--", "isCorrect": false},
+        {"text": "%", "isCorrect": false},
+        {"text": "**", "isCorrect": true},
+        {"text": "++", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какого оператора сравнения в Java не существует?",
+      "answers": [
+        {"text": "!=", "isCorrect": false},
+        {"text": "==", "isCorrect": false},
+        {"text": "<>", "isCorrect": true},
+        {"text": "===", "isCorrect": true},
+        {"text": ">=", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какой тип преобразования не произойдёт автоматически?",
+      "answers": [
+        {"text": "byte в short", "isCorrect": false},
+        {"text": "int в long", "isCorrect": false},
+        {"text": "char в short", "isCorrect": true},
+        {"text": "long в float", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какой тип данных не поддерживает оператор switch?",
+      "answers": [
+        {"text": "int", "isCorrect": false},
+        {"text": "String", "isCorrect": false},
+        {"text": "char", "isCorrect": false},
+        {"text": "long", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какое выражение создания переменной и массива является синтаксически некорректным?",
+      "answers": [
+        {"text": "int array[] = new int[0];", "isCorrect": false},
+        {"text": "int[] array = new int[1];", "isCorrect": false},
+        {"text": "int array = new int[1];", "isCorrect": true},
+        {"text": "int[] array = new int[] {1, 2};", "isCorrect": false},
+        {"text": "int[] array = {1, 2};", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Выберите верное утверждение. Добавление ключевого слова final к полю класса означает, что",
+      "answers": [
+        {"text": "поле класса может быть инициализировано только один раз", "isCorrect": true},
+        {"text": "поле должно инициализироваться при объявлении, в конструкторе или в инициализаторе экземпляра", "isCorrect": true},
+        {"text": "поле по умолчанию становится закрытым (аналогично использованию модификатора доступа private)", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что не влияет на перегрузку метода?",
+      "answers": [
+        {"text": "Количество параметров", "isCorrect": false},
+        {"text": "Тип возвращаемого значения", "isCorrect": true},
+        {"text": "Модификаторы доступа", "isCorrect": true},
+        {"text": "Типы параметров", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Значение ключевого слова void?",
+      "answers": [
+        {"text": "Метод не может переопределяться в классе наследнике", "isCorrect": false},
+        {"text": "Метод ничего не возвращает", "isCorrect": true},
+        {"text": "Метод не может перегружаться", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Назначение ключевого слова extends?",
+      "answers": [
+        {"text": "Используется, чтобы указать класс, интерфейс, от которого происходит наследование", "isCorrect": true},
+        {"text": "Добавляется к методу класса, указывая, что метод может наследоваться", "isCorrect": false},
+        {"text": "Используется в обобщениях (generics) для наложение ограничений типа", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какое ключевое слово не относится к модификаторам доступа?",
+      "answers": [
+        {"text": "public", "isCorrect": false},
+        {"text": "package", "isCorrect": true},
+        {"text": "private", "isCorrect": false},
+        {"text": "protected", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Как вызвать конструктор класса?\nclass SomeClass { }",
+      "answers": [
+        {"text": "construct()", "isCorrect": false},
+        {"text": "constructor()", "isCorrect": false},
+        {"text": "SomeClass()", "isCorrect": true},
+        {"text": "someClass()", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Все методы интерфейса по умолчанию являются",
+      "answers": [
+        {"text": "public и abstract", "isCorrect": true},
+        {"text": "protected и abstract", "isCorrect": false},
+        {"text": "public и super", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие типы не относятся к примитивным?",
+      "answers": [
+        {"text": "int", "isCorrect": false},
+        {"text": "Byte", "isCorrect": true},
+        {"text": "char", "isCorrect": false},
+        {"text": "short", "isCorrect": false},
+        {"text": "Object", "isCorrect": true},
+        {"text": "String", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Выберите только целочисленные типы.",
+      "answers": [
+        {"text": "int", "isCorrect": true},
+        {"text": "String", "isCorrect": false},
+        {"text": "double", "isCorrect": false},
+        {"text": "char", "isCorrect": false},
+        {"text": "short", "isCorrect": true},
+        {"text": "long", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Можно ли создать свой примитивный тип данных?",
+      "answers": [
+        {"text": "Нет", "isCorrect": true},
+        {"text": "Да", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Укажите отличия переменных примитивных и ссылочных типов.",
+      "answers": [
+        {"text": "Переменные примитивных типов не могут являться полями в классах, в отличие от ссылочных", "isCorrect": false},
+        {"text": "Переменные примитивных типов хранят значение, а переменные ссылочных типов ссылку на объект", "isCorrect": true},
+        {"text": "Значение переменных примитивных типов нельзя вернуть из метода, а ссылочных можно", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое значение по умолчанию будет присвоено для поля counter?\npublic class Some {\n    private Short counter;\n}",
+      "answers": [
+        {"text": "0", "isCorrect": false},
+        {"text": "undefined", "isCorrect": false},
+        {"text": "null", "isCorrect": true},
+        {"text": "Произойдет ошибка компиляции, так как private поля нужно обязательно инициализировать", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что будет выведено в результате выполнения кода?\npublic class Main {\n    public static void main(String[] args) {\n        Some some1 = new Some();\n        Some some2 = some1;\n        System.out.println(some1 == some1);\n    }\n}",
+      "answers": [
+        {"text": "false", "isCorrect": false},
+        {"text": "true", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какой результат будет выведен в результате выполнения кода?\npublic class Main {\n    public static void main(String[] args) {\n        int number = 1;\n        boolean isSome = (boolean) number;\n        System.out.println(isSome);\n    }\n}",
+      "answers": [
+        {"text": "1", "isCorrect": false},
+        {"text": "true", "isCorrect": false},
+        {"text": "Код не скомпилируется, так как существует ошибка приведения типа int к boolean", "isCorrect": true},
+        {"text": "null", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что будет выведено, в результате выполнения кода?\npublic class Main {\n    public static void main(String[] args) {\n        int a = 10;\n        int b = 2;\n        if ((a++ > 0) | (b++ > 0)) {\n            b += 4;\n        }\n        System.out.println(b);\n    }\n}",
+      "answers": [
+        {"text": "7", "isCorrect": true},
+        {"text": "6", "isCorrect": false},
+        {"text": "2", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какой из типов относится к беззнаковым?",
+      "answers": [
+        {"text": "int", "isCorrect": false},
+        {"text": "char", "isCorrect": true},
+        {"text": "long", "isCorrect": false},
+        {"text": "double", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Сколько битов в памяти занимает тип short?",
+      "answers": [
+        {"text": "32", "isCorrect": false},
+        {"text": "8", "isCorrect": false},
+        {"text": "16", "isCorrect": true},
+        {"text": "64", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какая запись вызовет ошибку во время компиляции?",
+      "answers": [
+        {"text": "int a = 12;", "isCorrect": false},
+        {"text": "int a = 014;", "isCorrect": false},
+        {"text": "int a = 1_2;", "isCorrect": false},
+        {"text": "int a = 0b1100;", "isCorrect": false},
+        {"text": "Все записи корректны, ошибки не будет", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какое значение будет выведено, при выполнении кода?\npublic class Main {\n    public static void main(String[] args) {\n        int a = 10;\n        some(a++);\n    }\n    public static void some(int a) {\n        System.out.println(a);\n    }\n}",
+      "answers": [
+        {"text": "11", "isCorrect": false},
+        {"text": "12", "isCorrect": false},
+        {"text": "10", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какое значение будет выведено, при выполнении кода?\npublic class Main {\n    public static void main(String[] args) {\n        byte a = 127;\n        System.out.println(++a);\n    }\n}",
+      "answers": [
+        {"text": "128", "isCorrect": false},
+        {"text": "-128", "isCorrect": true},
+        {"text": "127", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое значение будет выведено, при выполнении кода?\npublic class Main {\n    public static void main(String[] args) {\n        int a = 1;\n        int b = 2;\n        System.out.println(a | b);\n    }\n}",
+      "answers": [
+        {"text": "2", "isCorrect": false},
+        {"text": "false", "isCorrect": false},
+        {"text": "3", "isCorrect": true},
+        {"text": "true", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Возможны ли арифметические операции с типом char?",
+      "answers": [
+        {"text": "Да", "isCorrect": true},
+        {"text": "Нет", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что будет храниться в переменной ch в результате выполнения char ch = 'a' + 1?",
+      "answers": [
+        {"text": "a1", "isCorrect": false},
+        {"text": "2", "isCorrect": false},
+        {"text": "Произойдёт ошибка, так как к символу нельзя прибавить число", "isCorrect": false},
+        {"text": "b", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какая кодировка используется для хранения символа в памяти?",
+      "answers": [
+        {"text": "Windows-1250", "isCorrect": false},
+        {"text": "UTF-8", "isCorrect": false},
+        {"text": "UTF-16", "isCorrect": true},
+        {"text": "ASCII", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что будет выведено в результате выполнения кода?\npublic class Main {\n    public static void main(String[] args) {\n        double a = 0.1 * 10;\n        double b = 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1;\n        System.out.println(a == b);\n    }\n}",
+      "answers": [
+        {"text": "true", "isCorrect": false},
+        {"text": "false", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Что нужно сделать, если требуется хранить целочисленное число, которое не помещается в тип long?",
+      "answers": [
+        {"text": "Использовать класс Math", "isCorrect": false},
+        {"text": "Использовать класс BigInteger", "isCorrect": true},
+        {"text": "К сожалению java не позволяет хранить числа больших размеров, и при выборе языка это нужно учитывать. Поэтому нужно использовать другой язык программирования", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Скомпилируется ли код?\npublic void someFunc() {\n    char ch = 'f';\n    short s = ch;\n}",
+      "answers": [
+        {"text": "Да", "isCorrect": false},
+        {"text": "Нет", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Скомпилируется ли код?\npublic void someFunc() {\n    short s = 'f';\n}",
+      "answers": [
+        {"text": "Да", "isCorrect": true},
+        {"text": "Нет", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Скомпилируется ли код?\nInteger a = 20;",
+      "answers": [
+        {"text": "Нет, так как число 20 не является объектом, и относится к примитивному типу.", "isCorrect": false},
+        {"text": "Да, так как произойдёт автоупаковка числа в объект типа Integer", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Скомпилируется ли код?\npublic static void main(String[] args) {\n    Integer a = 23;\n    Integer b = 23;\n    int c = a + b;\n}",
+      "answers": [
+        {"text": "Нет, так как операция сложения неприменима к ссылочным типам", "isCorrect": false},
+        {"text": "Нет, так как результат сложения должен быть присвоен переменной ссылочного типа Integer", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Укажите допустимый вариант преобразования числа в строку?",
+      "answers": [
+        {"text": "(String) 45", "isCorrect": false},
+        {"text": "Такое невозможно", "isCorrect": false},
+        {"text": "Integer.toString(45)", "isCorrect": true},
+        {"text": "45 + ''", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Укажите верный способ преобразования строки в число?",
+      "answers": [
+        {"text": "Integer.parseInt(''34'');", "isCorrect": true},
+        {"text": "(Integer) ''34'';", "isCorrect": false},
+        {"text": "34'' + 0", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Что произойдёт, если в классе прописать String text;?\npublic class SomeClass {\n    String text;\n}",
+      "answers": [
+        {"text": "Создаётся объект типа String, ссылка на который будет хранится в переменной text.", "isCorrect": false},
+        {"text": "Создаётся переменная text типа String...", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "В результате выполнения класса В мы получим:\n\npublic class A {\n    private int i = 10;\n    public int getI() { return i; }\n    public void setI(int i) { this.i = i; }\n}\n\npublic class B {\n    public void process(A a) {\n        a = new A();\n        a.setI(20);\n    }\n    public static void main(String[] args) {\n        A a = new A();\n        B b = new B();\n        b.process(a);\n        System.out.println( a.getI() );\n    }\n}",
+      "answers": [
+        {"text": "Будет выведено «20»", "isCorrect": false},
+        {"text": "Будет выведено «10»", "isCorrect": false},
+        {"text": "Код не скомпилируется", "isCorrect": true},
+        {"text": "Возникнет ошибка времени выполнения", "isCorrect": false},
+        {"text": "Все ответы неверны", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие варианты кода не вызовут ошибку компиляции?",
+      "answers": [
+        {"text": "class Parent {} interface FirstChild {} interface SecondChild implements FirstChild {}", "isCorrect": false},
+        {"text": "class Parent {} interface FirstChild {} interface SecondChild extends FirstChild {}", "isCorrect": true},
+        {"text": "class Parent {} interface FirstChild {} class SecondChild implements FirstChild {}", "isCorrect": true},
+        {"text": "class Parent {} interface FirstChild extends Parent {} class SecondChild implements FirstChild {}", "isCorrect": false},
+        {"text": "class Parent {} class FirstChild extends Parent {} class SecondChild implements FirstChild {}", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно java.util.ResourceBundle корректны?",
+      "answers": [
+        {"text": "позволяет манипулировать наборами ресурсов, зависящих от локалей", "isCorrect": true},
+        {"text": "загрузка объекта для нужной локали производится с помощью статического метода getResource()", "isCorrect": false},
+        {"text": "класс ресурсов может иметь модификатор protected", "isCorrect": true},
+        {"text": "предназначен для хранения объектов, общих для всех локалей", "isCorrect": false},
+        {"text": "класс ресурсов может иметь модификатор private", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какой из следующих вариантов кода будет скомпилирован без ошибок?",
+      "answers": [
+        {"text": "public class SomeClass { int a = b; static int b = 5; }", "isCorrect": true},
+        {"text": "public class SomeClass { int a = SomeClass.b; static int b = 5; }", "isCorrect": true},
+        {"text": "public class SomeClass { static int a = SomeClass.b; static int b = 5; }", "isCorrect": true},
+        {"text": "public class SomeClass { static int a = b; static int b = 5; }", "isCorrect": false},
+        {"text": "public class SomeClass { static int a = b; static int b = 5; }", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Для каких элементов в Java можно указать модификатор доступа?",
+      "answers": [
+        {"text": "для конструкторов класса", "isCorrect": true},
+        {"text": "для типов (классов и интерфейсов) объявления верхнего уровня", "isCorrect": true},
+        {"text": "для элементов ссылочных типов для пакетов", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно java.util.Random корректны?",
+      "answers": [
+        {"text": "последовательный запуск приложения, генерирующего последовательность псевдослучайных чисел, никогда не вернет одинаковых последовательностей", "isCorrect": false},
+        {"text": "void nextBytes(byte[] arr) — заполняет массив arr нулями", "isCorrect": false},
+        {"text": "используется для получения последовательности псевдослучайных чисел", "isCorrect": true},
+        {"text": "double nextGaussian()— возвращает случайное число в диапазоне от 0.0 до 1.0 распределенное по нормальному закону", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Отметьте ключевые слова языка Java:",
+      "answers": [
+        {"text": "boolean", "isCorrect": true},
+        {"text": "null", "isCorrect": false},
+        {"text": "false", "isCorrect": false},
+        {"text": "default", "isCorrect": true},
+        {"text": "protected", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие из следующих присвоений корректны?",
+      "answers": [
+        {"text": "char c = (byte)5 + ‘a’;", "isCorrect": true},
+        {"text": "byte b2 = 200;", "isCorrect": false},
+        {"text": "byte c = (int)150 + ‘a’;", "isCorrect": false},
+        {"text": "byte c = (char)5 + ‘a’;", "isCorrect": true},
+        {"text": "short s = (short)(2 + 3);", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Какие из следующих присвоений корректны?",
+      "answers": [
+        {"text": "char c = (byte)5 + ‘a’;", "isCorrect": true},
+        {"text": "byte b2 = 200;", "isCorrect": false},
+        {"text": "byte c = (int)150 + ‘a’;", "isCorrect": false},
+        {"text": "byte c = (char)5 + ‘a’;", "isCorrect": true},
+        {"text": "short s = (short)(2 + 3);", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "программа не завершит работу, на консоли появится 1\nпрограмма не завершит работу, на консоли ничего не появится",
+      "answers": [
+        {"text": "программа не завершит работу, на консоли появится 2", "isCorrect": true},
+        {"text": "результат трудно предугадать", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "программа не завершит работу, на консоли появится 1\nпрограмма не завершит работу, на консоли ничего не появится",
+      "answers": [
+        {"text": "программа не завершит работу, на консоли появится 2", "isCorrect": true},
+        {"text": "результат трудно предугадать", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какие утверждения относительно класса String верны?",
+      "answers": [
+        {"text": "содержит только статические методы", "isCorrect": false},
+        {"text": "является абстрактным", "isCorrect": false},
+        {"text": "обладает свойством неизменяемости от этого класса можно унаследоваться", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Отметьте верное утверждение относительно языков Java и JavaScript:",
+      "answers": [
+        {"text": "оба языка кроссплатформенны JavaScript", "isCorrect": true},
+        {"text": "является синонимом Java", "isCorrect": false},
+        {"text": "их спецификации являются закрытыми", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Какое из перечисленных ниже имен является составным?\n1). Object java.lang lang java.lang.Object\n2). Object\n3). java.lang\n4). lang\n5). java.lang.Object",
+      "answers": [
+        {"text": "Object java.lang lang java.lang.Object", "isCorrect": false},
+        {"text": "Object", "isCorrect": false},
+        {"text": "java.lang", "isCorrect": true},
+        {"text": "lang", "isCorrect": false},
+        {"text": "java.lang.Object", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Может ли массив основываться на абстрактных классах? Интерфейсах?",
+      "answers": [
+        {"text": "да, да", "isCorrect": true},
+        {"text": "да, нет", "isCorrect": false},
+        {"text": "нет, нет", "isCorrect": false},
+        {"text": "нет, да", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Один из принципов объектно-ориентированного программирования:",
+      "answers": [
+        {"text": "Абстракционизм", "isCorrect": false},
+        {"text": "Полиморфизм", "isCorrect": true},
+        {"text": "Монорфизм", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Метод определения объектов, при котором производные объекты наследуют свойства от своих потом",
+      "answers": [
+        {"text": "Монорфизм", "isCorrect": false},
+        {"text": "Полиморфизм", "isCorrect": false},
+        {"text": "Наследование", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Свойство объектов, при котором действие с одинаковыми именами вызывает различное поведение для различных объектов",
+      "answers": [
+        {"text": "Полиморфизм", "isCorrect": true},
+        {"text": "Передача", "isCorrect": false},
+        {"text": "Монорфизм", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Данные, характеризующие состояние объекта",
+      "answers": [
+        {"text": "Доли объекта", "isCorrect": false},
+        {"text": "Части объекта", "isCorrect": false},
+        {"text": "Атрибуты объекта", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Совокупность объектов, характеризующаяся общностью методов и свойств:",
+      "answers": [
+        {"text": "Класс", "isCorrect": true},
+        {"text": "Вид", "isCorrect": false},
+        {"text": "Род", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Изменение состояния объекта в ответ на какое-либо действие:",
+      "answers": [
+        {"text": "Значение", "isCorrect": false},
+        {"text": "Событие", "isCorrect": true},
+        {"text": "Данность", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Действие, которое может выполнить объект:",
+      "answers": [
+        {"text": "Метод", "isCorrect": true},
+        {"text": "Событие", "isCorrect": false},
+        {"text": "Свойство", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Характеристика объекта:",
+      "answers": [
+        {"text": "Событие", "isCorrect": false},
+        {"text": "Данность", "isCorrect": false},
+        {"text": "Свойство", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "Совокупность свойств и методов:",
+      "answers": [
+        {"text": "Объект", "isCorrect": true},
+        {"text": "Свойство", "isCorrect": false},
+        {"text": "Событие", "isCorrect": false}
+      ]
+    },
+    {
+            "question": "Совокупность свойств и методов:",
+            "answers": [
+                {"text": "Объект", "isCorrect": true},
+                {"text": "Свойство", "isCorrect": false},
+                {"text": "Событие", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Тип, соответствующий классу:",
+            "answers": [
+                {"text": "Объективный тип", "isCorrect": false},
+                {"text": "Объектный тип +", "isCorrect": true},
+                {"text": "Видимый тип", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Компоненты, которые видны во время работы приложения, с ними напрямую может взаимодействовать пользователь, называются",
+            "answers": [
+                {"text": "Абстрактными", "isCorrect": false},
+                {"text": "Видимыми", "isCorrect": false},
+                {"text": "Визуальными", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Объектно-ориентированный подход (ООП) - это:",
+            "answers": [
+                {"text": "подход, при котором система разбивается на функциональные подсистемы, которые в свою очередь делятся на подфункции, подразделяемые на задачи и так далее", "isCorrect": true},
+                {"text": "подход, при котором требования к системе воспринимаются с точки зрения классов и объектов, выявленных в предметной области", "isCorrect": false},
+                {"text": "процесс разработки ПО, который обеспечивает упорядоченность к распределению задач и обязанностей в организации-разработчике", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "К наиболее популярным методологиям, поддерживающим ООП относятся",
+            "answers": [
+                {"text": "Экстремальное программирование", "isCorrect": true},
+                {"text": "Имитационное моделирование", "isCorrect": false},
+                {"text": "Гибкое моделирование", "isCorrect": false},
+                {"text": "Унифицированный процесс", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Каким образом в ООП представляется модуль?",
+            "answers": [
+                {"text": "в виде ориентированного графа", "isCorrect": true},
+                {"text": "в виде дерева", "isCorrect": false},
+                {"text": "в виде иерархии", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Унифицированный процесс – это",
+            "answers": [
+                {"text": "обобщенный шаблон, который может быть применен для разработки и сопровождения широкого круга систем", "isCorrect": false},
+                {"text": "процесс разработки ПО, который обеспечивает упорядоченный подход к распределению задач и обязанностей", "isCorrect": true},
+                {"text": "система обозначений для определения, визуализации и конструирования моделей системы в виде диаграмм и документов на основе ООП", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Каким образом в ООП осуществлена организация внутри модулей?",
+            "answers": [
+                {"text": "модуль состоит из функций, иерархически связанных между собой отношением композиции", "isCorrect": true},
+                {"text": "иерархия выстраивается с использованием двух отношений: композиция и наследование", "isCorrect": false},
+                {"text": "«объект-часть» может включаться сразу в несколько ''объектов-целое''", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что такое паттерны проектирования?",
+            "answers": [
+                {"text": "именованная пара «проблема/решение», содержащая готовое обобщенное решение типичной проблемы", "isCorrect": true},
+                {"text": "упорядоченный поход к распределению задач и обязанностей", "isCorrect": false},
+                {"text": "язык визуализации", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие преимущества ООП можно выделить по сравнению со структурным подходом?",
+            "answers": [
+                {"text": "объединение атрибутов и методов, а также инкапсуляция позволяют добиться большей внутренней и меньшей внешней связности между компонентами системы", "isCorrect": false},
+                {"text": "применение ООП позволяет легче организовать параллельные вычисления", "isCorrect": false},
+                {"text": "применение ООП существенно повышает уровень унификации разработки и пригодность для повторного использования проектов", "isCorrect": true},
+                {"text": "для моделирования с использованием ООП не нужно владеть определенной квалификацией и знаниями, т.к. ООП прост и понятен", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие подходы к определению общих свойств объектов можно выделить?",
+            "answers": [
+                {"text": "классический подход", "isCorrect": true},
+                {"text": "концептуальная кластеризация", "isCorrect": false},
+                {"text": "объектный подход", "isCorrect": true},
+                {"text": "теория прототипов", "isCorrect": false},
+                {"text": "архитектурный подход", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "При каком походе первоначальным этапом является формирование описания классов, а затем классификация сущности в соответствии с этими описаниями",
+            "answers": [
+                {"text": "классический подход", "isCorrect": false},
+                {"text": "концептуальная кластеризация", "isCorrect": false},
+                {"text": "объектный подход", "isCorrect": true},
+                {"text": "теория прототипов", "isCorrect": false},
+                {"text": "архитектурный подход", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой подход можно связать с теорией нечетких множеств из-за принадлежности одного объекта к нескольким категориям одновременно?",
+            "answers": [
+                {"text": "классический подход", "isCorrect": true},
+                {"text": "концептуальная кластеризация", "isCorrect": false},
+                {"text": "объектный подход", "isCorrect": false},
+                {"text": "теория прототипов", "isCorrect": false},
+                {"text": "архитектурный подход", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "При каком подходе классификация производится по степени сходства объектов с конкретным шаблоном?",
+            "answers": [
+                {"text": "классический подход", "isCorrect": false},
+                {"text": "концептуальная кластеризация", "isCorrect": false},
+                {"text": "объектный подход", "isCorrect": true},
+                {"text": "теория прототипов", "isCorrect": false},
+                {"text": "архитектурный подход", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "При каком подходе классификация осуществляется в соответствии с различными концепциями?",
+            "answers": [
+                {"text": "классический подход", "isCorrect": false},
+                {"text": "концептуальная кластеризация", "isCorrect": true},
+                {"text": "объектный подход", "isCorrect": false},
+                {"text": "теория прототипов", "isCorrect": false},
+                {"text": "архитектурный подход", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "При каком подходе в качестве критерия похожести объектов используется родственность свойств объектов?",
+            "answers": [
+                {"text": "классический подход", "isCorrect": false},
+                {"text": "концептуальная кластеризация", "isCorrect": false},
+                {"text": "объектный подход", "isCorrect": false},
+                {"text": "теория прототипов", "isCorrect": true},
+                {"text": "архитектурный подход", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие преимущества можно выделить при применении шаблонов?",
+            "answers": [
+                {"text": "сокращение затрат", "isCorrect": true},
+                {"text": "простота применения", "isCorrect": false},
+                {"text": "сокращение времени на разработку ПО", "isCorrect": true},
+                {"text": "повышение качества разработки ПО", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "При каком из подходов, системы получаются более компактными?",
+            "answers": [
+                {"text": "структурном подходе", "isCorrect": false},
+                {"text": "объектно-ориентированном подходе", "isCorrect": true},
+                {"text": "при любом подходе", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие принципы объектной модели являются обязательными?",
+            "answers": [
+                {"text": "сохраняемость", "isCorrect": false},
+                {"text": "абстрагирование", "isCorrect": true},
+                {"text": "инкапсуляция", "isCorrect": true},
+                {"text": "параллелизм", "isCorrect": true},
+                {"text": "модульность", "isCorrect": false},
+                {"text": "иерархичность", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Инвариант - это:",
+            "answers": [
+                {"text": "некоторое логическое условие, значение которого (истина или ложь) должно сохраняться", "isCorrect": false},
+                {"text": "внешнее проявление объекта с точки зрения его контракта с другими объектами", "isCorrect": false},
+                {"text": "свойство системы, которое было разложено на внутренне связные, но слабо связанные между собой модули", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Абстрагирование ...?",
+            "answers": [
+                {"text": "выделяет характеристики объекта, отличающие его от других объектов", "isCorrect": true},
+                {"text": "четко определяет концептуальные границы", "isCorrect": false},
+                {"text": "позволяет отделить самые существенные особенности поведения от несущественных", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "На какие из перечисленных видов делится абстрагирование?",
+            "answers": [
+                {"text": "абстракция сущности", "isCorrect": true},
+                {"text": "абстракция типа", "isCorrect": true},
+                {"text": "абстракция виртуальной машины", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Типизация - это:",
+            "answers": [
+                {"text": "способность объекта существовать во времени, переживая породивший его процесс, и/или в пространстве, перемещаясь из своего первоначального адресного пространства", "isCorrect": false},
+                {"text": "способ защититься от использования объектов одного класса вместо другого или по крайней мере управлять таким использованием", "isCorrect": false},
+                {"text": "положение теории типов, согласно которому имена (например, переменных) могут обозначать объекты разных (но имеющих общего родителя) классов", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Класс - это:",
+            "answers": [
+                {"text": "шаблон, на основе которого генерируются однотипные объекты", "isCorrect": true},
+                {"text": "множество объектов с общей структурой и поведением.", "isCorrect": false},
+                {"text": "нечто, чем можно оперировать", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Поведение - это:",
+            "answers": [
+                {"text": "то, как объект действует и реагирует", "isCorrect": false},
+                {"text": "свойство объекта или такой набор свойств, который отличает его от всех других объектов", "isCorrect": true},
+                {"text": "перечень всех свойств данного объекта и текущими значениями каждого из этих свойств", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие виды операций существуют?",
+            "answers": [
+                {"text": "интегратор", "isCorrect": false},
+                {"text": "модификатор", "isCorrect": true},
+                {"text": "селектор", "isCorrect": true},
+                {"text": "итератор", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Объект - это:",
+            "answers": [
+                {"text": "нечто, что поддается исследованию в каком-либо конкретном случае", "isCorrect": false},
+                {"text": "некоторый экземпляр, которым можно оперировать", "isCorrect": true},
+                {"text": "шаблон, на основе которого генерируются однотипные объекты", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие принципы проектирования более естественно и полно реализованы в ООП?",
+            "answers": [
+                {"text": "наследие", "isCorrect": false},
+                {"text": "поведение", "isCorrect": false},
+                {"text": "инкапсуляция", "isCorrect": true},
+                {"text": "полиморфизм", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Инкапсуляция - это:",
+            "answers": [
+                {"text": "принцип, в соответствии с которым содержание внутреннего устройства элементов системы должно быть скрыто друг от друга", "isCorrect": true},
+                {"text": "принцип, в соответствии с которым знание об общей категории разрешается применять для более узкой", "isCorrect": false},
+                {"text": "положение теории типов, согласно которому имена могут обозначать объекты разных классов", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Полиморфизм - это:",
+            "answers": [
+                {"text": "положение теории типов, согласно которому имена могут обозначать объекты разных классов", "isCorrect": false},
+                {"text": "принцип построения элементов модели так, чтобы они могли принимать различные внешние формы или функциональность (поведение) в зависимости от обстоятельств", "isCorrect": true},
+                {"text": "принцип, в соответствии с которым знание об общей категории разрешается применять для более узкой", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие из перечисленных видов отношений существуют между классами?",
+            "answers": [
+                {"text": "отношение зависимости", "isCorrect": false},
+                {"text": "ассоциация", "isCorrect": false},
+                {"text": "отношение последовательности", "isCorrect": false},
+                {"text": "наследование", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Обобщенный класс - это:",
+            "answers": [
+                {"text": "класс, который создан посредством шаблона", "isCorrect": false},
+                {"text": "класс, служащий шаблоном для создания других классов", "isCorrect": true},
+                {"text": "класс, экземпляры которого суть класса", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие утверждения относительно методам класса верны?",
+            "answers": [
+                {"text": "класс может содержать перегруженные методы, но должен включать определение хотя бы одного конструктора", "isCorrect": false},
+                {"text": "класс может содержать перегруженные методы, но должен включать определение хотя бы одного конструкторав классе могут содержаться перегруженные методы и перегруженные конструкторы", "isCorrect": true},
+                {"text": "в классе, содержащем перегруженные конструкторы, не должно быть перегруженных методов", "isCorrect": false},
+                {"text": "класс может включать перегруженные методы и не содержать определения ни одного конструктора", "isCorrect": true},
+                {"text": "класс должен содержать определение хотя бы одного метода и конструктора", "isCorrect": false},
+                {"text": "если класс не содержит определение ни одного конструктора, то компилятор создаст конструктор по умолчанию", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какие утверждения относительно компонентов класса верны?",
+            "answers": [
+                {"text": "класс может содержать перегруженные конструкторы", "isCorrect": true},
+                {"text": "в классе могут содержаться перегруженные методы", "isCorrect": true},
+                {"text": "в классе, содержащем перегруженные конструкторы, не должно быть перегруженных методов", "isCorrect": false},
+                {"text": "класс может включать перегруженные методы и не содержать описания ни одного конструктора", "isCorrect": true},
+                {"text": "в классе, содержащем перегруженные методы, не должно быть перегруженных конструкторов", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие утверждения относительно компонентов класса верны?",
+            "answers": [
+                {"text": "класс может не содержать ни одного конструктора, но на этапе компиляции будет создан конструктор по умолчанию", "isCorrect": true},
+                {"text": "класс может включать перегруженные конструкторы", "isCorrect": true},
+                {"text": "класс может не содержать ни одного метода", "isCorrect": true},
+                {"text": "класс должен включать хотя бы один метод", "isCorrect": false},
+                {"text": "ни одно утверждение не верно", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что будет выведено на экран в результате работы следующего фрагмента программы?\n\nclass Square {\n\t\tint s (int a, int b) { return a * b; }\n\t\tdouble s (double a, double b) { return a * b ; }\n}\npublic class MyClass {\n\tpublic static void main (String args[]) {\n\t\tSquare x = new Square();\n\t\tint a = 1;\n\t\tdouble b = 2;\n\t\tSystem.out.print(x.s(a, b+a) + x.s(a++, a));\n\t...\n",
+            "answers": [
+                {"text": "31", "isCorrect": false},
+                {"text": "32", "isCorrect": false},
+                {"text": "3.02", "isCorrect": false},
+                {"text": "5.0", "isCorrect": true},
+                {"text": "3.0 + 1", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что будет выведено на экран в результате работы следующей программы?\n\nclass Square {\n\tint s (int a, int b) { return a * b; }\n\tvoid s (double a, double b) { return a * b ; }\n}\npublic class MyClass {\n\tpublic static void main (String args[]) {\n\t\tSquare x = new Square();\n\t\tint a = 1;\n\t\tdouble b = 2;\n\t\tSystem.out.print(x.s(a, b+a) + x.s(a++, a));\n\t...\n",
+            "answers": [
+                {"text": "31", "isCorrect": false},
+                {"text": "32", "isCorrect": false},
+                {"text": "3.02", "isCorrect": false},
+                {"text": "5.0", "isCorrect": false},
+                {"text": "программа завершится ошибкой", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Что будет выведено на экран в результате работы следующей программы?\n\nclass Square {\n\tint s (int a, int b) { return a * b; }\n\tdouble s (double a, double b) { return a * b ; }\n}\npublic class MyClass {\n\tpublic static void main (String args[]) {\n\t\tSquare x = new Square();\n\t\tint a = 1;\n\t\tdouble b = 2;\n\t\tSystem.out.print(x.s(a, b+a));\n\tSystem.out.print(x.s(a++, a));\n...\n",
+            "answers": [
+                {"text": "31", "isCorrect": false},
+                {"text": "32", "isCorrect": false},
+                {"text": "3.02", "isCorrect": true},
+                {"text": "5.0", "isCorrect": false},
+                {"text": "3.0 + 1", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Переменная - это ...",
+            "answers": [
+                {"text": "Отдельная операция процессора", "isCorrect": false},
+                {"text": "Комбинация значений", "isCorrect": false},
+                {"text": "Именованная область памяти", "isCorrect": true},
+                {"text": "Анализ, обработка и выполнение кода", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "С помощью какого указателя можно объявить переменную?",
+            "answers": [
+                {"text": "variable", "isCorrect": false},
+                {"text": "value", "isCorrect": false},
+                {"text": "link", "isCorrect": false},
+                {"text": "let", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nconst MAX_VALUE = 100;\nlet number = 10;\nMAX_VALUE = MAX_VALUE + number;\nalert(MAX_VALUE);",
+            "answers": [
+                {"text": "Программа отобразит число 100", "isCorrect": false},
+                {"text": "Программа отобразит число 10", "isCorrect": false},
+                {"text": "Ошибка!", "isCorrect": true},
+                {"text": "Программа отобразит число 110", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой оператор поможет определить тип данных переменной?",
+            "answers": [
+                {"text": "istype", "isCorrect": false},
+                {"text": "typeid()", "isCorrect": false},
+                {"text": "typeof", "isCorrect": true},
+                {"text": "type()", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "К какому типу данных относится переменная n?\nlet n = 10;\nn = +String(n);",
+            "answers": [
+                {"text": "Строка", "isCorrect": false},
+                {"text": "Неопределённый тип", "isCorrect": false},
+                {"text": "Число", "isCorrect": false},
+                {"text": "Логический тип", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nalert((2 + 2) * 2);",
+            "answers": [
+                {"text": "4", "isCorrect": false},
+                {"text": "8", "isCorrect": true},
+                {"text": "2", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "С помощью какого оператора можно объединить строку с другой строкой?",
+            "answers": [
+                {"text": "&", "isCorrect": false},
+                {"text": "+", "isCorrect": true},
+                {"text": "++", "isCorrect": false},
+                {"text": "*", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какое расширение представляют файлы JavaScript?",
+            "answers": [
+                {"text": "*.bat", "isCorrect": false},
+                {"text": "*.html", "isCorrect": false},
+                {"text": "*.py", "isCorrect": false},
+                {"text": "*.js", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "С помощью какого тега можно вставить программу, написанную на JavaScript, в HTML-документ?",
+            "answers": [
+                {"text": "div", "isCorrect": false},
+                {"text": "logic", "isCorrect": false},
+                {"text": "body", "isCorrect": false},
+                {"text": "script", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "С помощью какого атрибута подключается файл скрипта?",
+            "answers": [
+                {"text": "href", "isCorrect": false},
+                {"text": "path", "isCorrect": false},
+                {"text": "src", "isCorrect": true},
+                {"text": "file", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nlet n = null;\nalert(String(n));",
+            "answers": [
+                {"text": "''null''", "isCorrect": true},
+                {"text": "null", "isCorrect": false},
+                {"text": "undefined", "isCorrect": false},
+                {"text": "Ошибка!", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nlet n = null;\nalert(+n);",
+            "answers": [
+                {"text": "0", "isCorrect": true},
+                {"text": "Ошибка!", "isCorrect": false},
+                {"text": "1", "isCorrect": false},
+                {"text": "null", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы и какому типу данных относятся обе переменные?\nlet apples = 10;\nlet oranges = 8;\nalert(\"Quantity: \" + String(apples + oranges));",
+            "answers": [
+                {"text": "Quantity: 18 / Обе переменные строки", "isCorrect": false},
+                {"text": "Quantity: 18 / Обе переменные числа", "isCorrect": true},
+                {"text": "18 / Обе переменные числа", "isCorrect": false},
+                {"text": "Ошибка! Обе переменные NaN", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nlet apples = \"6\";\nlet oranges = \"3\";\nalert(apples + +oranges);",
+            "answers": [
+                {"text": "63", "isCorrect": true},
+                {"text": "32", "isCorrect": false},
+                {"text": "60", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что нужно изменить в программе, чтобы результат стал 3?\nlet a = prompt(\"Первое число?\", 1);\nlet b = prompt(\"Второе число?\", 2);\nalert(a + b);",
+            "answers": [
+                {"text": "Изменить переменным тип данных с string на number", "isCorrect": true},
+                {"text": "Добавить дополнительные круглые скобки", "isCorrect": false},
+                {"text": "Добавить постфиксную форму инкремента, чтобы сложить значения", "isCorrect": false},
+                {"text": "Занести переменные в обратные кавычки", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какое число соответствует выражению 1 / 100000?",
+            "answers": [
+                {"text": "1e-6", "isCorrect": false},
+                {"text": "1e-5", "isCorrect": true},
+                {"text": "1e-7", "isCorrect": false},
+                {"text": "1e-4", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "С помощью какого метода можно из числа 0.7689792725424371 сделать такое число 0.769?",
+            "answers": [
+                {"text": ".toFixed()", "isCorrect": true},
+                {"text": ".round()", "isCorrect": false},
+                {"text": ".floor()", "isCorrect": false},
+                {"text": ".ceil()", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nlet word = \"Автоматизация\";\nalert(word[\"О\"]);",
+            "answers": [
+                {"text": "null", "isCorrect": false},
+                {"text": "undefined", "isCorrect": true},
+                {"text": "3", "isCorrect": false},
+                {"text": "-10", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что хранит переменная word?\nlet word = \"Автоматизация\";\nword[0] = \"а\";",
+            "answers": [
+                {"text": "undefined", "isCorrect": false},
+                {"text": "null", "isCorrect": false},
+                {"text": "Автоматизация", "isCorrect": true},
+                {"text": "автоматизация", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nlet word = \"Автоматизация\";\nalert(word.indexOf(\"О\"));",
+            "answers": [
+                {"text": "-10", "isCorrect": false},
+                {"text": "undefined", "isCorrect": false},
+                {"text": "3", "isCorrect": false},
+                {"text": "-1", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nword = \" Одна из целей программирования это автоматизация ручной работы \"alert(word.trim().toUpperCase());",
+            "answers": [
+                {"text": "ОДНА ИЗ ЦЕЛЕЙ ПРОГРАММИРОВАНИЯ ЭТО АВТОМАТИЗАЦИЯ РУЧНОЙ РАБОТЫ", "isCorrect": true},
+                {"text": "одна из целей программирования это автоматизация ручной работы", "isCorrect": false},
+                {"text": "Одна из целей программирования это автоматизация ручной работы", "isCorrect": false},
+                {"text": "Одна Из Целей Программирования Это Автоматизация Ручной Работы", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что такое массив?",
+            "answers": [
+                {"text": "Набор свойств и методов", "isCorrect": false},
+                {"text": "Упорядоченная коллекция данных", "isCorrect": true},
+                {"text": "Набор неизменяемых данных", "isCorrect": false},
+                {"text": "Упорядоченная последовательность символов", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как из массива let spam = [1, 2, 3]; сделать массив let spam = [1, 2, 3, 4, 5];?",
+            "answers": [
+                {"text": "spam[spam.length] = [4, 5];", "isCorrect": false},
+                {"text": "spam.unshift(4, 5);", "isCorrect": false},
+                {"text": "spam[3] = [4, 5];", "isCorrect": false},
+                {"text": "spam += [4, 5];", "isCorrect": false},
+                {"text": "spam.push(4, 5);", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Нужно выбрать верную конструкцию для удаление элемента объекта Map.let shoppingList = new Map(    [        [\"Помидоры\", 250],        [\"Огурцы\", 190],        [\"Лук\", 32]    ]);",
+            "answers": [
+                {"text": "shoppingList.pop();", "isCorrect": false},
+                {"text": "delete shoppingList.get(''Лук'');", "isCorrect": false},
+                {"text": "shoppingList.delete(''Лук'');", "isCorrect": true},
+                {"text": "shoppingList.pop(''Лук'');", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как определить количество элементов в множестве?",
+            "answers": [
+                {"text": ".length", "isCorrect": false},
+                {"text": ".size", "isCorrect": true},
+                {"text": "len()", "isCorrect": false},
+                {"text": ".count", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "С помощью какого метода можно добавить элемент во множество?",
+            "answers": [
+                {"text": ".set()", "isCorrect": false},
+                {"text": ".add()", "isCorrect": true},
+                {"text": ".has()", "isCorrect": false},
+                {"text": ".get()", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nlet spam = new Set([\"cat\", \"dog\", \"mouse\", \"fox\", \"cat\", \"wolf\", \"cow\"]);\nlet many = new Set([\"cow\", \"mouse\", \"cat\", \"dog\", \"fox\", \"dog\", \"wolf\"]);\nalert(spam == many);",
+            "answers": [
+                {"text": "true", "isCorrect": false},
+                {"text": "false", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какое модальное окно возвращает значение логического типа?",
+            "answers": [
+                {"text": "alert", "isCorrect": false},
+                {"text": "prompt", "isCorrect": false},
+                {"text": "confirm", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nalert(true + true - false);",
+            "answers": [
+                {"text": "0", "isCorrect": false},
+                {"text": "Ошибка!", "isCorrect": false},
+                {"text": "2", "isCorrect": true},
+                {"text": "1", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как работает break внутри case оператора switch?",
+            "answers": [
+                {"text": "Прервёт выполнение оператора switch", "isCorrect": true},
+                {"text": "Приведёт к дополнительным проверкам", "isCorrect": false},
+                {"text": "Выполнит блок команд, находящийся внутри default", "isCorrect": false},
+                {"text": "Прервёт выполнение всей программы", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Возможность выполнить блок кода для нескольких case - это ...",
+            "answers": [
+                {"text": "Группировка", "isCorrect": true},
+                {"text": "Проверка", "isCorrect": false},
+                {"text": "Перечисление", "isCorrect": false},
+                {"text": "Итерация", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как называется алгоритм, содержащий блок команд для повторения?",
+            "answers": [
+                {"text": "Рекурсия", "isCorrect": false},
+                {"text": "Линейный алгоритм", "isCorrect": false},
+                {"text": "Циклический алгоритм", "isCorrect": true},
+                {"text": "Разветвляющийся алгоритм", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что такое счётчик повторений?",
+            "answers": [
+                {"text": "Дополнительный оператор для завершения цикла", "isCorrect": false},
+                {"text": "Блок команд, находящийся внутри тела цикла", "isCorrect": false},
+                {"text": "Переменная для подсчёта запуска программы", "isCorrect": false},
+                {"text": "Переменная, контролирующая повторы выполнения цикла", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Как называется одно повторение блока команд?",
+            "answers": [
+                {"text": "Репитер", "isCorrect": false},
+                {"text": "Итерация", "isCorrect": true},
+                {"text": "Аллитерация", "isCorrect": false},
+                {"text": "Поток", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Блок команд, выполняющийся постоянно. Что это?",
+            "answers": [
+                {"text": "Событие", "isCorrect": false},
+                {"text": "Бесконечный цикл", "isCorrect": true},
+                {"text": "Цикл без условия", "isCorrect": false},
+                {"text": "Генератор", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой оператор прервёт выполнение цикла?",
+            "answers": [
+                {"text": "break", "isCorrect": true},
+                {"text": "destroy", "isCorrect": false},
+                {"text": "continue", "isCorrect": false},
+                {"text": "end", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой оператор пропустит оставшуюся часть тела цикла и перейдёт к выполнению следующего повтора?",
+            "answers": [
+                {"text": "next", "isCorrect": false},
+                {"text": "over", "isCorrect": false},
+                {"text": "continue", "isCorrect": true},
+                {"text": "step", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Будет ли выполняться блок команд, находящийся внутри цикла, если в качестве условия передать null?",
+            "answers": [
+                {"text": "Нет, т.к. null это false", "isCorrect": true},
+                {"text": "Да, т.к. null это true", "isCorrect": false},
+                {"text": "Возникнет ошибка, которая приведёт к остановке программы", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как начинается цикл while?",
+            "answers": [
+                {"text": "while true:", "isCorrect": false},
+                {"text": "while (true)", "isCorrect": true},
+                {"text": "while loop", "isCorrect": false},
+                {"text": "while (let i = 1, i <= 10, i++)", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nwhile (1)\n {    alert(1);    \nbreak;\n}",
+            "answers": [
+                {"text": "null", "isCorrect": false},
+                {"text": "Программа ничего не выполнит", "isCorrect": false},
+                {"text": "1", "isCorrect": true},
+                {"text": "0", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какое число нужно ввести, чтобы прервать выполнение цикла?\nlet number = +prompt(\"Введите число\");\nwhile (number >= 0) \n{    \nnumber = +prompt(\"Введите число\");\n}",
+            "answers": [
+                {"text": "-1", "isCorrect": true},
+                {"text": "1", "isCorrect": false},
+                {"text": "0", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какое число нужно ввести, чтобы прервать выполнение цикла?\nlet number = +prompt(\"Введите число\");\nwhile (number % 3 != 0)\n {    \nnumber = +prompt(\"Введите число\");\n}",
+            "answers": [
+                {"text": "1", "isCorrect": false},
+                {"text": "3", "isCorrect": true},
+                {"text": "4", "isCorrect": false},
+                {"text": "2", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы, при условии ввода 1, 2, 3, 4, 0?\nlet number = +prompt(\"Введите число\");\nlet result = number;\nwhile (number != 0)\n{    \nnumber = +prompt(\"Введите число\");    \nresult *= number;\n}\nalert(result);",
+            "answers": [
+                {"text": "12", "isCorrect": false},
+                {"text": "0", "isCorrect": true},
+                {"text": "1", "isCorrect": false},
+                {"text": "24", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Оператор break прервёт оба цикла или только вложенный?\nlet i = j = 0;\nwhile (i != 5) \n{    \nj = 0;    \nwhile (j <= i) \n{       \n break;        \nj += 1;    \n}    \ni += 1;\n}",
+            "answers": [
+                {"text": "Оба цикла прервутся", "isCorrect": false},
+                {"text": "Будет прерываться только вложенный цикл", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Чему равны переменные i и j после завершения обоих циклов?\nlet i = j = 0;\nwhile (i != 5)\n {    \nj = 0;   \n while (j <= i) \n{        \nj += 1;    \n}   \n i += 1;\n}",
+            "answers": [
+                {"text": "6 и 6", "isCorrect": false},
+                {"text": "0 и 5", "isCorrect": false},
+                {"text": "5 и 0", "isCorrect": false},
+                {"text": "5 и 5", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Для чего используются операторы if ... else if ... else?",
+            "answers": [
+                {"text": "Для равенства", "isCorrect": false},
+                {"text": "Для преобразования значений к логическому типу", "isCorrect": false},
+                {"text": "Для повтора действий", "isCorrect": false},
+                {"text": "Для выбора", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Как используется оператор else?",
+            "answers": [
+                {"text": "Указывает о завершении использования условного оператора", "isCorrect": false},
+                {"text": "Выполняет блок команд, если все другие условия ложны", "isCorrect": true},
+                {"text": "оператор является обязательным, нельзя его не указывать", "isCorrect": false},
+                {"text": "Проверяет дополнительное условие", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "В каких скобках указывается условие при использовании условного ветвления?",
+            "answers": [
+                {"text": "[ ]", "isCorrect": false},
+                {"text": "{ }", "isCorrect": false},
+                {"text": "( )", "isCorrect": true},
+                {"text": "Скобки можно не указывать", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Сработает ли команда \nalert()?\nif (\"0\") \n{    \nalert(\"Hello!\");\n}",
+            "answers": [
+                {"text": "да", "isCorrect": true},
+                {"text": "нет", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nalert( alert(1) || 2 || alert(3) );",
+            "answers": [
+                {"text": "2 и 3", "isCorrect": false},
+                {"text": "1 и 3", "isCorrect": false},
+                {"text": "undefined", "isCorrect": false},
+                {"text": "1 и 2", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "К какому типу преобразуют значения операторы сравнения?",
+            "answers": [
+                {"text": "Строки", "isCorrect": false},
+                {"text": "Логический тип", "isCorrect": true},
+                {"text": "Числа", "isCorrect": false},
+                {"text": "Неопределённый тип", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какая функция используется для ввода значений?",
+            "answers": [
+                {"text": "input()", "isCorrect": false},
+                {"text": "prompt()", "isCorrect": true},
+                {"text": "confirm()", "isCorrect": false},
+                {"text": "alert()", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какое ключевое слово используется для объявления функции?",
+            "answers": [
+                {"text": "fun", "isCorrect": false},
+                {"text": "function", "isCorrect": true},
+                {"text": "def", "isCorrect": false},
+                {"text": "let", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "С помощью какого оператора можно вернуть значение функции?",
+            "answers": [
+                {"text": "break", "isCorrect": false},
+                {"text": "get", "isCorrect": false},
+                {"text": "return", "isCorrect": true},
+                {"text": "continue", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Переменная объявляется внутри функции - это переменная с ____ областью видимости.",
+            "answers": [
+                {"text": "локальной", "isCorrect": true},
+                {"text": "глобальной", "isCorrect": false},
+                {"text": "внешней", "isCorrect": false},
+                {"text": "блочной", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Переменная объявляется в основном потоке программы - это переменная с ____ областью видимости.",
+            "answers": [
+                {"text": "глобальной", "isCorrect": true},
+                {"text": "блочной", "isCorrect": false},
+                {"text": "локальной", "isCorrect": false},
+                {"text": "внутренней", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как называются переменные, которые используются внутри функции, но не объявлены в основном потоке программы и в самой функции?",
+            "answers": [
+                {"text": "Константы", "isCorrect": false},
+                {"text": "Передатчики", "isCorrect": false},
+                {"text": "Аргументы", "isCorrect": true},
+                {"text": "Утверждения", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какое значение будет возвращено, если при вызове функции не указывать значение для дополнительного параметра?",
+            "answers": [
+                {"text": "undefined", "isCorrect": true},
+                {"text": "null", "isCorrect": false},
+                {"text": "Infinity", "isCorrect": false},
+                {"text": "NaN", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Можно ли оператор return заменить на оператор break для завершения функции?",
+            "answers": [
+                {"text": "Да, если функция возвращает true или false", "isCorrect": false},
+                {"text": "Да, если функцию записать в переменную", "isCorrect": false},
+                {"text": "Да", "isCorrect": false},
+                {"text": "Нет", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nlet summa = (n1, n2) => n1 + n2;\nalert(typeof summa);",
+            "answers": [
+                {"text": "function", "isCorrect": true},
+                {"text": "number", "isCorrect": false},
+                {"text": "string", "isCorrect": false},
+                {"text": "boolean", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nfunction summa(n1, n2) {}alert(summa(2, 3));",
+            "answers": [
+                {"text": "null", "isCorrect": false},
+                {"text": "undefined", "isCorrect": true},
+                {"text": "None", "isCorrect": false},
+                {"text": "NaN", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nfunction test() \n{   \n let number = 10;\n}\ntest();\nalert(number);",
+            "answers": [
+                {"text": "null", "isCorrect": false},
+                {"text": "undefined", "isCorrect": false},
+                {"text": "Ошибка!", "isCorrect": true},
+                {"text": "NaN", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nlet number = 10;\nfunction test(number) \n{   \n let result = number % 2;    \nreturn result;\n}\nnumber = test(number);\nalert(number);",
+            "answers": [
+                {"text": "5", "isCorrect": false},
+                {"text": "1", "isCorrect": false},
+                {"text": "Ошибка!", "isCorrect": false},
+                {"text": "0", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nfunction test(n1=5, n2=10) \n{    \nalert(n1 + n2);\n}\ntest(2, 3);",
+            "answers": [
+                {"text": "5", "isCorrect": true},
+                {"text": "Ошибка!", "isCorrect": false},
+                {"text": "20", "isCorrect": false},
+                {"text": "15", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что значит \"анонимная функция\"?",
+            "answers": [
+                {"text": "Функция без имени", "isCorrect": true},
+                {"text": "Функция, которая выполняется без вызова", "isCorrect": false},
+                {"text": "Функция, которая ничего не возвращает", "isCorrect": false},
+                {"text": "Функция, которая объявляется с помощью ключевого слова anonym", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как называется функция, которая передаётся в качестве дополнительного параметра другой функции для последующего её вызова?",
+            "answers": [
+                {"text": "Функция обратного вызова", "isCorrect": true},
+                {"text": "Функция-выражение", "isCorrect": false},
+                {"text": "Рекурсивная функция", "isCorrect": false},
+                {"text": "Рекурсивная функция", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nfunction test(n1, n2=n1) \n{    \nalert(n1 + n2);\n}\ntest(3, 2);",
+            "answers": [
+                {"text": "3", "isCorrect": false},
+                {"text": "Ошибка!", "isCorrect": false},
+                {"text": "6", "isCorrect": false},
+                {"text": "5", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Множество значений и действий, которые можно применить к этим значениям - это ...",
+            "answers": [
+                {"text": "Стек", "isCorrect": false},
+                {"text": "Последовательность битов", "isCorrect": false},
+                {"text": "Типы данных", "isCorrect": true},
+                {"text": "Адреса в памяти компьютера", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Объект - это ...",
+            "answers": [
+                {"text": "Управляющая конструкция", "isCorrect": false},
+                {"text": "Набор свойств, каждое из которых имеет имя и значение", "isCorrect": true},
+                {"text": "Функция с квадратными скобками", "isCorrect": false},
+                {"text": "Один из существующих примитивов", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как создать свойство с именем DIFFICULTY LEVEL (_уровень сложности_)?",
+            "answers": [
+                {"text": "Имя свойства нужно занести в квадратные скобки и присвоить значение - [difficulty level] = 3", "isCorrect": false},
+                {"text": "Имя свойства нужно занести в кавычки - ''difficulty level''", "isCorrect": true},
+                {"text": "В JavaScript нет возможности создать свойство с таким именем", "isCorrect": false},
+                {"text": "Нужно заменить символ пробела на нижнее подчёркивание при указании имени свойства - difficulty_level", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "С помощью какого цикла можно перебрать все свойства в объекте?",
+            "answers": [
+                {"text": "while (условие)", "isCorrect": false},
+                {"text": "for (начало; условие; шаг)", "isCorrect": false},
+                {"text": "for ... in", "isCorrect": true},
+                {"text": "goto ()", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какое ключевое слово используется для определения объекта?",
+            "answers": [
+                {"text": "Bigint", "isCorrect": false},
+                {"text": "Number", "isCorrect": false},
+                {"text": "Object", "isCorrect": true},
+                {"text": "Array", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как называется функция, которая присваивается свойству объекта?",
+            "answers": [
+                {"text": "Метод", "isCorrect": true},
+                {"text": "Команда", "isCorrect": false},
+                {"text": "Константа", "isCorrect": false},
+                {"text": "Литерал", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "С помощью какого ключевого слова можно получить доступ к хранящейся информации объекта?",
+            "answers": [
+                {"text": "this", "isCorrect": true},
+                {"text": "get", "isCorrect": false},
+                {"text": "self", "isCorrect": false},
+                {"text": "goto", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Чему равна переменная result после завершения цикла?\nlet result = 0;\nfor (i = 10; i > 0; i--) {    \nresult += i;\n};",
+            "answers": [
+                {"text": "0", "isCorrect": false},
+                {"text": "45", "isCorrect": false},
+                {"text": "50", "isCorrect": false},
+                {"text": "55", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какой будет результат программы?\nlet result = 0;\nfor (i = -10, i <= 10, i++) {    \nresult += i;\n};",
+            "answers": [
+                {"text": "Ошибка!", "isCorrect": true},
+                {"text": "0", "isCorrect": false},
+                {"text": "10", "isCorrect": false},
+                {"text": "-10", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие элементы в HTML относятся к блочным элементам?",
+            "answers": [
+                {"text": "h1, p, div", "isCorrect": true},
+                {"text": "a, img, br", "isCorrect": false},
+                {"text": "span, em, strong", "isCorrect": false},
+                {"text": "i, b, u, s", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие элементы визуально создают самостоятельные структурные блоки?",
+            "answers": [
+                {"text": "i, b, u", "isCorrect": false},
+                {"text": "span, em, strong", "isCorrect": false},
+                {"text": "h1-h6, p, div", "isCorrect": false},
+                {"text": "a, img, br", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Что отделяет блочные элементы от других элементов в HTML?",
+            "answers": [
+                {"text": "Абзацные отступы", "isCorrect": true},
+                {"text": "Граница блока (border)", "isCorrect": false},
+                {"text": "Поля (margin)", "isCorrect": false},
+                {"text": "Отступы (padding)", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие свойства определяют размер блока в CSS?",
+            "answers": [
+                {"text": "Фон и цвет текста", "isCorrect": false},
+                {"text": "Ширина и высота", "isCorrect": true},
+                {"text": "Граница и поля", "isCorrect": false},
+                {"text": "Отступы и поля", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие свойства задают дополнительное свободное пространство вокруг блока?",
+            "answers": [
+                {"text": "Поля (margin)", "isCorrect": true},
+                {"text": "Граница (border)", "isCorrect": false},
+                {"text": "Цвет фона (background-color)", "isCorrect": false},
+                {"text": "Отступы (padding)", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие свойства учитываются при определении размера блока?",
+            "answers": [
+                {"text": "Отступы и поля", "isCorrect": false},
+                {"text": "Ширина и высота", "isCorrect": true},
+                {"text": "Граница и поля", "isCorrect": false},
+                {"text": "Фон и цвет текста", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие элементы можно использовать для построения блочной верстки сайта?",
+            "answers": [
+                {"text": "h1-h6, p, div", "isCorrect": true},
+                {"text": "i, b, u, s", "isCorrect": false},
+                {"text": "a, img, br", "isCorrect": false},
+                {"text": "span, em, strong", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что такое CSS Keyframes?",
+            "answers": [
+                {"text": "Это атрибут HTML-элемента для создания анимаций.", "isCorrect": false},
+                {"text": "Это специальный тег для создания изображений.", "isCorrect": false},
+                {"text": "Это набор инструкций для создания анимаций в CSS.", "isCorrect": true},
+                {"text": "Это язык программирования для веб-разработки.", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что представляют собой ключевые моменты в CSS Keyframes?",
+            "answers": [
+                {"text": "Моменты во времени, на которых стили должны изменяться в анимации.", "isCorrect": true},
+                {"text": "Моменты, когда происходит загрузка изображений", "isCorrect": false},
+                {"text": "Моменты, когда браузер обновляет страницу", "isCorrect": false},
+                {"text": "Моменты, когда пользователь взаимодействует с веб-страницей", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как создать документ с разметкой html, чтобы он отображался в браузере?",
+            "answers": [
+                {"text": "Создать текстовый документ и поменять его расширение на .html", "isCorrect": true},
+                {"text": "Создать папку и поменять её расширение на .html", "isCorrect": false},
+                {"text": "Зайти в настройки браузера и выбрать ''Создать документ html''", "isCorrect": false},
+                {"text": "Найти ярлык браузера и изменить его расширение на .html", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Каким образом CSS Keyframes связываются с элементами HTML?",
+            "answers": [
+                {"text": "С помощью атрибута animation-name", "isCorrect": true},
+                {"text": "С помощью атрибута css-keyframes", "isCorrect": false},
+                {"text": "С помощью атрибута keyframes", "isCorrect": false},
+                {"text": "С помощью атрибута animation-styles", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Студент сохранил HTML-документ, но при просмотре в браузере увидел вместо текста непонятные символы. Что ему нужно сделать?",
+            "answers": [
+                {"text": "Установить русскую версию браузера", "isCorrect": false},
+                {"text": "Сохранить файл с расширением .utf8", "isCorrect": false},
+                {"text": "Сохранить документ в кодировке UTF 8", "isCorrect": true},
+                {"text": "Перезагрузить веб-страницу в браузер", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что такое html-элемент?",
+            "answers": [
+                {"text": "Это дескриптор, определяющий, какие запросы делает пользователь на сервер", "isCorrect": false},
+                {"text": "Информация о том, каким образом видит страницу разработчик", "isCorrect": false},
+                {"text": "Некое событие, которое происходит в браузере", "isCorrect": false},
+                {"text": "Служебное слово/символ, определяющее, как будет выводится информация в браузере", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "В каких случаях не указывается закрывающий тег?",
+            "answers": [
+                {"text": "Для элементов с атрибутами", "isCorrect": false},
+                {"text": "Для одиночных элементов", "isCorrect": true},
+                {"text": "Когда после одного элемента идёт такой же", "isCorrect": false},
+                {"text": "Когда один элемент вложен в другой", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какое из следующих свойств CSS задает максимальную ширину элемента?",
+            "answers": [
+                {"text": "min-width", "isCorrect": false},
+                {"text": "width", "isCorrect": false},
+                {"text": "max-width", "isCorrect": true},
+                {"text": "max-height", "isCorrect": false},
+                {"text": "height", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "С помощью чего один атрибут отделяется от другого?",
+            "answers": [
+                {"text": "Кавычек", "isCorrect": false},
+                {"text": "Переноса строки", "isCorrect": false},
+                {"text": "Пробела", "isCorrect": true},
+                {"text": "Дефиса", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что из перечисленного НЕ ЯВЛЯЕТСЯ основным элементом адаптивного дизайна?",
+            "answers": [
+                {"text": "Адаптивные изображения", "isCorrect": false},
+                {"text": "Статические макеты", "isCorrect": true},
+                {"text": "Гибкие сетки", "isCorrect": false},
+                {"text": "Медиазапросы", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что из перечисленного НЕ ЯВЛЯЕТСЯ основным элементом адаптивного дизайна?",
+            "answers": [
+                {"text": "Адаптивные изображения", "isCorrect": false},
+                {"text": "Статические макеты", "isCorrect": true},
+                {"text": "Гибкие сетки", "isCorrect": false},
+                {"text": "Медиазапросы", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что такое \"экранирование\"?",
+            "answers": [
+                {"text": "Вывод на экран изображений и ссылок", "isCorrect": false},
+                {"text": "Процесс снижения электромагнитного поля в области путем баррикадирования ее проводящим или магнитным материалом", "isCorrect": false},
+                {"text": "Работа с браузером в экранном режиме", "isCorrect": false},
+                {"text": "Выведение на экран служебных символов в качестве текстовых", "isCorrect": true},
+                {"text": "Работа с блоками, выводящимися на весь экран", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что содержит тег title?",
+            "answers": [
+                {"text": "Изображение", "isCorrect": false},
+                {"text": "Название веб-страницы, отображаемое в ''шапке'' браузера", "isCorrect": true},
+                {"text": "Текст документа", "isCorrect": false},
+                {"text": "Заголовок, отображаемый в документе", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "ОТМЕТЬТЕ ВЕРНОЕ УТВЕРЖДЕНИЕ:",
+            "answers": [
+                {"text": "вместо двойных кавычек можно использовать скобки", "isCorrect": false},
+                {"text": "за именем атрибута следует знак равенства и значение атрибута в кавычках", "isCorrect": true},
+                {"text": "атрибут тега встраивается в закрывающий тег", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Отметьте одно верное утверждение:",
+            "answers": [
+                {"text": "AФормат JPEG поддерживает анимацию", "isCorrect": false},
+                {"text": "GIF – один из самых популярных форматов изображений для сайтов", "isCorrect": false},
+                {"text": "Формат SVG имеет малый вес, отлично масштабируются", "isCorrect": true},
+                {"text": "Изображения в формате PNG по качеству выглядят хуже, чем JPEG", "isCorrect": false},
+                {"text": "Формат WebP поддерживается всеми браузерами", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что обозначает HTML тег <p>?",
+            "answers": [
+                {"text": "Подпись к изображению", "isCorrect": false},
+                {"text": "Ссылку", "isCorrect": false},
+                {"text": "Заголовок", "isCorrect": false},
+                {"text": "Параграф или текстовый абзац", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какой атрибут следует добавить к ссылке, чтобы она открывалась в новом окне?",
+            "answers": [
+                {"text": "target", "isCorrect": true},
+                {"text": "_blank", "isCorrect": false},
+                {"text": "new_win", "isCorrect": false},
+                {"text": "<a></a>", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "С помощью какого тега можно сделать текст жирным?",
+            "answers": [
+                {"text": "c", "isCorrect": false},
+                {"text": "m", "isCorrect": false},
+                {"text": "b", "isCorrect": true},
+                {"text": "i", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие атрибуты используются при подключении внешнего файла CSS с использованием тега?",
+            "answers": [
+                {"text": "type, value, link", "isCorrect": false},
+                {"text": "link, path, stylesheet", "isCorrect": false},
+                {"text": "style, source, link", "isCorrect": false},
+                {"text": "rel, href, type", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какое из утверждений является преимуществом использования внешнего файла CSS?",
+            "answers": [
+                {"text": "Изменения в стилях автоматически применяются только к текущей странице.", "isCorrect": false},
+                {"text": "Стили хранятся внутри HTML-тегов, что делает код компактнее.", "isCorrect": false},
+                {"text": "Все перечисленное", "isCorrect": false},
+                {"text": "Можно использовать один и тот же файл CSS на нескольких страницах сайта.", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "К чему будут применены стили, если они определены внутри тега <style> в HTML-документе?",
+            "answers": [
+                {"text": "Ко всем страницам в Интернете.", "isCorrect": false},
+                {"text": "Ко всем документам в одном каталоге.", "isCorrect": false},
+                {"text": "Ко всем страницам сайта.", "isCorrect": false},
+                {"text": "Только к текущему документу.", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какой из нижеперечисленных недостатков относится к встроенному CSS?",
+            "answers": [
+                {"text": "Невозможность использования на нескольких страницах.", "isCorrect": true},
+                {"text": "Сложность локализации стилей.", "isCorrect": false},
+                {"text": "Объемный код из-за множества файлов.", "isCorrect": false},
+                {"text": "Сложность обновления стилей.", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как CSS взаимодействует с HTML, когда используется внешний файл?",
+            "answers": [
+                {"text": "CSS подключается к HTML с помощью тега <link>.", "isCorrect": true},
+                {"text": "CSS автоматически наследует стили из HTML-тегов.", "isCorrect": false},
+                {"text": "CSS вставляется непосредственно в теги HTML.", "isCorrect": false},
+                {"text": "CSS не имеет отношения к HTML.", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какое значение в атрибуте type используется при подключении CSS к HTML?",
+            "answers": [
+                {"text": "text / html", "isCorrect": false},
+                {"text": "application / css", "isCorrect": false},
+                {"text": "text / css", "isCorrect": true},
+                {"text": "style / css", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой селектор выбирает все абзацы на странице?",
+            "answers": [
+                {"text": "p", "isCorrect": true},
+                {"text": "#paragraph", "isCorrect": false},
+                {"text": "paragraph", "isCorrect": false},
+                {"text": ".paragraph", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как выбрать все элементы с классом \"content\" в CSS?",
+            "answers": [
+                {"text": ".content.", "isCorrect": false},
+                {"text": "#content", "isCorrect": false},
+                {"text": ".content", "isCorrect": true},
+                {"text": "Content", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Если у элемента есть класс и идентификатор, какой стиль будет иметь более высокий приоритет?",
+            "answers": [
+                {"text": "Класс", "isCorrect": false},
+                {"text": "Оба равны по приоритету", "isCorrect": false},
+                {"text": "Идентификатор", "isCorrect": true},
+                {"text": "Зависит от порядка в коде", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что делает псевдокласс :hover в CSS?",
+            "answers": [
+                {"text": "Применяет стили к посещенной ссылке.", "isCorrect": false},
+                {"text": "Применяет стили к активной ссылке.", "isCorrect": false},
+                {"text": "Применяет стили к первому дочернему элементу.", "isCorrect": false},
+                {"text": "Применяет стили к ссылке, на которую наведен курсор.", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какой псевдокласс применяет стили ко всем четным элементам внутри родительского контейнера?",
+            "answers": [
+                {"text": ":hover", "isCorrect": false},
+                {"text": ":first-child", "isCorrect": false},
+                {"text": ":nth-child(even)", "isCorrect": true},
+                {"text": ":nth-child(odd)", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "В какой последовательности разрабатываются модули при нисходящем методе проектирования?",
+            "answers": [
+                {"text": "сначала разрабатывается головной модуль, затем – остальные модули", "isCorrect": true},
+                {"text": "сначала разрабатываются модули самого низкого уровня, затем – модули более высокого уровня, головной модуль разрабатывается в последнюю очередь", "isCorrect": false},
+                {"text": "модули всех уровней разрабатываются параллельно", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что делает псевдокласс :first-child в CSS?",
+            "answers": [
+                {"text": "Применяет стили ко всем дочерним элементам.", "isCorrect": false},
+                {"text": "Применяет стили ко всем нечетным элементам.", "isCorrect": false},
+                {"text": "Применяет стили к первому дочернему элементу в каждом родительском контейнере.", "isCorrect": true},
+                {"text": "Применяет стили только к первому дочернему элементу родителя.", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "В какой последовательности разрабатываются модули при восходящем методе проектирования?",
+            "answers": [
+                {"text": "сначала разрабатывается головной модуль, затем – остальные модули", "isCorrect": false},
+                {"text": "сначала разрабатываются модули самого низкого уровня, затем – модули более высокого уровня, головной модуль разрабатывается в последнюю очередь", "isCorrect": true},
+                {"text": "модули всех уровней разрабатываются параллельно", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какие элементы будут выбраны с использованием селектора :nth-child(2n)?",
+            "answers": [
+                {"text": "Только первый дочерний элемент.", "isCorrect": false},
+                {"text": "Только последний дочерний элемент.", "isCorrect": false},
+                {"text": "Все элементы с четными порядковыми номерами.", "isCorrect": true},
+                {"text": "Все элементы с нечетными порядковыми номерами.", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "При использовании какого метода проектирования сначала разрабатываются модули самого низкого уровня, затем – модули более высокого уровня, головной модуль разрабатывается на завершающем этапе проектирования?",
+            "answers": [
+                {"text": "при использовании восходящего метода", "isCorrect": true},
+                {"text": "при использовании нисходящего метода", "isCorrect": false},
+                {"text": "указанная последовательность проектирования является логичной во всех случаях, поэтому применяется во всех методах", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой CSS-свойство используется для изменения цвета текста?",
+            "answers": [
+                {"text": "color", "isCorrect": true},
+                {"text": "background-color", "isCorrect": false},
+                {"text": "font-color", "isCorrect": false},
+                {"text": "text-color", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что является преимуществом нисходящего метода проектирования?",
+            "answers": [
+                {"text": "не нужно писать заглушки", "isCorrect": false},
+                {"text": "логика программы (головной модуль) отлаживается на начальном этапе", "isCorrect": true},
+                {"text": "размер программного комплекса и его эксплуатационные характеристики можно оценить на начальном этапе проектирования", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как можно задать элемента в CSS?",
+            "answers": [
+                {"text": "color-background", "isCorrect": false},
+                {"text": "bg-color", "isCorrect": false},
+                {"text": "background-color", "isCorrect": true},
+                {"text": "background", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что является преимуществом восходящего метода проектирования?",
+            "answers": [
+                {"text": "не нужно писать заглушки", "isCorrect": true},
+                {"text": "логика программы (головной модуль) отлаживается на начальном этапе", "isCorrect": false},
+                {"text": "отсутствует необходимость дорабатывать модули более низких уровней", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как можно задать цвет фона элемента в CSS?",
+            "answers": [
+                {"text": "rgb(255, 0, 0)", "isCorrect": false},
+                {"text": "red", "isCorrect": false},
+                {"text": "Все варианты верные", "isCorrect": true},
+                {"text": "#00FF00", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "В чем недостаток восходящего метода проектирования?",
+            "answers": [
+                {"text": "нужно писать заглушки", "isCorrect": false},
+                {"text": "головной модуль разрабатывается на завершающем этапе, поэтому необходимо дорабатывать модули более низких уровней", "isCorrect": true},
+                {"text": "логика программы (головной модуль) отлаживается на начальном этапе, поэтому в дальнейшем сложно вносить изменения в программу", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как создать градиентный фон в CSS?",
+            "answers": [
+                {"text": "gradient: linear(top, #FF0000, #0000FF);", "isCorrect": false},
+                {"text": "gradient-background: linear(top, #FF0000, #0000FF);", "isCorrect": false},
+                {"text": "background-gradient: linear(top, #FF0000, #0000FF);", "isCorrect": false},
+                {"text": "background-image: linear-gradient(top, #FF0000, #0000FF);", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "К чему нужно стремиться при проектировании модулей?",
+            "answers": [
+                {"text": "к максимальной независимости модулей между собой", "isCorrect": true},
+                {"text": "к максимальной связанности модулей в проекте", "isCorrect": false},
+                {"text": "к максимальному количеству передаваемой между блоками информации", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какое CSS-свойство используется для задания шрифта текста?",
+            "answers": [
+                {"text": "font-style", "isCorrect": false},
+                {"text": "text-font", "isCorrect": false},
+                {"text": "font-size", "isCorrect": false},
+                {"text": "font-family", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Как изменить жирность (толщину) шрифта в CSS?",
+            "answers": [
+                {"text": "font-weight", "isCorrect": true},
+                {"text": "text-weight", "isCorrect": false},
+                {"text": "font-bold", "isCorrect": false},
+                {"text": "font-thickness", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какая составляющая определяет все модули, функции, их интерфейсы, а также алгоритмы работы и структуры данных?",
+            "answers": [
+                {"text": "системные требования к ПО", "isCorrect": false},
+                {"text": "организационные требования", "isCorrect": false},
+                {"text": "архитектура ПО", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какие единицы измерения можно использовать для задания размера шрифта?",
+            "answers": [
+                {"text": "Все вышеперечисленные", "isCorrect": true},
+                {"text": "em", "isCorrect": false},
+                {"text": "px (пиксели)", "isCorrect": false},
+                {"text": "% (проценты)", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что определяет архитектура ПО?",
+            "answers": [
+                {"text": "описание всех модулей, функций, их интерфейсов, а также алгоритмы работы и структуры данных", "isCorrect": true},
+                {"text": "реализацию алгоритмов работы и структуры данных", "isCorrect": false},
+                {"text": "описание программного продукта на языке высокого уровня", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "На каком этапе разработки ПО определяются описания всех модулей, функций, их интерфейсов, а также алгоритмов работы и структур данных?",
+            "answers": [
+                {"text": "на этапе разработки требований к ПО", "isCorrect": false},
+                {"text": "на этапе разработки архитектуры ПО", "isCorrect": true},
+                {"text": "на этапе кодирования", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как называется методология разработки программного обеспечения, в основе которой лежит представление программы в виде иерархической структуры блоков?",
+            "answers": [
+                {"text": "модульное программирование", "isCorrect": false},
+                {"text": "структурное программирование", "isCorrect": true},
+                {"text": "объектно-ориентированное программирование", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Как называется методология разработки программного обеспечения, в основе которой лежит разделение программы на отдельные именованные сущности?",
+            "answers": [
+                {"text": "модульное программирование", "isCorrect": true},
+                {"text": "структурное программирование", "isCorrect": false},
+                {"text": "функциональное программирование", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что такое модульное программирование?",
+            "answers": [
+                {"text": "парадигма программирования, в которой основными концепциями являются понятия объектов и классов", "isCorrect": false},
+                {"text": "методология разработки программного обеспечения, в основе которой лежит разделение программы на отдельные именованные сущности", "isCorrect": true},
+                {"text": "методология разработки программного обеспечения, в основе которой лежит представление программы в виде иерархической структуры блоков", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что является преимуществом структурного подхода в программировании?",
+            "answers": [
+                {"text": "увеличение возможности повторного использования кода", "isCorrect": false},
+                {"text": "упрощение процесса тестирования и отладки программы", "isCorrect": true},
+                {"text": "возможность писать одну программу на разных языка программирования", "isCorrect": false},
+                {"text": "уменьшение необходимости блок-схем и других графических форм изображения алгоритмов (сама программа является собственной блок-схемой)", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какое утверждение НЕСПРАВЕДЛИВО для структурного программирования?",
+            "answers": [
+                {"text": "упрощается процесс тестирования и отладки программы", "isCorrect": false},
+                {"text": "программу можно писать на разных языка программирования", "isCorrect": true},
+                {"text": "увеличивается возможность повторного использования кода", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой метод используется при разработке сложного программного обеспечения?",
+            "answers": [
+                {"text": "структурное программирование", "isCorrect": false},
+                {"text": "модульное программирование", "isCorrect": true},
+                {"text": "оба метода одинаково подходят для разработки сложных систем", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой метод проектирования целесообразно применять при разработке новой программного системы?",
+            "answers": [
+                {"text": "метод нисходящего проектирования", "isCorrect": true},
+                {"text": "метод восходящего проектирования", "isCorrect": false},
+                {"text": "оба метода эффективны в данном случае", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой метод проектирования целесообразно применять при модификации уже существующей программной системы?",
+            "answers": [
+                {"text": "метод нисходящего проектирования", "isCorrect": false},
+                {"text": "метод восходящего проектирования", "isCorrect": true},
+                {"text": "оба метода эффективны в данном случае", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "В каком случае предпочтительным является использование восходящего метода проектирования?",
+            "answers": [
+                {"text": "при модификации уже существующей программной системы", "isCorrect": true},
+                {"text": "при разработке новой программного системы", "isCorrect": false},
+                {"text": "ни в одном из предложенных случаев", "isCorrect": false},
+                {"text": "в обоих предложенных случаях", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что обозначает функциональная завершенность программного модуля?",
+            "answers": [
+                {"text": "модуль выполняет операции для реализации каждой отдельной функции в полном составе, достаточные для завершения начатой обработки", "isCorrect": true},
+                {"text": "результат работы программного модуля зависит только от исходных данных, но не зависит от работы других модулей", "isCorrect": false},
+                {"text": "обмен информацией между модулями должен быть по возможности минимизирован", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что обозначает логическая независимость программного модуля?",
+            "answers": [
+                {"text": "модуль выполняет операции для реализации каждой отдельной функции в полном составе, достаточные для завершения начатой обработки", "isCorrect": false},
+                {"text": "результат работы программного модуля зависит только от исходных данных, но не зависит от работы других модулей", "isCorrect": true},
+                {"text": "обмен информацией между модулями должен быть по возможности минимизирован", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Что обозначают слабые информационные связи между программными модулями?",
+            "answers": [
+                {"text": "каждый модуль выполняет операции для реализации каждой отдельной функции в полном составе, достаточные для завершения начатой обработки", "isCorrect": false},
+                {"text": "результат работы каждого модуля зависит только от исходных данных, но не зависит от работы других модулей", "isCorrect": false},
+                {"text": "обмен информацией между модулями должен быть по возможности минимизирован", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "Какой паттерн проектирования используется для создания объектов без указания конкретного класса создаваемого объекта?",
+            "answers": [
+                {"text": "Singleton", "isCorrect": false},
+                {"text": "Factory Method", "isCorrect": true},
+                {"text": "Observer", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой паттерн проектирования позволяет объектам оповещать другие объекты об изменениях своего состояния?",
+            "answers": [
+                {"text": "Strategy", "isCorrect": false},
+                {"text": "Observer", "isCorrect": true},
+                {"text": "Decorator", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Какой паттерн проектирования позволяет добавлять новое поведение к объектам, не изменяя их структуру?",
+            "answers": [
+                {"text": "Adapter", "isCorrect": false},
+                {"text": "Decorator", "isCorrect": true},
+                {"text": "Command", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "КАКОЕ ОСНОВНОЕ НАЗНАЧЕНИЕ ПАТТЕРНОВ ПРОЕКТИРОВАНИЯ?",
+            "answers": [
+                {"text": "Ускорение разработки программного обеспечения", "isCorrect": false},
+                {"text": "Предоставление готовых решений для часто встречающихся проблем", "isCorrect": true},
+                {"text": "Упрощение документации к коду", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "КАКОЙ ИЗ СЛЕДУЮЩИХ ПАТТЕРНОВ ОТНОСИТСЯ К ПОРОЖДАЮЩИМ ПАТТЕРНАМ?",
+            "answers": [
+                {"text": "Singleton", "isCorrect": true},
+                {"text": "Observer", "isCorrect": false},
+                {"text": "Strategy", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "КАКОЙ ИЗ СЛЕДУЮЩИХ ПАТТЕРНОВ ИСПОЛЬЗУЕТСЯ ДЛЯ СОЗДАНИЯ ОБЪЕКТОВ БЕЗ УКАЗАНИЯ КОНКРЕТНОГО КЛАССА СОЗДАВАЕМОГО ОБЪЕКТА?",
+            "answers": [
+                {"text": "Builder", "isCorrect": false},
+                {"text": "Prototype", "isCorrect": false},
+                {"text": "Factory Method", "isCorrect": true}
+            ]
+        },
+        {
+            "question": "КАКОЙ ПАТТЕРН ПРОЕКТИРОВАНИЯ ПОЗВОЛЯЕТ ДОБАВЛЯТЬ НОВОЕ ПОВЕДЕНИЕ К ОБЪЕКТАМ ДИНАМИЧЕСКИ?",
+            "answers": [
+                {"text": "Adapter", "isCorrect": false},
+                {"text": "Decorator", "isCorrect": true},
+                {"text": "Command", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "КАКОЙ ПАТТЕРН ПРОЕКТИРОВАНИЯ ПОЗВОЛЯЕТ ОБЪЕКТАМ ВЗАИМОДЕЙСТВОВАТЬ ДРУГ С ДРУГОМ, НЕ ЗНАЯ О КОНКРЕТНЫХ КЛАССАХ ДРУГ ДРУГА?",
+            "answers": [
+                {"text": "Mediator", "isCorrect": true},
+                {"text": "Observer", "isCorrect": false},
+                {"text": "Strategy", "isCorrect": false}
+            ]
+        },
+        {
+            "question": "Укажите правильный вариант ответа",
+            "answers": [
+                {"text": "Тег h1 одинарный", "isCorrect": false},
+                {"text": "Внутри тегов заголовков нежелательно использовать другие теги", "isCorrect": true},
+                {"text": "Чем больше заголовков на сайте, тем лучше", "isCorrect": false},
+                {"text": "Тег h1 по традиции используется 2-3 раза на странице", "isCorrect": false}
+            ]
+        }
+    ]
+}

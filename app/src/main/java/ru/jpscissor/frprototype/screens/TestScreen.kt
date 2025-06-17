@@ -392,6 +392,7 @@ private fun CheckButton(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun BottomPanel(
     currentQuestionIndex: Int,
