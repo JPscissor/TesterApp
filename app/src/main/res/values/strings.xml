@@ -9,7 +9,12 @@
     <string name="click_on_me">Click on me \nto exit</string>
     <string name="well_done">Well done!</string>
     <string name="nice_try">Nice try</string>
-    <string name="dont_giveup">Don\'t give up!</string>
-    <string name="yes">yes</string>
-    <string name="no">no</string>
+    <string name="do_not_give_up">Don\'t give up!</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="coming_soon">Coming soon</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_question_number">Enter question number</string>
+    <string name="jump_to">Jump to…</string>
 </resources>

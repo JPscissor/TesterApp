@@ -9,7 +9,12 @@
     <string name="click_on_me">Нажми на меня,\nчтобы выйти</string>
     <string name="well_done">Так держать!</string>
     <string name="nice_try">Хорошая попытка</string>
-    <string name="dont_giveup">Не здавайся!</string>
-    <string name="yes">да</string>
-    <string name="no">нет</string>
+    <string name="do_not_give_up">Не сдавайся!</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="coming_soon">Скоро</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="cancel">Отмена</string>
+    <string name="enter_question_number">Введите номер вопроса</string>
+    <string name="jump_to">Перейти к…</string>
 </resources>
