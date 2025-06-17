@@ -3,15 +3,6 @@
   "title": "01.01 X",
   "questions": [
     {
-      "question": "Укажите результат выполнения следующего кода:\npublic abstract class SomeClass implements Runnable {\n    public final static Object one = new Object(), two = new Object();\n    public static void main(String s[]) {\n        Thread t1 = new Thread() {\n            public void run() {\n                synchronized (one) {\n                    try { Thread.sleep(1000); } catch (InterruptedException e) { e.printStackTrace(); }\n                    synchronized (two) { System.out.print(\"1\"); }\n                }\n            }\n        };\n        Thread t2 = new Thread() {\n            public void run() {\n                synchronized (two) {\n                    synchronized (one) { System.out.print(\"2\"); }\n                }\n            }\n        };\n        t1.start();\n        t2.start();\n    }\n}",
-      "answers": [
-        {"text": "программа не завершит работу, на консоли появится 1", "isCorrect": false},
-        {"text": "программа не завершит работу, на консоли появится 2", "isCorrect": false},
-        {"text": "программа не завершит работу", "isCorrect": true},
-        {"text": "программа не завершит работу, на консоли появится 12", "isCorrect": false}
-      ]
-    },
-    {
       "question": "Что такое ООП?",
       "answers": [
         {"text": "Объектно-ориентированное программирование — методология программирования, основанная на представлении программы в виде совокупности объектов, каждый из которых является экземпляром определенного класса, а классы образуют иерархию наследования.", "isCorrect": true},
