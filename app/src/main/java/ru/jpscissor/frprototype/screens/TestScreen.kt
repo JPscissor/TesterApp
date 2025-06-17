@@ -1,5 +1,6 @@
 package ru.jpscissor.frprototype.screens
 
+import android.annotation.SuppressLint
 import android.content.Context
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -24,8 +25,10 @@ import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -49,6 +52,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
@@ -70,6 +74,7 @@ import ru.jpscissor.frprototype.data.loadTestFromJson
 import ru.jpscissor.frprototype.data.saveTestToJson
 import ru.jpscissor.frprototype.ui.theme.FRprototypeTheme
 
+@SuppressLint("ConfigurationScreenWidthHeight")
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
@@ -118,12 +123,19 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                 .background(MaterialTheme.colorScheme.background)
         ) {
             // Question
-            Row(
-                modifier = Modifier.fillMaxWidth().heightIn(140.dp).padding(16.dp)
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .heightIn(min = 140.dp, max = LocalConfiguration.current.screenHeightDp.dp / 2)
+                    .padding(16.dp)
+                    .background(MaterialTheme.colorScheme.background)
             ) {
                 Text(
-                    modifier = Modifier.padding(start = 6.dp),
                     text = currentQuestion.question,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .verticalScroll(rememberScrollState())
+                        .padding(end = 8.dp),
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Medium,
                     color = MaterialTheme.colorScheme.tertiary
@@ -637,7 +649,7 @@ fun TestScreenPreview() {
     FRprototypeTheme {
         val context = LocalContext.current
 
-        val testResources = listOf(R.raw.economy)
+        val testResources = listOf(R.raw.mdk0101)
         val tests = remember {
             testResources.mapNotNull { resourceId ->
                 try {
