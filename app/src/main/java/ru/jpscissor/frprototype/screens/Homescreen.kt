@@ -6,8 +6,8 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -16,12 +16,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBarsPadding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -35,7 +32,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -46,12 +42,13 @@ import ru.jpscissor.frprototype.ui.theme.FRprototypeTheme
 
 @Composable
 fun HomeScreen(context: Context, onNavigateToTest: (Int) -> Unit) {
-    Column(
+    Box(
         modifier = Modifier
             .fillMaxSize()
+            .systemBarsPadding()
             .background(MaterialTheme.colorScheme.background)
     ) {
-        val testResources = listOf(R.raw.sample, R.raw.history, R.raw.economy, R.raw.architecture)
+        val testResources = listOf(R.raw.sample, R.raw.history, R.raw.economy, R.raw.architecture, R.raw.bzhd, R.raw.cs, R.raw.english, R.raw.mdk0501)
 
         val tests = remember {
             testResources.mapNotNull { resourceId ->
@@ -66,26 +63,21 @@ fun HomeScreen(context: Context, onNavigateToTest: (Int) -> Unit) {
 
         Column(
             modifier = Modifier
-                .fillMaxSize()
-                .systemBarsPadding()
-                .padding(top = 10.dp, bottom = 16.dp, start = 16.dp, end = 16.dp)
+                .padding(top = 10.dp, start = 16.dp, end = 16.dp)
         ) {
-            ApperPanel()
-
-            Spacer(Modifier.height(64.dp))
-
+            UpperPanel()
+            Spacer(Modifier.height(40.dp))
             TestsList(tests, onNavigateToTest)
-
-            Spacer(Modifier.weight(1f))
-
-            BottomPanel()
         }
+
+        BottomPanel(
+            modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 16.dp)
+        )
     }
 }
 
-
 @Composable
-fun ApperPanel() {
+private fun UpperPanel() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -99,13 +91,11 @@ fun ApperPanel() {
     }
 }
 
-
-
 @Composable
-fun TestsList(tests: List<Test>, navigate: (Int) -> Unit) {
+private fun TestsList(tests: List<Test>, navigate: (Int) -> Unit) {
     LazyColumn(
         modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(34.dp)
+        verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         items(tests) { test ->
             TestItem(
@@ -114,22 +104,28 @@ fun TestsList(tests: List<Test>, navigate: (Int) -> Unit) {
                 navigate = { navigate(test.id) }
             )
         }
+
+        item{
+            Spacer(Modifier.height(80.dp))
+        }
     }
 }
 
-
 @Composable
-fun TestItem(title: String, quesNumber: Int, navigate: () -> Unit) {
+private fun TestItem(title: String, quesNumber: Int, navigate: () -> Unit) {
     Card(
-        modifier = Modifier.fillMaxWidth().height(87.dp),
+        onClick = navigate,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(80.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.onBackground,
             contentColor = Color.White
         ),
-        shape = RoundedCornerShape(15.dp),
+        shape = RoundedCornerShape(24.dp),
     ) {
         Row(
-            modifier = Modifier.fillMaxSize().padding(12.dp),
+            modifier = Modifier.fillMaxSize().padding(16.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
@@ -139,84 +135,74 @@ fun TestItem(title: String, quesNumber: Int, navigate: () -> Unit) {
                 Text(
                     text = title,
                     color = MaterialTheme.colorScheme.tertiary,
-                    fontSize = 18.sp
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold
                 )
 
                 Text(
                     text = stringResource(R.string.questions) + ": $quesNumber",
                     color = MaterialTheme.colorScheme.tertiary,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.SemiBold
-                )
-            }
-
-            Button(
-                onClick = { navigate() },
-                colors = ButtonDefaults.buttonColors(
-                    contentColor = Color.White,
-                    containerColor = MaterialTheme.colorScheme.onSurface,
-                    disabledContentColor = Color.White,
-                    disabledContainerColor = MaterialTheme.colorScheme.onSurface
-                ),
-                modifier = Modifier.width(103.dp).height(46.dp),
-                shape = RoundedCornerShape(20.dp),
-                contentPadding = PaddingValues(0.dp)
-            ) {
-                Text(
-                    text = stringResource(R.string.start),
-                    color = MaterialTheme.colorScheme.background,
-                    fontSize = 20.sp,
-                    textAlign = TextAlign.Center,
+                    fontSize = 16.sp
                 )
             }
         }
     }
 }
 
-
-
 @Composable
-fun BottomPanel() {
+private fun BottomPanel(modifier: Modifier = Modifier) {
     Card(
-        modifier = Modifier.fillMaxWidth(),
+        elevation = CardDefaults.cardElevation(defaultElevation = 12.dp),
+        modifier = modifier
+            .fillMaxWidth(0.9f)
+            .height(60.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface,
             contentColor = MaterialTheme.colorScheme.onSurface
         ),
         shape = RoundedCornerShape(40.dp)
     ) {
-        Row(
-            modifier = Modifier.fillMaxWidth().height(70.dp).padding(horizontal = 30.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
         ) {
-            Image(
-                painter = painterResource(R.drawable.shop_selected_icon),
-                contentDescription = ""
-            )
-            Spacer(Modifier.weight(1f))
-
-            val context = LocalContext.current
-            Image(
-                painter = painterResource(R.drawable.folder_icon),
-                modifier = Modifier.clickable{ Toast.makeText(context, "скоро", Toast.LENGTH_SHORT).show() },
-                contentDescription = ""
-            )
-            Spacer(Modifier.weight(1f))
-            Image(
-                painter = painterResource(R.drawable.cog_icon),
-                modifier = Modifier.clickable{ Toast.makeText(context, "скоро", Toast.LENGTH_SHORT).show() },
-                contentDescription = ""
-            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 30.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Image(
+                    painter = painterResource(R.drawable.shop_selected_icon),
+                    contentDescription = null
+                )
+                Spacer(Modifier.weight(1f))
+                val context = LocalContext.current
+                Image(
+                    painter = painterResource(R.drawable.folder_icon),
+                    modifier = Modifier.clickable {
+                        Toast.makeText(context, R.string.coming_soon, Toast.LENGTH_SHORT).show()
+                    },
+                    contentDescription = null
+                )
+                Spacer(Modifier.weight(1f))
+                Image(
+                    painter = painterResource(R.drawable.cog_icon),
+                    modifier = Modifier.clickable {
+                        Toast.makeText(context, R.string.coming_soon, Toast.LENGTH_SHORT).show()
+                    },
+                    contentDescription = null
+                )
+            }
         }
     }
 }
-
 
 @Composable
 @Preview
 fun HomePreview() {
     FRprototypeTheme {
-        HomeScreen( LocalContext.current, {})
+        HomeScreen( LocalContext.current ) {}
     }
 }

@@ -27,7 +27,7 @@ data class Test(
 )
 
 
-fun readTestFromJson( context: Context, resourceId: Int ): String {
+private fun readTestFromJson( context: Context, resourceId: Int ): String {
     val inputStream = context.resources.openRawResource(resourceId)
     return inputStream.bufferedReader().use { it.readText() }
 }
