@@ -46,6 +46,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -115,20 +116,25 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                 //--------------------------------
 
                 currentQuestion.answers.forEachIndexed { index, answer ->
+                    val cardHeight = when {
+                        answer.text.length > 50 -> 110.dp
+                        answer.text.length > 30 -> 96.dp
+                        else -> 84.dp
+                    }
+
                     Card(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(84.dp)
+                            .height(cardHeight)
                             .padding(vertical = 4.dp)
                             .clickable {
-                                // Обновляем список выбранных индексов
                                 modifiedTest = modifiedTest.copy(
                                     questions = modifiedTest.questions.toMutableList().apply {
                                         val updatedSelectedIndices = currentQuestion.selectedAnswerIndex.toMutableList()
                                         if (updatedSelectedIndices.contains(index)) {
-                                            updatedSelectedIndices.remove(index) // Удаляем индекс, если он уже выбран
+                                            updatedSelectedIndices.remove(index)
                                         } else {
-                                            updatedSelectedIndices.add(index) // Добавляем индекс, если он еще не выбран
+                                            updatedSelectedIndices.add(index)
                                         }
                                         this[currentQuestionIndex] = currentQuestion.copy(
                                             selectedAnswerIndex = updatedSelectedIndices
@@ -151,7 +157,7 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                                 if (answer.isCorrect) {
                                     Color(0xff8EFF92)
                                 } else {
-                                    Color.Transparent
+                                    Color(0xffFF7373)
                                 }
                             } else {
                                 MaterialTheme.colorScheme.onBackground
@@ -167,9 +173,15 @@ fun TestScreen(onBack: () -> Unit, test: Test, context: Context) {
                         ) {
                             Text(
                                 text = answer.text,
-                                fontSize = if (answer.text.length >= 30) 10.sp else 14.sp,
+                                fontSize = when {
+                                    answer.text.length >= 50 -> 10.sp
+                                    answer.text.length >= 30 -> 12.sp
+                                    else -> 14.sp
+                                },
                                 fontWeight = FontWeight.SemiBold,
                                 modifier = Modifier.padding(start = 8.dp),
+                                overflow = TextOverflow.Visible,
+                                maxLines = Int.MAX_VALUE,
                                 color = if (currentQuestion.selectedAnswerIndex.contains(index)) {
                                     MaterialTheme.colorScheme.onBackground
                                 } else if (isChecked) {
