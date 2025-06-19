@@ -48,7 +48,7 @@ fun HomeScreen(context: Context, onNavigateToTest: (Int) -> Unit) {
             .systemBarsPadding()
             .background(MaterialTheme.colorScheme.background)
     ) {
-        val testResources = listOf(R.raw.sample, R.raw.history, R.raw.economy, R.raw.architecture, R.raw.bzhd, R.raw.cs, R.raw.english, R.raw.mdk0501, R.raw.mdk0101)
+        val testResources = listOf(R.raw.sample, R.raw.mdk0501, R.raw.mdk0101209, R.raw.mdk0104)
 
         val tests = remember {
             testResources.mapNotNull { resourceId ->
