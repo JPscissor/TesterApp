@@ -1,6 +1,6 @@
 {
-  "id": 2331,
-  "title": "0104 X МЯУ???",
+  "id": 3967,
+  "title": "МДК 01.04 Тест",
   "questions": [
     {
       "question": "Системная программа – это",
@@ -437,11 +437,12 @@
         {
           "text": ". Совокупность стандартизованных текстовых и графических средств, обеспечивающих обмен базами данных между устройствами",
           "isCorrect": false
-        },
-        {
-          "text": "1-е поколение, 50-е годы: ЭВМ на…",
-          "isCorrect": false
-        },
+        }
+      ]
+    },
+    {
+      "question": "Первое-е поколение, 50-е годы: ЭВМ на…",
+      "answers": [
         {
           "text": ". Электронных вакуумных лампах (термин “электронные” является частью названия этой элементной базы);",
           "isCorrect": true
@@ -453,11 +454,12 @@
         {
           "text": ". Больших и сверхбольших интегральных схемах, основная из которых – микропроцессор (сотни тысяч – десятки миллионов активных элементов водном кристале);",
           "isCorrect": false
-        },
-        {
-          "text": "2-е поколение, 60-е годы: ЭВМ на…",
-          "isCorrect": false
-        },
+        }
+      ]
+    },
+    {
+      "question": "Второе-е поколение, 60-е годы: ЭВМ на…",
+      "answers": [
         {
           "text": ". Электронных вакуумных лампах (термин “электронные” является частью названия этой элементной базы)",
           "isCorrect": false
@@ -469,11 +471,12 @@
         {
           "text": ". Полупроводниковых приборах (транзисторах)",
           "isCorrect": true
-        },
-        {
-          "text": "3-е поколение, 70-е годы: ЭВМ на…",
-          "isCorrect": false
-        },
+        }
+      ]
+    },
+    {
+      "question": "Третье-е поколение, 70-е годы: ЭВМ на…",
+      "answers": [
         {
           "text": ". Полупроводниковых интегральных схемах с малой и средней степенью интеграции",
           "isCorrect": true
@@ -485,11 +488,12 @@
         {
           "text": ". Электронных вакуумных лампах (термин “электронные” является частью названия этой элементной базы)",
           "isCorrect": false
-        },
-        {
-          "text": "4-е поколение, 80-90-е годы: ЭВМ на…",
-          "isCorrect": false
-        },
+        }
+      ]
+    },
+    {
+      "question": "Четвертое-е поколение, 80-90-е годы: ЭВМ на…",
+      "answers": [
         {
           "text": ". Больших и сверхбольших интегральных схемах, основная из которых – микропроцессор (сотни тысяч – десятки миллионов активных элементов водном кристалле);",
           "isCorrect": true
@@ -2799,11 +2803,12 @@
         {
           "text": ". режим, при котором переключение процессов возможно только, когда работающий процесс вызовет системную функцию",
           "isCorrect": true
-        },
-        {
-          "text": "1Вытесняющая многозадачность — …",
-          "isCorrect": false
-        },
+        }
+      ]
+    },
+    {
+      "question": "Вытесняющая многозадачность — …",
+      "answers": [
         {
           "text": ". режим многозадачности, при котором переключение процессов возможно в любой момент времени",
           "isCorrect": false
@@ -3029,11 +3034,7 @@
       ]
     },
     {
-      "question": "Выберите один вариант из списка",
-      "answers": []
-    },
-    {
-      "question": "_____ ссылаются на имена переменных, функций, массивов, классов и т.д., созданные программистом.",
+      "question": "Выберите один вариант из списка ссылаются на имена переменных, функций, массивов, классов и т.д., созданные программистом.",
       "answers": [
         {
           "text": ". Ключевые слова",
@@ -3129,7 +3130,7 @@
       ]
     },
     {
-      "question": "C++ носил имя _____ до того, как оно было изменено на C++.",
+      "question": "С++ носил имя _____ до того, как оно было изменено на С++.",
       "answers": [
         {
           "text": ". C with classes",
@@ -3150,168 +3151,19 @@
       ]
     },
     {
-      "question": "C ++ - это __________ язык программирования",
-      "answers": [
-        {
-          "text": ". объектно-ориентированный, универсальный и модульный",
-          "isCorrect": false
-        },
-        {
-          "text": ". все перечисленное",
-          "isCorrect": true
-        },
-        {
-          "text": ". процедурный и функциональный",
-          "isCorrect": false
-        },
-        {
-          "text": ". общего назначения",
-          "isCorrect": false
-        }
-      ]
-    },
-    {
-      "question": "C ++ появился под влиянием",
-      "answers": [
-        {
-          "text": ". C ++ был разработан как замена всем перечисленным языкам",
-          "isCorrect": true
-        },
-        {
-          "text": ". Modula-2 и Simula",
-          "isCorrect": false
-        },
-        {
-          "text": ". C",
-          "isCorrect": false
-        },
-        {
-          "text": ". Ада и АЛГОЛ",
-          "isCorrect": false
-        }
-      ]
-    },
-    {
-      "question": "Какая из перечисленных ниже программ на C ++ подходит для вывода в консоль строки \"Hello World\"?",
+      "question": "Какая из перечисленных ниже программ на C ++ подходит для вывода в консоль строки \"Hello World\"?\nusing namespace std;\nint main()\n{\ncout<<\"Hello World\";\nreturn 0;\n}\nint main()\n{\nstd::cout<<\"Hello World\";\nreturn 0;\n}\nusing namespace std;\nvoid codescracker();\nint main()\n{",
       "answers": [
         {
           "text": "#include<iostream>",
           "isCorrect": false
-        }
-      ]
-    },
-    {
-      "question": "using namespace std;",
-      "answers": []
-    },
-    {
-      "question": "int main()",
-      "answers": []
-    },
-    {
-      "question": "{",
-      "answers": []
-    },
-    {
-      "question": "cout<<\"Hello World\";",
-      "answers": []
-    },
-    {
-      "question": "return 0;",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": [
+        },
         {
           "text": "#include<iostream>",
           "isCorrect": false
-        }
-      ]
-    },
-    {
-      "question": "int main()",
-      "answers": []
-    },
-    {
-      "question": "{",
-      "answers": []
-    },
-    {
-      "question": "std::cout<<\"Hello World\";",
-      "answers": []
-    },
-    {
-      "question": "return 0;",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": [
+        },
         {
           "text": "#include<iostream>",
           "isCorrect": false
-        }
-      ]
-    },
-    {
-      "question": "using namespace std;",
-      "answers": []
-    },
-    {
-      "question": "void codescracker();",
-      "answers": []
-    },
-    {
-      "question": "int main()",
-      "answers": []
-    },
-    {
-      "question": "{",
-      "answers": []
-    },
-    {
-      "question": "codescracker();",
-      "answers": []
-    },
-    {
-      "question": "return 0;",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "void codescracker()",
-      "answers": []
-    },
-    {
-      "question": "{",
-      "answers": []
-    },
-    {
-      "question": "cout<<\"Hello World\";",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": [
-        {
-          "text": ". 2",
-          "isCorrect": false
-        },
-        {
-          "text": ". 1",
-          "isCorrect": false
-        },
-        {
-          "text": ". все",
-          "isCorrect": false
-        },
-        {
-          "text": ". 3",
-          "isCorrect": true
         }
       ]
     },
@@ -3366,23 +3218,7 @@
       ]
     },
     {
-      "question": "Что выполнит следующая программа?",
-      "answers": []
-    },
-    {
-      "question": "#include <iostream>",
-      "answers": []
-    },
-    {
-      "question": "int main() {",
-      "answers": []
-    },
-    {
-      "question": "std::cout << \"C++ is fun\";",
-      "answers": []
-    },
-    {
-      "question": "}",
+      "question": "Что выполнит следующая программа?\n#include <iostream>\nint main() {\nstd::cout << \"C++ is fun\";\n}",
       "answers": [
         {
           "text": ". текст ''C++isfun''",
@@ -3424,35 +3260,7 @@
       ]
     },
     {
-      "question": "Сколько строк будет в выводе следующей программы?",
-      "answers": []
-    },
-    {
-      "question": "#include <iostream>",
-      "answers": []
-    },
-    {
-      "question": "int main() {",
-      "answers": []
-    },
-    {
-      "question": "// print c++ is fun",
-      "answers": []
-    },
-    {
-      "question": "std::cout << \"C++ is fun\";",
-      "answers": []
-    },
-    {
-      "question": "// c++ is fun",
-      "answers": []
-    },
-    {
-      "question": "// c++ c++ c++",
-      "answers": []
-    },
-    {
-      "question": "}",
+      "question": "Сколько строк будет в выводе следующей программы?\n#include <iostream>\nint main() {\n// print c++ is fun\nstd::cout << \"C++ is fun\";\n// c++ is fun\n// c++ c++ c++\n}",
       "answers": [
         {
           "text": ". 2",
@@ -3536,11 +3344,7 @@
       ]
     },
     {
-      "question": "Какие из следующих значений может хранить переменная test?",
-      "answers": []
-    },
-    {
-      "question": "int test;",
+      "question": "Какие из следующих значений может хранить переменная test?\nint test;",
       "answers": [
         {
           "text": ". \t''19''",
@@ -3561,7 +3365,7 @@
       ]
     },
     {
-      "question": "Как сделать перевод на новую строку?",
+      "question": "Как сделать перевод на новую строку?\nint a=10. Что из этого является литералом?",
       "answers": [
         {
           "text": ". \t\\n",
@@ -3578,12 +3382,7 @@
         {
           "text": ". \t\\f",
           "isCorrect": false
-        }
-      ]
-    },
-    {
-      "question": "int a=10. Что из этого является литералом?",
-      "answers": [
+        },
         {
           "text": ". \t=",
           "isCorrect": false
@@ -3792,35 +3591,7 @@
       ]
     },
     {
-      "question": "Что будет выведено в результате выполнения программы?",
-      "answers": []
-    },
-    {
-      "question": "#include <iostream>",
-      "answers": []
-    },
-    {
-      "question": "using namespace std;",
-      "answers": []
-    },
-    {
-      "question": "int main() {",
-      "answers": []
-    },
-    {
-      "question": "char a = 'x';",
-      "answers": []
-    },
-    {
-      "question": "cout << \"hello\" << a << endl;",
-      "answers": []
-    },
-    {
-      "question": "return 0;",
-      "answers": []
-    },
-    {
-      "question": "}",
+      "question": "Что будет выведено в результате выполнения программы?\\n#include <iostream>\\nusing namespace std;\\nint main() {\\nchar a = 'x';\\ncout << \"hello\" << a << endl;\\nreturn 0;\\n}",
       "answers": [
         {
           "text": ". \thelloaendl",
@@ -3841,31 +3612,7 @@
       ]
     },
     {
-      "question": "На рисунке представлена простейшая программа на С++",
-      "answers": []
-    },
-    {
-      "question": "#include <iostream>",
-      "answers": []
-    },
-    {
-      "question": "int main (int list)",
-      "answers": []
-    },
-    {
-      "question": "{",
-      "answers": []
-    },
-    {
-      "question": "std : : cout<<\"Hello Warld!\";",
-      "answers": []
-    },
-    {
-      "question": "return 0;",
-      "answers": []
-    },
-    {
-      "question": "}.",
+      "question": "На рисунке представлена простейшая программа на С++\n#include <iostream>\nint main (int list)\n{\nstd : : cout<<\"Hello Warld!\";\nreturn 0;\n}.",
       "answers": [
         {
           "text": ". \tпрепроцессора для подключения библиотеки",
@@ -3928,43 +3675,7 @@
       ]
     },
     {
-      "question": "Что будет выведено в результате выполнения данной программы?",
-      "answers": []
-    },
-    {
-      "question": "#include <iostream>",
-      "answers": []
-    },
-    {
-      "question": "using namespace std;",
-      "answers": []
-    },
-    {
-      "question": "int main() {",
-      "answers": []
-    },
-    {
-      "question": "int x = 10;",
-      "answers": []
-    },
-    {
-      "question": "double y = 15.5;",
-      "answers": []
-    },
-    {
-      "question": "x = y;",
-      "answers": []
-    },
-    {
-      "question": "cout << x << endl;",
-      "answers": []
-    },
-    {
-      "question": "return 0;",
-      "answers": []
-    },
-    {
-      "question": "}",
+      "question": "Что будет выведено в результате выполнения данной программы?\\n#include <iostream>\\nusing namespace std;\\nint main() {\\nint x = 10;\\ndouble y = 15.5;\\nx = y;\\n  cout << x << endl;\\n   return 0;\\n}",
       "answers": [
         {
           "text": ". 15",
@@ -3985,19 +3696,7 @@
       ]
     },
     {
-      "question": "Создается 2 переменные:",
-      "answers": []
-    },
-    {
-      "question": "int num1 = 26;",
-      "answers": []
-    },
-    {
-      "question": "double num2 = 20.5;",
-      "answers": []
-    },
-    {
-      "question": "Как будет выглядеть преобразование из int в double?",
+      "question": "Создается 2 переменные:\\nint num1 = 26;\\ndouble num2 = 20.5;\\nКак будет выглядеть преобразование из int в double?",
       "answers": [
         {
           "text": ". num2 = (int)num1",
@@ -4039,39 +3738,7 @@
       ]
     },
     {
-      "question": "Каким будет результат программы?",
-      "answers": []
-    },
-    {
-      "question": "#include <iostream>",
-      "answers": []
-    },
-    {
-      "question": "using namespace std;",
-      "answers": []
-    },
-    {
-      "question": "int main() {",
-      "answers": []
-    },
-    {
-      "question": "bool result;",
-      "answers": []
-    },
-    {
-      "question": "result = (3 != 5) && (3 < 5);",
-      "answers": []
-    },
-    {
-      "question": "cout << result << endl;",
-      "answers": []
-    },
-    {
-      "question": "return 0;",
-      "answers": []
-    },
-    {
-      "question": "}",
+      "question": "Каким будет результат программы?\\n#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n   bool result;\\n\\n    result = (3 != 5) && (3 < 5);\\n    cout << result << endl;\\n    return 0;\\n}",
       "answers": [
         {
           "text": ". 2",
@@ -4176,55 +3843,7 @@
       ]
     },
     {
-      "question": "Каким будет результат выполнения программы?",
-      "answers": []
-    },
-    {
-      "question": "#include <iostream>",
-      "answers": []
-    },
-    {
-      "question": "using namespace std;",
-      "answers": []
-    },
-    {
-      "question": "int main() {",
-      "answers": []
-    },
-    {
-      "question": "int number1=10, number2=20;",
-      "answers": []
-    },
-    {
-      "question": "if (number1 >= number2) {",
-      "answers": []
-    },
-    {
-      "question": "cout << \"1\" << endl;",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "else {",
-      "answers": []
-    },
-    {
-      "question": "cout << \"2\" << endl;",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "return 0;",
-      "answers": []
-    },
-    {
-      "question": "}",
+      "question": "Каким будет результат выполнения программы?\\n#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n    int number1=10, number2=20;\\n    if (number1 >= number2) {\\n            cout << \"1\" << endl;\\n}\\n    else {\\n            cout << \"2\" << endl;\\n}\\n    return 0;\\n}",
       "answers": [
         {
           "text": ". \t2",
@@ -4245,83 +3864,7 @@
       ]
     },
     {
-      "question": "Каким будет результат выполнения программы?",
-      "answers": []
-    },
-    {
-      "question": "#include <iostream>",
-      "answers": []
-    },
-    {
-      "question": "#include <locale.h>",
-      "answers": []
-    },
-    {
-      "question": "using namespace std;",
-      "answers": []
-    },
-    {
-      "question": "int main() {",
-      "answers": []
-    },
-    {
-      "question": "int num = 10;",
-      "answers": []
-    },
-    {
-      "question": "if (num != 0) {",
-      "answers": []
-    },
-    {
-      "question": "if (num > 0) {",
-      "answers": []
-    },
-    {
-      "question": "cout << \"Positive \";",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "else {",
-      "answers": []
-    },
-    {
-      "question": "cout << \"Negative \";",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "else {",
-      "answers": []
-    },
-    {
-      "question": "cout << \"Is 0\" << endl;",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "cout << \"goodbye\" << endl;",
-      "answers": []
-    },
-    {
-      "question": "return 0;",
-      "answers": []
-    },
-    {
-      "question": "}",
+      "question": "Каким будет результат выполнения программы?\\n#include <iostream>\\n#include <locale.h>\\nusing namespace std;\\n\\nint main() {\\n    int num = 10;\\n    if (num != 0) {\\n            if (num > 0) {\\n                cout << \"Positive \";\\n            }\\n            else {\\n                cout << \"Negative \";\\n            }\\n    }\\n    else {\\n      cout << \"Is 0\" << endl;\\n    }\\n    cout << \"goodbye\" << endl;\\n    return 0;\\n}",
       "answers": [
         {
           "text": ". Positive",
@@ -4342,11 +3885,7 @@
       ]
     },
     {
-      "question": "Сколько раз будет выполнен цикл?",
-      "answers": []
-    },
-    {
-      "question": "for(int i=0; i<=5; i+=3);",
+      "question": "Сколько раз будет выполнен цикл?\nfor(int i=0; i<=5; i+=3);",
       "answers": [
         {
           "text": ". 3",
@@ -4493,19 +4032,6 @@
       ]
     },
     {
-      "question": "break нельзя использовать с вложенным циклом.",
-      "answers": [
-        {
-          "text": ". \tНеверно",
-          "isCorrect": true
-        },
-        {
-          "text": ". Верно",
-          "isCorrect": false
-        }
-      ]
-    },
-    {
       "question": "Какой оператор используется для указания значения, с которым будет сравниваться выражение в операторе switch?",
       "answers": [
         {
@@ -4570,7 +4096,12 @@
     },
     {
       "question": "Какие пунктуационные знаки используются в программах на С++ для обозначения начала и конца блоков кода?",
-      "answers": []
+      "answers": [
+        {
+          "text": "Заглушка: недостающий ответ",
+          "isCorrect": false
+        }
+      ]
     },
     {
       "question": "Примечание. Рассматривайте блок кода как тело некоторой функции, например, функции main().",
@@ -4594,28 +4125,13 @@
       ]
     },
     {
-      "question": "Дана реализация функции fact()",
-      "answers": []
-    },
-    {
-      "question": "int fact (int val) {",
-      "answers": []
-    },
-    {
-      "question": "int ret = 1;",
-      "answers": []
-    },
-    {
-      "question": "while (vel > 1)",
-      "answers": []
-    },
-    {
-      "question": "return ret;",
-      "answers": []
-    },
-    {
-      "question": "}.",
-      "answers": []
+      "question": "Дана реализация функции fact()\nint fact (int val) {\nint ret = 1;",
+      "answers": [
+        {
+          "text": "Заглушка: недостающий ответ",
+          "isCorrect": false
+        }
+      ]
     },
     {
       "question": "Корректный вызов функции осуществляется записью…",
@@ -4639,31 +4155,11 @@
       ]
     },
     {
-      "question": "Запись вида",
-      "answers": []
-    },
-    {
-      "question": "void func (void) { /*. . . */ }",
-      "answers": []
-    },
-    {
-      "question": "означает, что …",
+      "question": "Запись вида\nvoid func (void) { /*. . . */ }",
       "answers": [
         {
-          "text": ". функция вызывает саму себя, рекурсивно",
+          "text": "Заглушка: недостающий ответ",
           "isCorrect": false
-        },
-        {
-          "text": ". функция принимает массив аргументов",
-          "isCorrect": false
-        },
-        {
-          "text": ". функция принимает аргумент любого типа",
-          "isCorrect": false
-        },
-        {
-          "text": ". функция имеет пустой список параметров",
-          "isCorrect": true
         }
       ]
     },
@@ -5143,38 +4639,10 @@
       ]
     },
     {
-      "question": "Какая структура здесь объявлена?",
-      "answers": []
-    },
-    {
-      "question": "struct Cat {",
-      "answers": []
-    },
-    {
-      "question": "char name;",
-      "answers": []
-    },
-    {
-      "question": "int age;",
-      "answers": []
-    },
-    {
-      "question": "};",
+      "question": "Какая структура здесь объявлена?\nstruct Cat {",
       "answers": [
         {
-          "text": ". Cat",
-          "isCorrect": true
-        },
-        {
-          "text": ". age",
-          "isCorrect": false
-        },
-        {
-          "text": ". struct",
-          "isCorrect": false
-        },
-        {
-          "text": ". name",
+          "text": "Заглушка: недостающий ответ",
           "isCorrect": false
         }
       ]
@@ -5403,46 +4871,10 @@
       ]
     },
     {
-      "question": "Какой конструктор описан в приведенном коде?",
-      "answers": []
-    },
-    {
-      "question": "class MyClass {",
-      "answers": []
-    },
-    {
-      "question": "public:",
-      "answers": []
-    },
-    {
-      "question": "MyClass() {",
-      "answers": []
-    },
-    {
-      "question": "//",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "};",
+      "question": "Какой конструктор описан в приведенном коде?\nclass MyClass {",
       "answers": [
         {
-          "text": ". конструктор с инициализацией списка",
-          "isCorrect": false
-        },
-        {
-          "text": ". конструктор по умолчанию",
-          "isCorrect": true
-        },
-        {
-          "text": ". конструктор с параметрами",
-          "isCorrect": false
-        },
-        {
-          "text": ". конструктор копирования",
+          "text": "Заглушка: недостающий ответ",
           "isCorrect": false
         }
       ]
@@ -5524,103 +4956,11 @@
       ]
     },
     {
-      "question": "Что выведет данная программа?",
-      "answers": []
-    },
-    {
-      "question": "#include <iostream>",
-      "answers": []
-    },
-    {
-      "question": "using namespace std;",
-      "answers": []
-    },
-    {
-      "question": "class Count {",
-      "answers": []
-    },
-    {
-      "question": "private:",
-      "answers": []
-    },
-    {
-      "question": "int value;",
-      "answers": []
-    },
-    {
-      "question": "public:",
-      "answers": []
-    },
-    {
-      "question": "Count() : value(10) {}",
-      "answers": []
-    },
-    {
-      "question": "void operator ++ () {",
-      "answers": []
-    },
-    {
-      "question": "++value;",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "void display() {",
-      "answers": []
-    },
-    {
-      "question": "cout << \"Count: \" << value << endl;",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "};",
-      "answers": []
-    },
-    {
-      "question": "int main() {",
-      "answers": []
-    },
-    {
-      "question": "Count count1;",
-      "answers": []
-    },
-    {
-      "question": "++count1;",
-      "answers": []
-    },
-    {
-      "question": "count1.display();",
-      "answers": []
-    },
-    {
-      "question": "return 0;",
-      "answers": []
-    },
-    {
-      "question": "}",
+      "question": "Что выведет данная программа?\n#include <iostream>\nusing namespace std;\nclass Count {",
       "answers": [
         {
-          "text": ". \tCount: 10",
+          "text": "Заглушка: недостающий ответ",
           "isCorrect": false
-        },
-        {
-          "text": ". \t0",
-          "isCorrect": false
-        },
-        {
-          "text": ". \t10",
-          "isCorrect": false
-        },
-        {
-          "text": ". \tCount: 11",
-          "isCorrect": true
         }
       ]
     },
@@ -5756,19 +5096,7 @@
       ]
     },
     {
-      "question": "Какое значение возвратит запуск на выполнение данного фрагмента программного кода?",
-      "answers": []
-    },
-    {
-      "question": "int a [] = {1, 2, 3, 4, 5, 6};",
-      "answers": []
-    },
-    {
-      "question": "int *ptr = (int*) (&a+1);",
-      "answers": []
-    },
-    {
-      "question": "cout<<*(ptr-1);",
+      "question": "Какое значение возвратит запуск на выполнение данного фрагмента программного кода?\nint a [] = {1, 2, 3, 4, 5, 6};\nint *ptr = (int*) (&a+1);\ncout<<*(ptr-1);",
       "answers": [
         {
           "text": ". 1",
@@ -5831,94 +5159,10 @@
       ]
     },
     {
-      "question": "Каким будет вывод программы?",
-      "answers": []
-    },
-    {
-      "question": "#include <iostream>",
-      "answers": []
-    },
-    {
-      "question": "using namespace std;",
-      "answers": []
-    },
-    {
-      "question": "void swap(int *n1, int *n2);",
-      "answers": []
-    },
-    {
-      "question": "int main()",
-      "answers": []
-    },
-    {
-      "question": "{",
-      "answers": []
-    },
-    {
-      "question": "int num1 = 5, num2 = 20;",
-      "answers": []
-    },
-    {
-      "question": "swap(&num1, &num2);",
-      "answers": []
-    },
-    {
-      "question": "cout << \"num1 = \" << num1 << endl;",
-      "answers": []
-    },
-    {
-      "question": "cout << \"num2 = \" << num2;",
-      "answers": []
-    },
-    {
-      "question": "return 0;",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "void swap(int* n1, int* n2)",
-      "answers": []
-    },
-    {
-      "question": "{",
-      "answers": []
-    },
-    {
-      "question": "int temp;",
-      "answers": []
-    },
-    {
-      "question": "temp = *n1;",
-      "answers": []
-    },
-    {
-      "question": "*n1 = *n2;",
-      "answers": []
-    },
-    {
-      "question": "*n2 = temp;",
-      "answers": []
-    },
-    {
-      "question": "}",
+      "question": "Каким будет вывод программы?\n#include <iostream>\nusing namespace std;\nvoid swap(int *n1, int *n2);\nint main()\n{\nint num1 = 5, num2 = 20;",
       "answers": [
         {
-          "text": ". num1=5 num2=20",
-          "isCorrect": false
-        },
-        {
-          "text": ". temp=5 n1=20 n2=5",
-          "isCorrect": false
-        },
-        {
-          "text": ". num1=20 num2=5",
-          "isCorrect": true
-        },
-        {
-          "text": ". temp=5 num1=20",
+          "text": "Заглушка: недостающий ответ",
           "isCorrect": false
         }
       ]
@@ -6092,47 +5336,11 @@
       ]
     },
     {
-      "question": "Дан программный код с реализацией наследования.",
-      "answers": []
-    },
-    {
-      "question": "class Mix {",
-      "answers": []
-    },
-    {
-      "question": "public:",
-      "answers": []
-    },
-    {
-      "question": "int present;",
-      "answers": []
-    },
-    {
-      "question": "protected:",
-      "answers": []
-    },
-    {
-      "question": "int enjoy;",
-      "answers": []
-    },
-    {
-      "question": "};",
+      "question": "Дан программный код с реализацией наследования.\nclass Mix {",
       "answers": [
         {
-          "text": ". struct A : Mix {};",
+          "text": "Заглушка: недостающий ответ",
           "isCorrect": false
-        },
-        {
-          "text": ". class B : Mix {};",
-          "isCorrect": false
-        },
-        {
-          "text": ". class C : public Mix {};",
-          "isCorrect": false
-        },
-        {
-          "text": ". struct D : protected Mix {}",
-          "isCorrect": true
         }
       ]
     },
@@ -6158,60 +5366,13 @@
       ]
     },
     {
-      "question": "Дан фрагмент программного кода",
-      "answers": []
-    },
-    {
-      "question": "class Patient {",
-      "answers": []
-    },
-    {
-      "question": "private:",
-      "answers": []
-    },
-    {
-      "question": "int studentNumber;",
-      "answers": []
-    },
-    {
-      "question": "string group;",
-      "answers": []
-    },
-    {
-      "question": "string name;",
-      "answers": []
-    },
-    {
-      "question": "public:",
-      "answers": []
-    },
-    {
-      "question": "void learning() {",
-      "answers": []
-    },
-    {
-      "question": "// код",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "void reading() {",
-      "answers": []
-    },
-    {
-      "question": "// код",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "};",
-      "answers": []
+      "question": "Дан фрагмент программного кода\nclass Patient {",
+      "answers": [
+        {
+          "text": "Заглушка: недостающий ответ",
+          "isCorrect": false
+        }
+      ]
     },
     {
       "question": "Какие переменные или функции будут закрытыми?",
@@ -6386,43 +5547,7 @@
       ]
     },
     {
-      "question": "Какой из типов наследования приведен во фрагменте программного кода?",
-      "answers": []
-    },
-    {
-      "question": "class Coniferous{",
-      "answers": []
-    },
-    {
-      "question": "//",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "};",
-      "answers": []
-    },
-    {
-      "question": "class Tree{",
-      "answers": []
-    },
-    {
-      "question": "//",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "};",
-      "answers": []
-    },
-    {
-      "question": "class Spruce: public Coniferous, public Tree{};",
+      "question": "Какой из типов наследования приведен во фрагменте программного кода?\nclass Coniferous{\n//\n}\n};\nclass Tree{\n//\n}\n};\nclass Spruce: public Coniferous, public Tree{};",
       "answers": [
         {
           "text": ". многоуровневое наследование",
@@ -6561,94 +5686,10 @@
       ]
     },
     {
-      "question": "Какая функция в приведенном ниже коде является виртуальной?",
-      "answers": []
-    },
-    {
-      "question": "class Vegetable{",
-      "answers": []
-    },
-    {
-      "question": "private:",
-      "answers": []
-    },
-    {
-      "question": "string type;",
-      "answers": []
-    },
-    {
-      "question": "public:",
-      "answers": []
-    },
-    {
-      "question": "Vegetable() : type(\"Vegetable\") {}",
-      "answers": []
-    },
-    {
-      "question": "virtual string getWeight() {",
-      "answers": []
-    },
-    {
-      "question": "return type;",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "};",
-      "answers": []
-    },
-    {
-      "question": "class Cucumber: public Vegetable{",
-      "answers": []
-    },
-    {
-      "question": "private:",
-      "answers": []
-    },
-    {
-      "question": "string type;",
-      "answers": []
-    },
-    {
-      "question": "public:",
-      "answers": []
-    },
-    {
-      "question": "Cucumber() : type(\"Cucumber\") {}",
-      "answers": []
-    },
-    {
-      "question": "string getWeight() override {",
-      "answers": []
-    },
-    {
-      "question": "return type;",
-      "answers": []
-    },
-    {
-      "question": "}",
-      "answers": []
-    },
-    {
-      "question": "};",
+      "question": "Какая функция в приведенном ниже коде является виртуальной?\nclass Vegetable{",
       "answers": [
         {
-          "text": ". getWeight()",
-          "isCorrect": true
-        },
-        {
-          "text": ". Cucumber()",
-          "isCorrect": false
-        },
-        {
-          "text": ". Vegetable()",
-          "isCorrect": false
-        },
-        {
-          "text": ". Type",
+          "text": "Заглушка: недостающий ответ",
           "isCorrect": false
         }
       ]
@@ -6840,35 +5881,6 @@
         {
           "text": ". char",
           "isCorrect": false
-        },
-        {
-          "text": ". wchar_t",
-          "isCorrect": false
-        },
-        {
-          "text": ". boot",
-          "isCorrect": false
-        },
-        {
-          "text": ". float",
-          "isCorrect": false
-        },
-        {
-          "text": ". double",
-          "isCorrect": false
-        }
-      ]
-    },
-    {
-      "question": "Cимвольный тип данных в С++:",
-      "answers": [
-        {
-          "text": ". int",
-          "isCorrect": false
-        },
-        {
-          "text": ". char",
-          "isCorrect": true
         },
         {
           "text": ". wchar_t",
